@@ -1,0 +1,32 @@
+name: components_library
+description: Components Library package.
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  components_core:
+    path: ../core
+
+  google_fonts: ^6.2.1
+  lottie: ^3.3.1
+  another_flushbar: ^1.12.30
+  font_awesome_flutter: ^10.8.0
+  flutter_widget_from_html_core: ^0.16.0
+  url_launcher: ^6.3.1
+  dio: ^5.9.0
+  shimmer: ^3.0.0
+
+dev_dependencies:
+  injectable_generator: any
+  build_runner: any
+  retrofit_generator: any
+  json_serializable: any
+
+flutter:
+  uses-material-design: true

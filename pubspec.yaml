@@ -10,9 +10,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  components_library:
+    path: packages/components/library
+  feature_about_me:
+    path: packages/features/about_me
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-flutter:
-
+  injectable_generator: 2.6.2
+  build_runner: 2.4.14
+  json_serializable: 6.9.0
