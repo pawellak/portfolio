@@ -283,6 +283,27 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
+  feature_project_list:
+    dependency: "direct main"
+    description:
+      path: "packages/features/project_list"
+      relative: true
+    source: path
+    version: "0.0.1"
+  feature_settings:
+    dependency: "direct main"
+    description:
+      path: "packages/features/settings"
+      relative: true
+    source: path
+    version: "0.0.1"
+  feature_weather:
+    dependency: "direct main"
+    description:
+      path: "packages/features/weather"
+      relative: true
+    source: path
+    version: "0.0.1"
   ffi:
     dependency: transitive
     description:

@@ -14,6 +14,12 @@ dependencies:
     path: packages/components/library
   feature_about_me:
     path: packages/features/about_me
+  feature_weather:
+    path: packages/features/weather
+  feature_settings:
+    path: packages/features/settings
+  feature_project_list:
+    path: packages/features/project_list
 
 dev_dependencies:
   flutter_test:

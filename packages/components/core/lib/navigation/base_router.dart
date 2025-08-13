@@ -5,5 +5,5 @@ abstract class BaseRouter {
 
   abstract final List<RouteBase> routes;
 
-  abstract final StatefulShellBranch? bottomBarRoute;
+  abstract final StatefulShellBranch? statefulShellBranch;
 }

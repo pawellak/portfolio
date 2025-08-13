@@ -7,7 +7,7 @@ class LibraryRouter extends BaseRouter {
   const LibraryRouter();
 
   @override
-  StatefulShellBranch? get bottomBarRoute => null;
+  StatefulShellBranch? get statefulShellBranch => null;
 
   @override
   List<RouteBase> get routes => [

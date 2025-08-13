@@ -23,5 +23,4 @@ dependencies:
 dev_dependencies:
   injectable_generator: any
   build_runner: any
-  retrofit_generator: any
   json_serializable: any

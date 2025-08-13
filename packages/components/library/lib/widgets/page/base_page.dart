@@ -1,8 +1,8 @@
-import 'package:components_core/di/core_package.dart';
+import 'package:components_core/components_pub_dev_export.dart' show BlocProvider;
+import 'package:components_core/di/core_package.dart' show getIt;
+import 'package:components_core/presentation/base_cubit.dart' show BaseCubit;
+import 'package:components_library/resources/dimens.dart' show Dimens;
 import 'package:flutter/material.dart';
-
-import '../../components_library_export.dart';
-import '../../resources/dimens.dart';
 
 abstract class BasePage<T extends BaseCubit> extends StatelessWidget {
   const BasePage({super.key, this.canPop = true, EdgeInsets? edgeInsets, this.initialParams})

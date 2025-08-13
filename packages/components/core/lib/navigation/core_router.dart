@@ -8,7 +8,7 @@ class CoreRouter extends BaseRouter {
   const CoreRouter();
 
   @override
-  StatefulShellBranch? get bottomBarRoute => null;
+  StatefulShellBranch? get statefulShellBranch => null;
 
   @override
   List<RouteBase> get routes => [];
