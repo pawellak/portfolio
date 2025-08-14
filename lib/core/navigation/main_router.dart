@@ -1,6 +1,6 @@
 import 'package:components_library/components_library_export.dart'
     show GoRouter, StatefulMobileHomePage, StatefulShellRoute, StatefulWebHomePage, getIt;
-import 'package:feature_about_me/about_me_feature_impl.dart';
+import 'package:feature_about_me/feature_about_me_impl.dart';
 import 'package:feature_about_me/navigation/about_me_router.dart';
 import 'package:feature_project_list/navigation/project_list_router.dart';
 import 'package:feature_settings/navigation/settings_router.dart';
