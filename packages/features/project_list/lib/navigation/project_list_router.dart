@@ -6,8 +6,8 @@ class ProjectListRouter implements BaseRouter {
   const ProjectListRouter();
 
   @override
-  List<RouteBase> get routes => [const ProjectListPage().toRoute];
+  List<RouteBase> get routes => [];
 
   @override
-  StatefulShellBranch get statefulShellBranch => StatefulShellBranch(routes: []);
+  StatefulShellBranch get statefulShellBranch => StatefulShellBranch(routes: [const ProjectListPage().toRoute]);
 }

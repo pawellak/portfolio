@@ -6,8 +6,8 @@ class SettingsRouter implements BaseRouter {
   const SettingsRouter();
 
   @override
-  List<RouteBase> get routes => [const SettingsPage().toRoute];
+  List<RouteBase> get routes => [];
 
   @override
-  StatefulShellBranch get statefulShellBranch => StatefulShellBranch(routes: []);
+  StatefulShellBranch get statefulShellBranch => StatefulShellBranch(routes: [const SettingsPage().toRoute]);
 }

@@ -1,3 +1,4 @@
+import 'package:components_library/components_library_export.dart';
 import 'package:flutter/material.dart';
 
 class AboutMeDesktopWidget extends StatelessWidget {
@@ -5,14 +6,14 @@ class AboutMeDesktopWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => const Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        Column(
-          children: [Center(child: Text('aboutMe1'))],
-        ),
-        Column(
-          children: [Center(child: Text('aboutMe2'))],
-        ),
-      ],
-    );
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Column(
+            children: [Center(child: Label('label.about_me.title'))],
+          ),
+          Column(
+            children: [Center(child: Label('label.about_me.description'))],
+          ),
+        ],
+      );
 }

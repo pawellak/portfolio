@@ -13,10 +13,6 @@ class MainRouter {
   static GoRouter router = GoRouter(
     initialLocation: FeatureAboutMeImpl.featurePath,
     routes: [
-      ...getIt<AboutMeRouter>().routes,
-      ...getIt<WeatherRouter>().routes,
-      ...getIt<ProjectListRouter>().routes,
-      ...getIt<SettingsRouter>().routes,
       StatefulShellRoute.indexedStack(
         branches: [
           getIt<AboutMeRouter>().statefulShellBranch,

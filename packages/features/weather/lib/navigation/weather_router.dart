@@ -6,8 +6,8 @@ class WeatherRouter implements BaseRouter {
   const WeatherRouter();
 
   @override
-  List<RouteBase> get routes => [const WeatherPage().toRoute];
+  List<RouteBase> get routes => [];
 
   @override
-  StatefulShellBranch get statefulShellBranch => StatefulShellBranch(routes: []);
+  StatefulShellBranch get statefulShellBranch => StatefulShellBranch(routes: [const WeatherPage().toRoute]);
 }

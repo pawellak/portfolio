@@ -8,14 +8,14 @@ import 'package:flutter/material.dart';
 class SettingsPage extends BasePage<SettingsCubit> {
   const SettingsPage({super.key});
 
+  static const String name = 'settings-page';
   static const String path = '/$name';
-  static const String name = 'about-me';
 
   @override
   String get goName => name;
 
   @override
-  String get goPath => goPath;
+  String get goPath => path;
 
   @override
   ClAdapter buildPage(BuildContext context) =>

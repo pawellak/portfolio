@@ -9,14 +9,14 @@ import 'package:flutter/material.dart';
 class ProjectListPage extends BasePage<ProjectListCubit> {
   const ProjectListPage({super.key});
 
+  static const String name = 'project-list-page';
   static const String path = '/$name';
-  static const String name = 'about-me';
 
   @override
   String get goName => name;
 
   @override
-  String get goPath => goPath;
+  String get goPath => path;
 
   @override
   ClAdapter buildPage(BuildContext context) =>
