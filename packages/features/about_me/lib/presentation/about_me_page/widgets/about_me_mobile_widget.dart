@@ -1,10 +1,11 @@
+import 'package:components_library/components_library_export.dart';
 import 'package:flutter/material.dart';
 
-class AboutMeMobileWidget extends StatelessWidget {
-  const AboutMeMobileWidget({super.key});
+class AboutMeMobile extends StatelessWidget {
+  const AboutMeMobile({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Label('about me page mobile');
   }
 }

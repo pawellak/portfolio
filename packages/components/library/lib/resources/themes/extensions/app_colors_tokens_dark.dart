@@ -5,6 +5,13 @@ import 'package:flutter/material.dart';
 class AppColorsTokensDark extends AppColorsTokens {
   const AppColorsTokensDark();
 
+
+  @override
+  Color get topNavigationBackgroundColor => Colors.black;
+
+  @override
+  Color get topNavigationTitleBackgroundColor => Colors.white;
+
   @override
   Color get splashScreenBackgroundColor => AppColors.cPrimary;
 
@@ -244,4 +251,6 @@ class AppColorsTokensDark extends AppColorsTokens {
 
   @override
   Color get dividerColor => AppColors.cGray[25] ?? AppColors.cGray;
+
+
 }

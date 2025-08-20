@@ -1,4 +1,18 @@
 {
   "label.about_me.title": "O mnie",
-  "label.about_me.description": "Ukonczyłem studia z zakresu elektroniki."
+  "label.about_me.description": "Czesc, jestem pasjonatem...",
+  "label.about_me.download_cv": "Pobierz CV",
+  "label.about_me.education.title": "Edukacja",
+  "label.about_me.education.eng.degree": "degree_eng",
+  "label.about_me.education.eng.institution": "institution_eng",
+  "label.about_me.education.eng.period": "period_eng",
+  "label.about_me.education.eng.description": "description_eng",
+  "label.about_me.education.msc_eng.degree": "degree_msc_eng",
+  "label.about_me.education.msc_eng.institution": "institution_msc_eng",
+  "label.about_me.education.msc_eng.period": "period_msc_eng",
+  "label.about_me.education.msc_eng.description": "description_msc_eng",
+  "label.menu.portfolio": "Portfolio",
+  "label.menu_item.projects": "Projekty",
+  "label.menu_item.about_me": "O mnie",
+  "label.menu_item.settings": "Ustawienia"
 }

@@ -8,5 +8,5 @@ class StatefulMobileHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) =>
-      Center(child: Text('123'),);
+      const Center(child: Text('Mobile'),);
 }

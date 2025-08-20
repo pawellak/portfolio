@@ -1,4 +1,15 @@
 {
-  "label.about_me.title": "About Me",
-  "label.about_me.description": "I graduated in electronics."
+  "label.about_me.title": "About me",
+  "label.about_me.description": "Hello I am passionate...",
+  "label.about_me.download_cv": "Download CV",
+  "label.about_me.education.title": "Education",
+  "label.about_me.education.eng.degree": "degree_eng",
+  "label.about_me.education.eng.institution": "institution_eng",
+  "label.about_me.education.eng.period": "period_eng",
+  "label.about_me.education.eng.description": "description_eng",
+  "label.about_me.education.msc_eng.degree": "degree_msc_eng",
+  "label.about_me.education.msc_eng.institution": "institution_msc_eng",
+  "label.about_me.education.msc_eng.period": "period_msc_eng",
+  "label.about_me.education.msc_eng.description": "description_msc_eng",
+  "label.menu.portfolio" : "Portfolio"
 }

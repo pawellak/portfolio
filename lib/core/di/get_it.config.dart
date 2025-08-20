@@ -16,8 +16,6 @@ import 'package:feature_project_list/di/feature_project_list_package.module.dart
     as _i214;
 import 'package:feature_settings/di/feature_settings_package.module.dart'
     as _i504;
-import 'package:feature_weather/di/feature_weather_package.module.dart'
-    as _i149;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
@@ -35,7 +33,6 @@ extension GetItInjectableX on _i174.GetIt {
     await _i504.FeatureSettingsPackageModule().init(gh);
     await _i214.FeatureProjectListPackageModule().init(gh);
     await _i102.FeatureAboutMePackageModule().init(gh);
-    await _i149.FeatureWeatherPackageModule().init(gh);
     await _i960.ComponentsCorePackageModule().init(gh);
     await _i144.ComponentsLibraryPackageModule().init(gh);
     return this;

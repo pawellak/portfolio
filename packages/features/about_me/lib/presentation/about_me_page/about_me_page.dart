@@ -5,13 +5,14 @@ import 'package:feature_about_me/presentation/about_me_page/widgets/about_me_des
 import 'package:feature_about_me/presentation/about_me_page/widgets/about_me_mobile_widget.dart';
 import 'package:flutter/material.dart';
 
-const _defaultKey = '/';
+const _kPageName = 'about-me';
+const _kDefaultRoutePath = '/';
 
 class AboutMePage extends BasePage<AboutMeCubit> {
   const AboutMePage({super.key});
 
-  static const String name = 'about-me';
-  static const String path = _defaultKey;
+  static const String name = _kPageName;
+  static const String path = _kDefaultRoutePath;
 
   @override
   String get goName => name;
@@ -20,6 +21,5 @@ class AboutMePage extends BasePage<AboutMeCubit> {
   String get goPath => path;
 
   @override
-  ClAdapter buildPage(BuildContext context) =>
-      const ClAdapter(desktop: AboutMeDesktopWidget(), mobile: AboutMeMobileWidget());
+  ClAdapter buildPage(BuildContext context) => const ClAdapter(desktop: AboutMeDesktop(), mobile: AboutMeMobile());
 }

@@ -5,9 +5,16 @@ import 'package:flutter/material.dart';
 class AppColorsTokensLight extends AppColorsTokens {
   const AppColorsTokensLight();
 
-  ///Bottom Navigation
+
   @override
-  Color get bottomNavigationBackgroundColor => AppColors.cGray[100] ?? AppColors.cGray;
+  Color get topNavigationBackgroundColor => AppColors.cBlack;
+
+  @override
+  Color get topNavigationTitleBackgroundColor => AppColors.cWhite;
+
+  @override
+  Color get refreshIndicatorColor => AppColors.cPrimary[500] ?? AppColors.cPrimary;
+
 
   @override
   Color get checkBoxSelectedColor => AppColors.cPrimary[200] ?? AppColors.cPrimary;
@@ -16,12 +23,13 @@ class AppColorsTokensLight extends AppColorsTokens {
   Color get checkboxBorderColor => AppColors.cPrimary[200] ?? AppColors.cPrimary;
 
   @override
-  Color get refreshIndicatorColor => AppColors.cPrimary[500] ?? AppColors.cPrimary;
-
-  @override
   Color get checkboxEnabledBackgroundColor => AppColors.cPrimary;
 
-  ///Navigation
+
+  //Navigation
+  @override
+  Color get bottomNavigationBackgroundColor => AppColors.cGray[100] ?? AppColors.cGray;
+
   @override
   Color get navigationProgressBarBackground => AppColors.cPrimary[200] ?? AppColors.cPrimary;
 
@@ -61,14 +69,14 @@ class AppColorsTokensLight extends AppColorsTokens {
   @override
   Color get splashScreenBackgroundColor => AppColors.cPrimary;
 
-  ///Badge
+  //Badge
   @override
   Color get lightBadgeBackgroundColor => AppColors.cSecondary[300] ?? AppColors.cSecondary;
 
   @override
   Color get lightBadgeTextColor => AppColors.cPrimary[300] ?? AppColors.cPrimary;
 
-  ///Text
+  //Text
   @override
   Color get textBrand => AppColors.cPrimary[300] ?? AppColors.cPrimary;
 
@@ -81,7 +89,7 @@ class AppColorsTokensLight extends AppColorsTokens {
   @override
   Color get textWhite => AppColors.cWhite;
 
-  ///Navigation
+  //Navigation
   @override
   Color get navigationAdditionalTextColor => AppColors.cGray[500] ?? AppColors.cGray;
 
@@ -91,15 +99,14 @@ class AppColorsTokensLight extends AppColorsTokens {
   @override
   Color get surfaceContainerIconPrimary => AppColors.cPrimary[300] ?? AppColors.cPrimary;
 
-  ///Button Ghost
+  //Button Ghost
   @override
   Color get buttonGhostDefaultColor => AppColors.cPrimary[300] ?? AppColors.cPrimary;
 
   @override
   Color get buttonGhostPressedColor => AppColors.cPrimary[400] ?? AppColors.cPrimary;
 
-  ///Button Primary
-
+  //Button Primary
   @override
   Color get buttonPrimaryPressedBackgroundColor => AppColors.cPrimary[400] ?? AppColors.cPrimary;
 
@@ -115,7 +122,7 @@ class AppColorsTokensLight extends AppColorsTokens {
   @override
   Color get buttonPrimaryDisabledTextColor => AppColors.cGray[400] ?? AppColors.cGray;
 
-  ///Button Secondary
+  //Button Secondary
   @override
   Color get buttonSecondaryBackgroundColor => AppColors.cSecondary[300] ?? AppColors.cGray;
 
@@ -164,8 +171,7 @@ class AppColorsTokensLight extends AppColorsTokens {
   @override
   Color get textFieldDisabledBackgroundColor => AppColors.cGray[200] ?? AppColors.cGray;
 
-  /// Snackbar
-
+  // Snackbar
   @override
   Color get snackBarDefaultBackgroundColor => AppColors.cGray[500] ?? AppColors.cGray;
 
@@ -196,7 +202,7 @@ class AppColorsTokensLight extends AppColorsTokens {
   @override
   Color get snackBarSuccessTextColor => AppColors.cWhite;
 
-  ///Surface
+  //Surface
   @override
   Color get overlayDarkBackgroundColor => AppColors.cPrimary[500]?.withAlpha(230) ?? AppColors.cPrimary;
 
@@ -206,7 +212,7 @@ class AppColorsTokensLight extends AppColorsTokens {
   @override
   Color get surfaceContainerSecondary => AppColors.cGray[50] ?? AppColors.cGray;
 
-  ///Shimmer
+  //Shimmer
   @override
   Color get shimmerBaseColor => AppColors.cGray[50] ?? AppColors.cGray;
 
@@ -237,7 +243,7 @@ class AppColorsTokensLight extends AppColorsTokens {
   @override
   AppColorsTokensLight lerp(ThemeExtension<AppColorsTokens>? other, double t) => const AppColorsTokensLight();
 
-  ///Done Action
+  //Done Action
   @override
   Color get doneActionKeyboardBackgroundColor => const Color(0xFFECECEE);
 
@@ -246,4 +252,5 @@ class AppColorsTokensLight extends AppColorsTokens {
 
   @override
   Color get dividerColor => AppColors.cGray[900] ?? AppColors.cGray;
+
 }

@@ -10,6 +10,6 @@ class AboutMeRouter implements BaseRouter {
 
   @override
   StatefulShellBranch get statefulShellBranch => StatefulShellBranch(
-        routes: [AboutMePage().toRoute],
+        routes: [const AboutMePage().toRoute],
       );
 }
