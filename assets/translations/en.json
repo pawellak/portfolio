@@ -11,5 +11,6 @@
   "label.about_me.education.msc_eng.institution": "institution_msc_eng",
   "label.about_me.education.msc_eng.period": "period_msc_eng",
   "label.about_me.education.msc_eng.description": "description_msc_eng",
-  "label.menu.portfolio" : "Portfolio"
+  "label.menu.portfolio": "Portfolio",
+  "label.settings.quote": "You’ve got to start with the customer experience and work backwards to the technology. You can’t start with the technology and try to figure out where you’re going to try and sell it."
 }

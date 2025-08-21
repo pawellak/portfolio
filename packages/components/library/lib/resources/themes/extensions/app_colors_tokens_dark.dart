@@ -32,7 +32,7 @@ class AppColorsTokensDark extends AppColorsTokens {
   @override
   Color get checkboxTextColor => AppColors.cPrimary[500] ?? AppColors.cPrimary;
 
-  ///Navigation
+  //Navigation
   @override
   Color get navigationProgressBarBackground => AppColors.cPrimary[200] ?? AppColors.cPrimary;
 
@@ -42,14 +42,14 @@ class AppColorsTokensDark extends AppColorsTokens {
   @override
   Color get navigationTextColor => AppColors.cWhite;
 
-  ///Badge
+  //Badge
   @override
   Color get lightBadgeBackgroundColor => AppColors.cGray[700] ?? AppColors.cGray;
 
   @override
   Color get lightBadgeTextColor => AppColors.cGray[400] ?? AppColors.cGray;
 
-  ///Text
+  //Text
   @override
   Color get textBrand => AppColors.cPrimary[100] ?? AppColors.cPrimary;
 
@@ -74,7 +74,7 @@ class AppColorsTokensDark extends AppColorsTokens {
   @override
   Color get moreMenuColorText => AppColors.cPrimary[500] ?? AppColors.cPrimary;
 
-  ///Navigation
+  //Navigation
   @override
   Color get navigationAdditionalTextColor => AppColors.cGray[400] ?? AppColors.cGray;
 
@@ -82,16 +82,19 @@ class AppColorsTokensDark extends AppColorsTokens {
   Color get surfaceContainerIconBackground => AppColors.cGray[900] ?? AppColors.cGray;
 
   @override
+  Color get containerBorderColor => AppColors.cBlack.withAlpha(120);
+
+  @override
   Color get surfaceContainerIconPrimary => AppColors.cPrimary[100] ?? AppColors.cPrimary;
 
-  ///Button Ghost
+  //Button Ghost
   @override
   Color get buttonGhostDefaultColor => AppColors.cPrimary[100] ?? AppColors.cPrimary;
 
   @override
   Color get buttonGhostPressedColor => AppColors.cPrimary[75] ?? AppColors.cPrimary;
 
-  ///Button Primary
+  //Button Primary
 
   @override
   Color get buttonPrimaryPressedBackgroundColor => AppColors.cPrimary[100] ?? AppColors.cPrimary;
@@ -108,7 +111,7 @@ class AppColorsTokensDark extends AppColorsTokens {
   @override
   Color get buttonPrimaryDisabledTextColor => AppColors.cGray[600] ?? AppColors.cGray;
 
-  ///Button Secondary
+  //Button Secondary
 
   @override
   Color get buttonSecondaryBackgroundColor => AppColors.cGray[700] ?? AppColors.cGray;
@@ -197,14 +200,14 @@ class AppColorsTokensDark extends AppColorsTokens {
   @override
   Color get surfaceContainerSecondary => AppColors.cGray[600] ?? AppColors.cGray;
 
-  ///Bottom Navigation
+  //Bottom Navigation
   @override
   Color get bottomNavigationPrimaryColor => AppColors.cBlack;
 
   @override
   Color get bottomNavigationSecondaryColor => AppColors.cWhite;
 
-  ///Shimmer
+  //Shimmer
   @override
   Color get shimmerBaseColor => AppColors.cGray[800] ?? AppColors.cGray;
 
@@ -235,7 +238,7 @@ class AppColorsTokensDark extends AppColorsTokens {
   @override
   Color get shadowColor => (AppColors.cPrimary[600] ?? AppColors.cPrimary).withAlpha(50);
 
-  ///Done Action
+  //Done Action
   @override
   Color get doneActionKeyboardBackgroundColor => const Color(0xFF373737);
 

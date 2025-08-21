@@ -76,6 +76,8 @@ abstract class AppColorsTokens extends ThemeExtension<AppColorsTokens> {
   abstract final Color buttonSecondaryTextColor;
   abstract final Color buttonSecondaryStrokeColor;
 
+
+
   //Text Field
   abstract final Color textFieldBackgroundColor;
   abstract final Color textFieldSecondaryBackgroundColor;
@@ -104,6 +106,7 @@ abstract class AppColorsTokens extends ThemeExtension<AppColorsTokens> {
 
   //Surface
   abstract final Color surfaceContainerPrimary;
+  abstract final Color containerBorderColor;
   abstract final Color surfaceContainerSecondary;
   abstract final Color overlayDarkBackgroundColor;
 

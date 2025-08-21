@@ -1,5 +1,8 @@
+import 'package:feature_settings/presentation/settings_page/widgets/setting_list_widget.dart';
 import 'package:feature_settings/presentation/settings_page/widgets/settings_label_widget.dart';
 import 'package:flutter/material.dart';
+
+const _kSettingsFlex = 2;
 
 class SettingsExpandedWidget extends StatelessWidget {
   const SettingsExpandedWidget({super.key});
@@ -8,10 +11,10 @@ class SettingsExpandedWidget extends StatelessWidget {
   Widget build(BuildContext context) => const Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          SettingsLabelWidget(),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text('Settings Expanded')],
+          Flexible(child: SettingsLabelWidget()),
+          Flexible(
+            flex: _kSettingsFlex,
+            child: SettingListWidget(),
           ),
         ],
       );

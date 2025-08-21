@@ -27,18 +27,17 @@ class ClRadioListTile<T> extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
 
   @override
-  Widget build(BuildContext context) => RadioListTile<T>(
-        contentPadding: padding,
-        title: _buildWidget(context),
-        value: value,
-        groupValue: groupValue,
-        onChanged: onChanged,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Dimens.dimen12)),
-        tileColor: context.colorTokens.surfaceContainerPrimary,
-        selectedTileColor: context.colorTokens.surfaceContainerPrimary,
-        fillColor:
-            WidgetStateProperty.resolveWith<Color>((states) => context.colorTokens.checkboxEnabledBackgroundColor),
-      );
+  Widget build(BuildContext context) => RadioListTile.adaptive(
+    contentPadding: padding,
+    title: _buildWidget(context),
+    value: value,
+    groupValue: groupValue,
+    onChanged: onChanged,
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Dimens.dimen12)),
+    tileColor: context.colorTokens.surfaceContainerPrimary,
+    selectedTileColor: context.colorTokens.surfaceContainerPrimary,
+    fillColor: WidgetStateProperty.resolveWith<Color>((states) => context.colorTokens.checkboxEnabledBackgroundColor),
+  );
 
   Widget _buildWidget(BuildContext context) {
     if (suffixWidget != null) {
@@ -50,10 +49,7 @@ class ClRadioListTile<T> extends StatelessWidget {
       return Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          columnWidget ?? const SizedBox(),
-          _buildTitle(context),
-        ],
+        children: [columnWidget ?? const SizedBox(), _buildTitle(context)],
       );
     } else {
       return _buildTitle(context);
@@ -61,10 +57,10 @@ class ClRadioListTile<T> extends StatelessWidget {
   }
 
   Label _buildTitle(BuildContext context) => Label(
-        title,
-        translate: translate,
-        style: context.textTheme.bodyMedium,
-        fontWeight: FontWeight.bold,
-        color: titleColor ?? context.colorTokens.checkboxTextColor,
-      );
+    title,
+    translate: translate,
+    style: context.textTheme.bodyMedium,
+    fontWeight: FontWeight.bold,
+    color: titleColor ?? context.colorTokens.textPrimary,
+  );
 }

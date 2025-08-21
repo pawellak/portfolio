@@ -23,7 +23,7 @@ class AppColorsTokensLight extends AppColorsTokens {
   @override
   Color get checkboxEnabledBackgroundColor => AppColors.cPrimary;
 
-  ///Bottom Navigation
+  //Bottom Navigation
   @override
   Color get bottomNavigationPrimaryColor => AppColors.cBlack;
 
@@ -86,6 +86,9 @@ class AppColorsTokensLight extends AppColorsTokens {
 
   @override
   Color get surfaceContainerIconBackground => AppColors.cGray[100] ?? AppColors.cGray;
+
+  @override
+  Color get containerBorderColor => AppColors.cBlack.withAlpha(60);
 
   @override
   Color get surfaceContainerIconPrimary => AppColors.cPrimary[300] ?? AppColors.cPrimary;
@@ -162,7 +165,7 @@ class AppColorsTokensLight extends AppColorsTokens {
   @override
   Color get textFieldDisabledBackgroundColor => AppColors.cGray[200] ?? AppColors.cGray;
 
-  // Snackbar
+  //Snackbar
   @override
   Color get snackBarDefaultBackgroundColor => AppColors.cGray[500] ?? AppColors.cGray;
 
