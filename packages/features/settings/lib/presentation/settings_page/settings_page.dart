@@ -1,8 +1,8 @@
 import 'package:components_library/widgets/adapters/cl_adapter.dart';
 import 'package:components_library/widgets/page/base_page.dart';
 import 'package:feature_settings/presentation/settings_page/bloc/settings_cubit.dart';
-import 'package:feature_settings/presentation/settings_page/widgets/settings_desktop_widget.dart';
-import 'package:feature_settings/presentation/settings_page/widgets/settings_mobile_widget.dart';
+import 'package:feature_settings/presentation/settings_page/settings_compact_widget.dart';
+import 'package:feature_settings/presentation/settings_page/settings_expanded_widget.dart';
 import 'package:flutter/material.dart';
 
 class SettingsPage extends BasePage<SettingsCubit> {
@@ -12,12 +12,6 @@ class SettingsPage extends BasePage<SettingsCubit> {
   static const String path = '/$name';
 
   @override
-  String get goName => name;
-
-  @override
-  String get goPath => path;
-
-  @override
   ClAdapter buildPage(BuildContext context) =>
-      const ClAdapter(desktop: SettingsDesktopWidget(), mobile: SettingsMobileWidget());
+      const ClAdapter(expanded: SettingsExpandedWidget(), compact: SettingsCompactWidget());
 }

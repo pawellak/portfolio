@@ -1,16 +1,15 @@
 import 'package:components_library/resources/app_colors.dart';
 import 'package:components_library/resources/themes/extensions/app_colors_tokens.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' show Color, ThemeExtension;
 
 class AppColorsTokensDark extends AppColorsTokens {
   const AppColorsTokensDark();
 
+  @override
+  Color get topNavigationSecondaryBackgroundColor => AppColors.cBlack;
 
   @override
-  Color get topNavigationBackgroundColor => Colors.black;
-
-  @override
-  Color get topNavigationTitleBackgroundColor => Colors.white;
+  Color get topNavigationPrimaryBackgroundColor => AppColors.cWhite;
 
   @override
   Color get splashScreenBackgroundColor => AppColors.cPrimary;
@@ -200,16 +199,10 @@ class AppColorsTokensDark extends AppColorsTokens {
 
   ///Bottom Navigation
   @override
-  Color get bottomNavigationBackgroundColor => AppColors.cGray[900] ?? AppColors.cGray;
+  Color get bottomNavigationPrimaryColor => AppColors.cBlack;
 
   @override
-  Color get bottomNavigationBorderColor => AppColors.cGray[700] ?? AppColors.cGray;
-
-  @override
-  Color get bottomNavigationDeselectedColor => AppColors.cGray[400] ?? AppColors.cGray;
-
-  @override
-  Color get bottomNavigationSelectedColor => AppColors.cPrimary[600] ?? AppColors.cPrimary;
+  Color get bottomNavigationSecondaryColor => AppColors.cWhite;
 
   ///Shimmer
   @override
@@ -251,6 +244,4 @@ class AppColorsTokensDark extends AppColorsTokens {
 
   @override
   Color get dividerColor => AppColors.cGray[25] ?? AppColors.cGray;
-
-
 }

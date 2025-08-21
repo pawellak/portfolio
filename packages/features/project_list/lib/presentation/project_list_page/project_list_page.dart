@@ -1,9 +1,8 @@
 import 'package:components_library/widgets/adapters/cl_adapter.dart';
 import 'package:components_library/widgets/page/base_page.dart';
 import 'package:feature_project_list/presentation/project_list_page/bloc/project_list_cubit.dart';
-import 'package:feature_project_list/presentation/project_list_page/widgets/project_list_desktop_widget.dart';
-import 'package:feature_project_list/presentation/project_list_page/widgets/project_list_mobile_widget.dart';
-
+import 'package:feature_project_list/presentation/project_list_page/project_list_compact_widget.dart';
+import 'package:feature_project_list/presentation/project_list_page/project_list_expanded_widget.dart';
 import 'package:flutter/material.dart';
 
 class ProjectListPage extends BasePage<ProjectListCubit> {
@@ -13,12 +12,6 @@ class ProjectListPage extends BasePage<ProjectListCubit> {
   static const String path = '/$name';
 
   @override
-  String get goName => name;
-
-  @override
-  String get goPath => path;
-
-  @override
   ClAdapter buildPage(BuildContext context) =>
-      const ClAdapter(desktop: ProjectListDesktopWidget(), mobile: ProjectListMobileWidget());
+      const ClAdapter(expanded: ProjectListExpandedWidget(), compact: ProjectListCompactWidget());
 }

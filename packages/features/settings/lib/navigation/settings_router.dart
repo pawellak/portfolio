@@ -9,5 +9,13 @@ class SettingsRouter implements BaseRouter {
   List<RouteBase> get routes => [];
 
   @override
-  StatefulShellBranch get statefulShellBranch => StatefulShellBranch(routes: [const SettingsPage().toRoute]);
+  StatefulShellBranch get statefulShellBranch => StatefulShellBranch(
+        routes: [
+          GoRoute(
+            path: SettingsPage.path,
+            name: SettingsPage.name,
+            builder: (context, state) => const SettingsPage(),
+          ),
+        ],
+      );
 }

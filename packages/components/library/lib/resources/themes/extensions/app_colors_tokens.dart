@@ -31,14 +31,12 @@ abstract class AppColorsTokens extends ThemeExtension<AppColorsTokens> {
   abstract final Color scaffoldBackgroundColor;
 
   //Top Navigation
-  abstract final Color topNavigationBackgroundColor;
-  abstract final Color topNavigationTitleBackgroundColor;
+  abstract final Color topNavigationSecondaryBackgroundColor;
+  abstract final Color topNavigationPrimaryBackgroundColor;
 
   //Bottom Navigation
-  abstract final Color bottomNavigationBackgroundColor;
-  abstract final Color bottomNavigationBorderColor;
-  abstract final Color bottomNavigationSelectedColor;
-  abstract final Color bottomNavigationDeselectedColor;
+  abstract final Color bottomNavigationPrimaryColor;
+  abstract final Color bottomNavigationSecondaryColor;
 
   abstract final Color refreshIndicatorColor;
 

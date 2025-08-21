@@ -1,14 +1,15 @@
-import 'package:components_core/components_pub_dev_export.dart' show StatefulNavigationShell;
+import 'package:components_core/components_pub_dev_export.dart' show StatefulNavigationShell, StringTranslateExtension;
 import 'package:components_core/navigation/app_menu_data.dart' show AppMenuData;
 import 'package:components_library/components_library_export.dart' show ContextExtensions, ThemeExtensions;
-import 'package:components_library/presentation/home_page/web/widgets/appbar_item_widget.dart' show AppBarItemWidget;
 import 'package:components_library/resources/dimens.dart' show Dimens;
 import 'package:components_library/widgets/container/cl_container.dart';
 import 'package:components_library/widgets/label/label.dart' show Label;
 import 'package:flutter/material.dart';
 
-class AppBarDesktopMenuWidget extends StatelessWidget {
-  const AppBarDesktopMenuWidget({super.key, required this.navigationShell});
+part 'appbar_expanded_item_widget.dart';
+
+class AppBarExpandedMenuWidget extends StatelessWidget {
+  const AppBarExpandedMenuWidget({super.key, required this.navigationShell});
 
   final StatefulNavigationShell navigationShell;
 
@@ -16,7 +17,7 @@ class AppBarDesktopMenuWidget extends StatelessWidget {
   Widget build(BuildContext context) => Column(
     children: [
       ClContainer(
-        backgroundColor: context.colorTokens.topNavigationBackgroundColor,
+        backgroundColor: context.colorTokens.topNavigationSecondaryBackgroundColor,
         width: double.infinity,
         height: Dimens.dimen72,
         borderRadius: BorderRadius.zero,
@@ -26,7 +27,7 @@ class AppBarDesktopMenuWidget extends StatelessWidget {
           children:
               AppMenuData.values.indexed
                   .map(
-                    (e) => AppBarItemWidget(
+                    (e) => _AppBarExpandedItemWidget(
                       item: e.$2,
                       onTap: () {
                         _onMenuItemPressed(context, e.$1);
@@ -37,17 +38,17 @@ class AppBarDesktopMenuWidget extends StatelessWidget {
         ),
       ),
       ClContainer(
-        backgroundColor: context.colorTokens.topNavigationTitleBackgroundColor,
+        backgroundColor: context.colorTokens.topNavigationPrimaryBackgroundColor,
         height: Dimens.dimen50,
         borderRadius: BorderRadius.zero,
-        padding: EdgeInsets.symmetric(horizontal: context.paddingMobile),
+        padding: EdgeInsets.symmetric(horizontal: context.desktopPadding),
         width: double.infinity,
         child: Row(
           children: [
             const SizedBox(width: Dimens.dimen12),
             Label(
               'label.menu.portfolio',
-              color: context.colorTokens.topNavigationBackgroundColor,
+              color: context.colorTokens.topNavigationSecondaryBackgroundColor,
               style: context.textTheme.titleLarge,
               fontWeight: FontWeight.bold,
             ),
@@ -56,7 +57,7 @@ class AppBarDesktopMenuWidget extends StatelessWidget {
       ),
       ClContainer(
         height: Dimens.dimen1,
-        backgroundColor: context.colorTokens.topNavigationTitleBackgroundColor,
+        backgroundColor: context.colorTokens.topNavigationPrimaryBackgroundColor,
         width: double.infinity,
       ),
     ],

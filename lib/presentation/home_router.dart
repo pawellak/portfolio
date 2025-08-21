@@ -11,6 +11,6 @@ class HomeRouter extends StatelessWidget {
     supportedLocales: context.supportedLocales,
     locale: context.locale,
     themeMode: ThemeMode.light,
-    routerConfig: MainRouter.router,
+    routerConfig: appRouter,
   );
 }

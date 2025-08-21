@@ -297,13 +297,6 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
-  feature_weather:
-    dependency: "direct main"
-    description:
-      path: "packages/features/weather"
-      relative: true
-    source: path
-    version: "0.0.1"
   ffi:
     dependency: transitive
     description:

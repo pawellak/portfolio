@@ -5,16 +5,14 @@ import 'package:flutter/material.dart';
 class AppColorsTokensLight extends AppColorsTokens {
   const AppColorsTokensLight();
 
+  @override
+  Color get topNavigationSecondaryBackgroundColor => AppColors.cBlack;
 
   @override
-  Color get topNavigationBackgroundColor => AppColors.cBlack;
-
-  @override
-  Color get topNavigationTitleBackgroundColor => AppColors.cWhite;
+  Color get topNavigationPrimaryBackgroundColor => AppColors.cWhite;
 
   @override
   Color get refreshIndicatorColor => AppColors.cPrimary[500] ?? AppColors.cPrimary;
-
 
   @override
   Color get checkBoxSelectedColor => AppColors.cPrimary[200] ?? AppColors.cPrimary;
@@ -25,10 +23,12 @@ class AppColorsTokensLight extends AppColorsTokens {
   @override
   Color get checkboxEnabledBackgroundColor => AppColors.cPrimary;
 
-
-  //Navigation
+  ///Bottom Navigation
   @override
-  Color get bottomNavigationBackgroundColor => AppColors.cGray[100] ?? AppColors.cGray;
+  Color get bottomNavigationPrimaryColor => AppColors.cBlack;
+
+  @override
+  Color get bottomNavigationSecondaryColor => AppColors.cWhite;
 
   @override
   Color get navigationProgressBarBackground => AppColors.cPrimary[200] ?? AppColors.cPrimary;
@@ -44,15 +44,6 @@ class AppColorsTokensLight extends AppColorsTokens {
 
   @override
   Color get scaffoldBackgroundColor => AppColors.cPrimary[50] ?? AppColors.cPrimary;
-
-  @override
-  Color get bottomNavigationBorderColor => AppColors.cPrimary[200] ?? AppColors.cPrimary;
-
-  @override
-  Color get bottomNavigationDeselectedColor => AppColors.cGray[800] ?? AppColors.cPrimary;
-
-  @override
-  Color get bottomNavigationSelectedColor => AppColors.cPrimary;
 
   @override
   Color get runsDotsDeselectedColor => AppColors.cGray[700] ?? AppColors.cBlack;
@@ -252,5 +243,4 @@ class AppColorsTokensLight extends AppColorsTokens {
 
   @override
   Color get dividerColor => AppColors.cGray[900] ?? AppColors.cGray;
-
 }

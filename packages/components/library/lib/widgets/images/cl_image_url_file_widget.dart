@@ -1,5 +1,3 @@
-import 'dart:io';
-import 'package:components_library/widgets/loading/cl_shimmer.dart';
 import 'package:flutter/material.dart';
 
 const _defaultBorderRadius = 8.0;

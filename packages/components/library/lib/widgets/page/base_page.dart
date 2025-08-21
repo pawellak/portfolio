@@ -11,9 +11,6 @@ abstract class BasePage<T extends BaseCubit> extends StatelessWidget {
   final bool canPop;
   final dynamic initialParams;
 
-  abstract final String goName;
-  abstract final String goPath;
-
   final EdgeInsets _edgeInsets;
 
   Widget buildPage(BuildContext context);

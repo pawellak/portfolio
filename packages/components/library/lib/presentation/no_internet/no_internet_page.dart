@@ -11,12 +11,6 @@ class NoInternetPage extends BasePage<NoInternetCubit> {
   static const path = '/$name';
 
   @override
-  String get goName => name;
-
-  @override
-  String get goPath => path;
-
-  @override
   Widget buildPage(BuildContext context) => BlocListener<NoInternetCubit, NoInternetState>(
     listener: (context, state) {
       switch (state) {
