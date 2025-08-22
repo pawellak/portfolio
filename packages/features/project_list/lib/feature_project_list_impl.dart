@@ -5,12 +5,6 @@ import 'package:feature_project_list/presentation/project_list_page/project_list
 class FeatureProjectListImpl implements FeatureProjectList {
   const FeatureProjectListImpl();
 
-  static const String featureName = ProjectListPage.name;
-  static const String featurePath = ProjectListPage.path;
-
-  @override
-  String get path => ProjectListPage.path;
-
-  @override
-  String get name => ProjectListPage.name;
+  static const String name = ProjectListPage.name;
+  static const String path = ProjectListPage.path;
 }

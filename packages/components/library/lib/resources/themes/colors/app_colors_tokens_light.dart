@@ -1,5 +1,5 @@
 import 'package:components_library/resources/app_colors.dart';
-import 'package:components_library/resources/themes/extensions/app_colors_tokens.dart';
+import 'package:components_library/resources/themes/colors/app_colors_tokens.dart';
 import 'package:flutter/material.dart';
 
 class AppColorsTokensLight extends AppColorsTokens {
@@ -218,6 +218,9 @@ class AppColorsTokensLight extends AppColorsTokens {
 
   @override
   Color get iconSecondaryColor => AppColors.cGray[800] ?? AppColors.cGray;
+
+  @override
+  Color get iconBackgroundColor => AppColors.cGray[200] ?? AppColors.cGray;
 
   @override
   Color get registrationAvailableNegativeColor => (AppColors.cSuccess[200] ?? AppColors.cSuccess).withAlpha(200);

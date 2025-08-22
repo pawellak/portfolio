@@ -43,7 +43,7 @@ class ClRadioListTile<T> extends StatelessWidget {
     if (suffixWidget != null) {
       return Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [_buildTitle(context), suffixWidget ?? const SizedBox()],
+        children: [Expanded(child: _buildTitle(context)), suffixWidget ?? const SizedBox()],
       );
     } else if (columnWidget != null) {
       return Column(

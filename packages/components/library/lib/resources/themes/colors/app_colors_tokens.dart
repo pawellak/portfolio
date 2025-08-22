@@ -49,6 +49,7 @@ abstract class AppColorsTokens extends ThemeExtension<AppColorsTokens> {
 
   abstract final Color iconPrimaryColor;
   abstract final Color iconSecondaryColor;
+  abstract final Color iconBackgroundColor;
 
   //Splash Screen
   abstract final Color splashScreenBackgroundColor;

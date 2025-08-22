@@ -2,8 +2,8 @@ import 'package:components_library/resources/app_colors.dart';
 import 'package:components_library/resources/themes/app_text_selection_teme.dart';
 import 'package:components_library/resources/themes/app_text_themes.dart';
 import 'package:components_library/resources/themes/app_transition_theme.dart';
-import 'package:components_library/resources/themes/extensions/app_colors_tokens_dark.dart';
-import 'package:components_library/resources/themes/extensions/app_colors_tokens_light.dart';
+import 'package:components_library/resources/themes/colors/app_colors_tokens_dark.dart';
+import 'package:components_library/resources/themes/colors/app_colors_tokens_light.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -11,7 +11,7 @@ abstract class AppThemes {
   static final appThemeLight = ThemeData(
     useMaterial3: true,
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.cPrimary),
-    scaffoldBackgroundColor: Colors.red,
+    scaffoldBackgroundColor: AppColors.cGray[100] ?? AppColors.cGray,
     fontFamily: GoogleFonts.manrope().fontFamily,
     extensions: const [AppColorsTokensLight()],
     textTheme: AppTextThemes.appTextTheme,

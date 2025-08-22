@@ -7,13 +7,15 @@ class ClSwitch extends StatelessWidget {
     super.key,
     required this.value,
     required this.onChanged,
-    required this.label,
+    required this.labelSelected,
+    required this.labelUnselected,
     required this.iconDataSelected,
     required this.iconDataUnselected,
   });
 
   final bool value;
-  final String label;
+  final String labelSelected;
+  final String labelUnselected;
   final IconData iconDataSelected;
   final IconData iconDataUnselected;
   final void Function(bool) onChanged;
@@ -25,19 +27,24 @@ class ClSwitch extends StatelessWidget {
     onTap: () {
       onChanged(!value);
     },
-    child: Row(
-      spacing: Dimens.dimen12,
-      children: [
-        AnimatedCrossFade(
-          firstChild: ClIcon(path: iconDataSelected),
-          secondChild: ClIcon(path: iconDataUnselected),
-          crossFadeState: value? CrossFadeState.showFirst:CrossFadeState.showSecond,
-          duration: const Duration(seconds: 1),
-        ),
-
-        Expanded(child: Text(label)),
-        Switch.adaptive(value: value, onChanged: onChanged),
-      ],
-    ).addPaddingAll(Dimens.dimen4),
+    child: Ink(
+      decoration: BoxDecoration(
+        color: context.colorTokens.surfaceContainerPrimary,
+        borderRadius: BorderRadius.circular(Dimens.dimen12),
+      ),
+      child: Row(
+        spacing: Dimens.dimen12,
+        children: [
+          AnimatedCrossFade(
+            firstChild: ClIcon(path: iconDataSelected),
+            secondChild: ClIcon(path: iconDataUnselected),
+            crossFadeState: value ? CrossFadeState.showFirst : CrossFadeState.showSecond,
+            duration: const Duration(seconds: 1),
+          ),
+          Expanded(child: Label(value ? labelSelected : labelUnselected,fontWeight: FontWeight.w600,)),
+          Switch.adaptive(value: value, onChanged: onChanged),
+        ],
+      ).addPaddingAll(Dimens.dimen12),
+    ),
   );
 }

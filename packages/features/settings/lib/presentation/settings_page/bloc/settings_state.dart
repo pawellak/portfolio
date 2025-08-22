@@ -1,12 +1,17 @@
 part of 'settings_cubit.dart';
 
-sealed class SettingsState extends BaseState {}
+sealed class SettingsState extends BaseState {
+  const SettingsState();
+}
 
-class SettingsInitial extends SettingsState {}
+class SettingsInitial extends SettingsState {
+  const SettingsInitial();
+}
 
-class SettingsChanged extends SettingsState {
-  SettingsChanged({required this.isDarkMode, required this.isEnglish});
+class SettingsUpdateTheme extends SettingsState {
+  const SettingsUpdateTheme();
+}
 
-  final bool isDarkMode;
-  final bool isEnglish;
+class SettingsUpdateLocale extends SettingsState {
+  const SettingsUpdateLocale();
 }

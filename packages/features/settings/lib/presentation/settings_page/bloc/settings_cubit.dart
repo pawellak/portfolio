@@ -1,23 +1,36 @@
-import 'package:components_library/components_library_export.dart';
+import 'package:components_library/components_library_export.dart'
+    show AppSettingsRepository, BaseCubit, BaseState, injectable;
+import 'package:flutter/material.dart' show ThemeMode;
 
 part 'settings_state.dart';
 
 @injectable
 class SettingsCubit extends BaseCubit<SettingsState> {
-  SettingsCubit() : super(SettingsInitial());
+  SettingsCubit(this._repository) : super(const SettingsInitial());
 
-  @override
-  Future<void> initialMethod() async {
-    _fetchSettings();
-  }
+  final AppSettingsRepository _repository;
 
-  void _fetchSettings() {}
+  ThemeMode get currentTheme => _repository.currentThemeMode;
+
+  String get currentLocale => _repository.currentLocale;
 
   void onToggleThemePressed(bool? isDarkMode) {
-    emit(SettingsChanged(isDarkMode: isDarkMode??false,isEnglish: false));
+    _repository.saveThemeMode(_getThemeModeToSave(isDarkMode));
+    emit(const SettingsUpdateTheme());
   }
 
-  void onLanguageRadioChanged(bool? isEnglish) {
-    emit(SettingsChanged(isEnglish: !(isEnglish??false),isDarkMode: false));
+  void onLanguageRadioChanged(String? locale) {
+    _repository.saveLocale(locale);
+    emit(const SettingsUpdateLocale());
+  }
+
+  ThemeMode? _getThemeModeToSave(bool? isDarkMode) {
+    final ThemeMode? themeModeToSave;
+    if (isDarkMode == null) {
+      themeModeToSave = null;
+    } else {
+      themeModeToSave = isDarkMode ? ThemeMode.dark : ThemeMode.light;
+    }
+    return themeModeToSave;
   }
 }

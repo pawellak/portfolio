@@ -7,7 +7,7 @@ import 'package:feature_settings/navigation/settings_router.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
 final GoRouter appRouter = GoRouter(
-  initialLocation: FeatureAboutMeImpl.featurePath,
+  initialLocation: FeatureAboutMeImpl.path,
   routes: [
     StatefulShellRoute.indexedStack(
       branches: [

@@ -1,5 +1,5 @@
-import 'package:components_library/widgets/adapters/cl_adapter.dart';
-import 'package:components_library/widgets/page/base_page.dart';
+import 'package:components_library/components_library_export.dart'
+    show AppSettingsProvider, BasePage, BlocListener, BuildContextEasyLocalizationExtension, ClAdapter, ReadContext;
 import 'package:feature_settings/presentation/settings_page/bloc/settings_cubit.dart';
 import 'package:feature_settings/presentation/settings_page/settings_compact_widget.dart';
 import 'package:feature_settings/presentation/settings_page/settings_expanded_widget.dart';
@@ -12,6 +12,18 @@ class SettingsPage extends BasePage<SettingsCubit> {
   static const String path = '/$name';
 
   @override
-  ClAdapter buildPage(BuildContext context) =>
-      const ClAdapter(expanded: SettingsExpandedWidget(), compact: SettingsCompactWidget());
+  Widget buildPage(_) => BlocListener<SettingsCubit, SettingsState>(
+        listener: (context, state) async {
+          switch (state) {
+            case SettingsUpdateTheme():
+              context.read<AppSettingsProvider>().notifyAppSettingsChanges();
+            case SettingsUpdateLocale():
+              final currentLocal = context.read<SettingsCubit>().currentLocale;
+              await context.setLocale(Locale(currentLocal));
+            case SettingsInitial():
+              break;
+          }
+        },
+        child: const ClAdapter(expanded: SettingsExpandedWidget(), compact: SettingsCompactWidget()),
+      );
 }

@@ -1,5 +1,5 @@
 import 'package:components_library/resources/app_colors.dart';
-import 'package:components_library/resources/themes/extensions/app_colors_tokens.dart';
+import 'package:components_library/resources/themes/colors/app_colors_tokens.dart';
 import 'package:flutter/material.dart' show Color, ThemeExtension;
 
 class AppColorsTokensDark extends AppColorsTokens {
@@ -9,13 +9,13 @@ class AppColorsTokensDark extends AppColorsTokens {
   Color get topNavigationSecondaryBackgroundColor => AppColors.cBlack;
 
   @override
-  Color get topNavigationPrimaryBackgroundColor => AppColors.cWhite;
+  Color get topNavigationPrimaryBackgroundColor => AppColors.cGray[300] ?? AppColors.cGray;
 
   @override
   Color get splashScreenBackgroundColor => AppColors.cPrimary;
 
   @override
-  Color get scaffoldBackgroundColor => AppColors.cGray[900] ?? AppColors.cPrimary;
+  Color get scaffoldBackgroundColor => AppColors.cGray[900] ?? AppColors.cGray;
 
   @override
   Color get checkBoxSelectedColor => AppColors.cPrimary[200] ?? AppColors.cPrimary;
@@ -82,7 +82,7 @@ class AppColorsTokensDark extends AppColorsTokens {
   Color get surfaceContainerIconBackground => AppColors.cGray[900] ?? AppColors.cGray;
 
   @override
-  Color get containerBorderColor => AppColors.cBlack.withAlpha(120);
+  Color get containerBorderColor => AppColors.cGray[700] ?? AppColors.cGray;
 
   @override
   Color get surfaceContainerIconPrimary => AppColors.cPrimary[100] ?? AppColors.cPrimary;
@@ -225,6 +225,9 @@ class AppColorsTokensDark extends AppColorsTokens {
 
   @override
   Color get iconSecondaryColor => AppColors.cGray[300] ?? AppColors.cGray;
+
+  @override
+  Color get iconBackgroundColor => AppColors.cGray[500] ?? AppColors.cGray;
 
   @override
   Color get registrationAvailableNegativeColor => (AppColors.cSuccess[500] ?? AppColors.cSuccess).withAlpha(200);

@@ -15,6 +15,11 @@
   "label.menu_item.projects": "Projekty",
   "label.menu_item.about_me": "O mnie",
   "label.menu_item.settings": "Ustawienia",
-  "label.settings.quote": "You’ve got to start with the customer experience and work backwards to the technology. You can’t start with the technology and try to figure out where you’re going to try and sell it."
-
+  "label.settings.quote": "Musisz zacząć od doświadczenia klienta, a dopiero potem cofnąć się i sięgnąć po technologię. Nie możesz zacząć od technologii i próbować wymyślić, gdzie ją sprzedać.",
+  "label.settings.theme": "Motyw",
+  "label.settings.isDarkMode": "Ciemny motyw",
+  "label.settings.isLightMode": "Jasny motyw",
+  "label.settings.language": "Język",
+  "label.settings.polish": "Polski",
+  "label.settings.english": "Angielski"
 }

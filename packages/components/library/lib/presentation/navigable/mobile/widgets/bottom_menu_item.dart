@@ -2,15 +2,13 @@ part of '../navigable_mobile_body.dart';
 
 class _BottomMenuItem extends StatelessWidget {
   const _BottomMenuItem({
-    required this.label,
-    required this.icon,
     required this.itemIndex,
     required this.activeIndex,
     required this.onTap,
+    required this.menuItemData,
   });
 
-  final String label;
-  final IconData icon;
+  final AppMenuData menuItemData;
   final int itemIndex;
   final int activeIndex;
   final void Function(int) onTap;
@@ -26,8 +24,12 @@ class _BottomMenuItem extends StatelessWidget {
     child: Column(
       spacing: Dimens.dimen4,
       children: [
-        ClIcon(size: Dimens.dimen20, path: icon, color: _iconColor(context)),
-        Label(label, color: _iconColor(context)),
+        ClIcon(
+          size: Dimens.dimen20,
+          path: _isActive ? menuItemData.selectedIcon : menuItemData.unselectedIcon,
+          color: _iconColor(context),
+        ),
+        Label(menuItemData.label, color: _iconColor(context)),
       ],
     ),
   );

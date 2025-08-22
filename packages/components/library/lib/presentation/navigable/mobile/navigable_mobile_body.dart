@@ -35,8 +35,7 @@ class NavigableMobileBody extends StatelessWidget {
                         child: _BottomMenuItem(
                           onTap: navigationShell.goBranch,
                           activeIndex: navigationShell.currentIndex,
-                          icon: menuItemData.selectedIcon,
-                          label: menuItemData.label,
+                          menuItemData: menuItemData,
                           itemIndex: menuItemData.index,
                         ),
                       ),

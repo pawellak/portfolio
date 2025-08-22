@@ -18,8 +18,9 @@ class FeatureSettingsPackageModule extends _i526.MicroPackageModule {
   @override
   _i687.FutureOr<void> init(_i526.GetItHelper gh) {
     gh.factory<_i787.SettingsRouter>(() => const _i787.SettingsRouter());
-    gh.factory<_i102.SettingsCubit>(() => _i102.SettingsCubit());
     gh.singleton<_i965.FeatureSettings>(
         () => const _i736.FeatureSettingsImpl());
+    gh.factory<_i102.SettingsCubit>(
+        () => _i102.SettingsCubit(gh<_i965.AppSettingsRepository>()));
   }
 }

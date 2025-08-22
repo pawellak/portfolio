@@ -5,12 +5,6 @@ import 'package:feature_about_me/presentation/about_me_page/about_me_page.dart';
 class FeatureAboutMeImpl implements FeatureAboutMe {
   const FeatureAboutMeImpl();
 
-  static const String featurePath = AboutMePage.path;
-  static const String featureName = AboutMePage.name;
-
-  @override
-  String get path => AboutMePage.path;
-
-  @override
-  String get name => AboutMePage.name;
+  static const String path = AboutMePage.path;
+  static const String name = AboutMePage.name;
 }
