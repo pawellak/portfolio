@@ -38,16 +38,16 @@ class ClContainer extends StatelessWidget {
   }
 
   Widget _buildChildWidget(BuildContext context) => Container(
-        width: width,
-        height: height,
-        padding: padding ?? const EdgeInsets.all(Dimens.dimen16),
-        margin: margin,
-        decoration: BoxDecoration(
-          border: border,
-          boxShadow: boxShadow,
-          color: backgroundColor ?? context.colorTokens.surfaceContainerPrimary,
-          borderRadius: borderRadius ?? BorderRadius.circular(Dimens.dimen12),
-        ),
-        child: child,
-      );
+    width: width,
+    height: height,
+    padding: padding ?? const EdgeInsets.all(Dimens.dimen16),
+    margin: margin,
+    decoration: BoxDecoration(
+      border: border,
+      boxShadow: boxShadow,
+      color: backgroundColor ?? context.colorTokens.surfaceContainerPrimary,
+      borderRadius: borderRadius ?? BorderRadius.circular(Dimens.dimen12),
+    ),
+    child: child,
+  );
 }

@@ -9,7 +9,7 @@ const _kPageName = 'about-me';
 const _kDefaultRoutePath = '/';
 
 class AboutMePage extends BasePage<AboutMeCubit> {
-  const AboutMePage({super.key});
+  const AboutMePage({super.key}) : super(edgeInsets: EdgeInsets.zero);
 
   static const String name = _kPageName;
   static const String path = _kDefaultRoutePath;

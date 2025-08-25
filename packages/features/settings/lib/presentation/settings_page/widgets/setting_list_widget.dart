@@ -1,6 +1,6 @@
 import 'package:components_library/components_library_export.dart';
 import 'package:components_library/resources/dimens.dart';
-import 'package:components_library/resources/icons/app_icons.dart';
+import 'package:components_library/resources/icons/app_image.dart';
 import 'package:components_library/widgets/container/cl_container.dart';
 import 'package:feature_settings/presentation/settings_page/bloc/settings_cubit.dart';
 import 'package:flutter/material.dart'
@@ -49,7 +49,7 @@ class SettingListWidget extends StatelessWidget {
                 const Label('label.settings.language'),
                 ClRadioListTile<String>(
                   suffixWidget: const ClImagePathWidget(
-                    path: AppIcons.flagPl,
+                    path: AppImage.flagPl,
                     width: Dimens.dimen44,
                   ),
                   title: 'label.settings.polish',
@@ -59,7 +59,7 @@ class SettingListWidget extends StatelessWidget {
                 ),
                 ClRadioListTile<String>(
                   suffixWidget: const ClImagePathWidget(
-                    path: AppIcons.flagEn,
+                    path: AppImage.flagEn,
                     width: Dimens.dimen44,
                   ),
                   title: 'label.settings.english',

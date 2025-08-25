@@ -1,6 +1,7 @@
 export 'adapters/adapters_export.dart';
 export 'base/export_base.dart';
 export 'buttons/buttons_export.dart';
+export 'dividers/cl_divider.dart';
 export 'icons/icons_export.dart';
 export 'images/images_export.dart';
 export 'label/label_exeport.dart';

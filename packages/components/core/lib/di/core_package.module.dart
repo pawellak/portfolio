@@ -12,6 +12,7 @@ import 'package:components_core/controllers/app_settings_repository_impl.dart'
     as _i950;
 import 'package:components_core/di/core_package.dart' as _i850;
 import 'package:components_core/navigation/core_router.dart' as _i861;
+import 'package:components_core/providers/app_settings_provider.dart' as _i428;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:logger/logger.dart' as _i974;
 import 'package:shared_preferences/shared_preferences.dart' as _i460;
@@ -29,6 +30,8 @@ class ComponentsCorePackageModule extends _i526.MicroPackageModule {
     gh.singleton<_i861.CoreRouter>(() => const _i861.CoreRouter());
     gh.factory<_i17.AppSettingsRepository>(
         () => _i950.AppSettingsRepositoryImpl(gh<_i460.SharedPreferences>()));
+    gh.factory<_i428.AppSettingsProvider>(
+        () => _i428.AppSettingsProvider(gh<_i17.AppSettingsRepository>()));
   }
 }
 

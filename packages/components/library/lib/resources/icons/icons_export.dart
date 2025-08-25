@@ -1,2 +1,2 @@
-export 'app_icons.dart';
+export 'app_image.dart';
 export 'app_lottie.dart';

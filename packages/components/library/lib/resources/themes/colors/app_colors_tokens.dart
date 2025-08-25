@@ -120,4 +120,5 @@ abstract class AppColorsTokens extends ThemeExtension<AppColorsTokens> {
   abstract final Color doneActionKeyboardTextColor;
 
   abstract final Color dividerColor;
+  abstract final Color dividerSecondaryColor;
 }

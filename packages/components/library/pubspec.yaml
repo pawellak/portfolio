@@ -21,6 +21,7 @@ dependencies:
   url_launcher: ^6.3.1
   dio: ^5.9.0
   shimmer: ^3.0.0
+  liquid_glass_renderer: ^0.1.1-dev.6
 
 dev_dependencies:
   injectable_generator: any

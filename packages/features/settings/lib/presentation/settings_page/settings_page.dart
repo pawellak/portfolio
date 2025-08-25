@@ -16,7 +16,7 @@ class SettingsPage extends BasePage<SettingsCubit> {
         listener: (context, state) async {
           switch (state) {
             case SettingsUpdateTheme():
-              context.read<AppSettingsProvider>().notifyAppSettingsChanges();
+              context.read<AppSettingsProvider>().refreshApp();
             case SettingsUpdateLocale():
               final currentLocal = context.read<SettingsCubit>().currentLocale;
               await context.setLocale(Locale(currentLocal));

@@ -4,17 +4,38 @@ import 'package:components_library/widgets/container/cl_container.dart';
 import 'package:flutter/material.dart';
 
 class ClImagePathWidget extends StatelessWidget {
-  const ClImagePathWidget({super.key, required this.path, this.width});
+  const ClImagePathWidget({
+    super.key,
+    required this.path,
+    this.width,
+    this.height,
+    this.borderRadius,
+    this.backgroundColor,
+    this.padding,
+    this.margin,
+    this.imageBorderRadius,
+  });
 
   final String path;
   final double? width;
+  final double? height;
+  final BorderRadius? borderRadius;
+  final BorderRadius? imageBorderRadius;
+  final Color? backgroundColor;
+  final EdgeInsets? padding;
+  final EdgeInsets? margin;
 
   @override
   Widget build(BuildContext context) => ClContainer(
+    margin: margin,
     width: width,
-    padding: const EdgeInsets.symmetric(horizontal: Dimens.dimen4),
-    borderRadius: const BorderRadius.all(Radius.circular(Dimens.dimen6)),
-    backgroundColor: context.colorTokens.iconBackgroundColor,
-    child: Image.asset(path, fit: BoxFit.fitHeight),
+    height: height,
+    padding: padding ?? const EdgeInsets.symmetric(horizontal: Dimens.dimen4),
+    borderRadius: borderRadius ?? const BorderRadius.all(Radius.circular(Dimens.dimen6)),
+    backgroundColor: backgroundColor ?? context.colorTokens.iconBackgroundColor,
+    child: ClipRRect(
+      borderRadius: imageBorderRadius ?? const BorderRadius.all(Radius.circular(Dimens.dimen6)),
+      child: Image.asset(path, fit: BoxFit.fitHeight),
+    ),
   );
 }

@@ -1,4 +1,4 @@
-import 'package:feature_about_me/presentation/about_me_page/widgets/about_me_label_widget.dart';
+import 'package:feature_about_me/presentation/about_me_page/widgets/about_me_section_contact.dart';
 import 'package:flutter/material.dart';
 
 class AboutMeExpanded extends StatelessWidget {
@@ -6,13 +6,18 @@ class AboutMeExpanded extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => const Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          AboutMeLabelWidget(),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text('About me Expanded')],
-          ),
-        ],
-      );
+    children: [
+      AboutMeSectionContact(),
+      // Column(
+      //   children: [
+      //     AboutMeEducationWidget(
+      //       labelKey: 'label.about_me.education.msc_eng',
+      //     ),
+      //     AboutMeEducationWidget(
+      //       labelKey: 'label.about_me.education.msc_eng',
+      //     ),
+      //   ],
+      // ),
+    ],
+  );
 }

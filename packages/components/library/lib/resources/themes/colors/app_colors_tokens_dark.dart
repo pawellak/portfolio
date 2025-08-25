@@ -250,4 +250,7 @@ class AppColorsTokensDark extends AppColorsTokens {
 
   @override
   Color get dividerColor => AppColors.cGray[25] ?? AppColors.cGray;
+
+  @override
+  Color get dividerSecondaryColor => AppColors.cGray[50] ?? AppColors.cGray;
 }

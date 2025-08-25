@@ -248,5 +248,8 @@ class AppColorsTokensLight extends AppColorsTokens {
   Color get doneActionKeyboardTextColor => const Color(0xFF0E5EFB);
 
   @override
-  Color get dividerColor => AppColors.cGray[900] ?? AppColors.cGray;
+  Color get dividerColor => AppColors.cGray[400] ?? AppColors.cGray;
+
+  @override
+  Color get dividerSecondaryColor => AppColors.cGray[300] ?? AppColors.cGray;
 }

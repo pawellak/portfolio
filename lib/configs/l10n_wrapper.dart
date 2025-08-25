@@ -4,8 +4,8 @@ import 'package:pawellak_portfolio/core/i18n/labels_loader.dart';
 
 const String _translationsPath = 'assets/translations';
 
-class AppSettingsL10nWrapper extends StatelessWidget {
-  const AppSettingsL10nWrapper(this.child, {super.key});
+class L10nWrapper extends StatelessWidget {
+  const L10nWrapper(this.child, {super.key});
 
   final Widget child;
 
