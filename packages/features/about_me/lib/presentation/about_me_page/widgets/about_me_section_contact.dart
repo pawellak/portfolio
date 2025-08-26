@@ -13,27 +13,30 @@ class AboutMeSectionContact extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => ClContainer(
-    borderRadius: BorderRadius.zero,
+    borderRadius: const BorderRadius.only(
+      bottomLeft: Radius.circular(Dimens.dimen12),
+      bottomRight: Radius.circular(Dimens.dimen12),
+    ),
+    margin: const EdgeInsets.only(bottom: Dimens.dimen12),
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       spacing: Dimens.dimen16,
       children: [
         const ClImagePathWidget(path: AppImage.me, width: Dimens.dimen120),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            spacing: Dimens.dimen12,
-            children: [
-              Label(_kMe, style: context.textTheme.titleLarge, textAlign: TextAlign.start),
-              const _AboutMeContactWidget(description: _kPhoneContact, icon: FluentIcons.phone_16_regular),
-              const _AboutMeContactWidget(description: _kEmail, icon: FluentIcons.mail_16_regular),
-              const _AboutMeContactWidget(
-                description: 'label.about_me.office_place',
-                icon: FluentIcons.city_16_regular,
-                translate: true,
-              ),
-            ],
-          ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          spacing: Dimens.dimen12,
+          children: [
+            Label(_kMe, style: context.textTheme.titleLarge, textAlign: TextAlign.start, fontWeight: FontWeight.bold),
+            const _AboutMeContactWidget(description: _kPhoneContact, icon: FluentIcons.phone_16_regular),
+            const _AboutMeContactWidget(description: _kEmail, icon: FluentIcons.mail_16_regular),
+            const _AboutMeContactWidget(
+              description: 'label.about_me.office_place',
+              icon: FluentIcons.city_16_regular,
+              translate: true,
+            ),
+          ],
         ),
       ],
     ),
@@ -52,14 +55,12 @@ class _AboutMeContactWidget extends StatelessWidget {
     spacing: Dimens.dimen8,
     children: [
       ClIcon(path: icon, color: context.colorTokens.textPrimary),
-      Expanded(
-        child: Label(
-          description,
-          translate: translate,
-          style: context.textTheme.bodyLarge,
-          color: context.colorTokens.textSecondary,
-          textAlign: TextAlign.start,
-        ),
+      Label(
+        description,
+        translate: translate,
+        style: context.textTheme.bodyLarge,
+        color: context.colorTokens.textPrimary,
+        textAlign: TextAlign.start,
       ),
     ],
   );

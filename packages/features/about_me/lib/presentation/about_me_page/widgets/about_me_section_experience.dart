@@ -2,7 +2,6 @@ import 'package:components_library/components_library_export.dart';
 import 'package:components_library/resources/dimens.dart';
 import 'package:components_library/resources/icons/app_image.dart';
 import 'package:components_library/widgets/container/cl_container.dart';
-import 'package:components_library/widgets/dividers/cl_secondary_divider.dart';
 import 'package:feature_about_me/presentation/widgets/about_me_section_widget.dart';
 import 'package:flutter/material.dart'
     show
@@ -27,13 +26,11 @@ class AboutMeSectionExperience extends StatelessWidget {
     icon: FluentIcons.book_compass_24_regular,
     title: 'label.about_me.experience.title',
     child: Column(
+      spacing: Dimens.dimen12,
       children: [
         _AboutMeExperienceWidget(labelKey: 'sygnisoft', imagePath: AppImage.sygnisoft),
-        ClSecondaryDivider(),
         _AboutMeExperienceWidget(labelKey: 'svantek', imagePath: AppImage.svantek),
-        ClSecondaryDivider(),
         _AboutMeExperienceWidget(labelKey: 'falcon_acoustics', imagePath: AppImage.falconAcoustics),
-        ClSecondaryDivider(),
         _AboutMeExperienceWidget(labelKey: 'ecoplan', imagePath: AppImage.ecoplan),
       ],
     ),
@@ -58,7 +55,7 @@ class _AboutMeExperienceWidget extends StatelessWidget {
           children: [
             Expanded(child: _AboutMeSectionExperienceCompanyWidget(labelKey)),
             ClImagePathWidget(
-              width: Dimens.dimen90,
+              width: Dimens.dimen120,
               path: imagePath,
               borderRadius: const BorderRadius.all(Radius.circular(Dimens.dimen8)),
               imageBorderRadius: BorderRadius.zero,
@@ -80,21 +77,20 @@ class _AboutMeSectionExperienceCompanyWidget extends StatelessWidget {
   final String labelKey;
 
   @override
-  Widget build(BuildContext context) => Expanded(
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Label(
-          'label.about_me.experience.company_name.$labelKey',
-          style: context.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold),
-        ),
-        Label(
-          'label.about_me.experience.position.$labelKey',
-          style: context.textTheme.bodySmall,
-          color: context.colorTokens.textSecondary,
-        ),
-        Label('label.about_me.experience.period.$labelKey', style: context.textTheme.bodySmall),
-      ],
-    ),
+  Widget build(BuildContext context) => Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Label(
+        'label.about_me.experience.company_name.$labelKey',
+        style: context.textTheme.titleSmall,
+        fontWeight: FontWeight.bold,
+      ),
+      Label('label.about_me.experience.position.$labelKey', style: context.textTheme.bodyLarge),
+      Label(
+        'label.about_me.experience.period.$labelKey',
+        style: context.textTheme.bodyMedium,
+        color: context.colorTokens.textSecondary,
+      ),
+    ],
   );
 }

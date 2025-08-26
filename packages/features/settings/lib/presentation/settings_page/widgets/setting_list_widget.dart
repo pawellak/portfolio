@@ -3,6 +3,7 @@ import 'package:components_library/resources/dimens.dart';
 import 'package:components_library/resources/icons/app_image.dart';
 import 'package:components_library/widgets/container/cl_container.dart';
 import 'package:feature_settings/presentation/settings_page/bloc/settings_cubit.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart'
     show Border, BuildContext, Colors, Column, CrossAxisAlignment, Icons, MainAxisAlignment, StatelessWidget, Widget;
 
@@ -20,6 +21,7 @@ class SettingListWidget extends StatelessWidget {
         children: [
           ClContainer(
             backgroundColor: Colors.transparent,
+            margin: const EdgeInsets.only(top: Dimens.dimen12),
             border: Border.all(color: context.colorTokens.containerBorderColor),
             child: Column(
               spacing: Dimens.dimen8,

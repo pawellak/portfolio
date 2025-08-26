@@ -28,15 +28,7 @@ abstract class BasePage<T extends BaseCubit> extends StatelessWidget {
       builder:
           (providerContext) => PopScope(
             canPop: canPop,
-            child: SafeArea(
-              bottom: false,
-              child: Padding(
-                padding: _edgeInsets,
-                child: CustomScrollView(
-                  slivers: [SliverFillRemaining(hasScrollBody: false, child: buildPage(context))],
-                ),
-              ),
-            ),
+            child: SafeArea(bottom: false, child: Padding(padding: _edgeInsets, child: buildPage(context))),
           ),
     ),
   );

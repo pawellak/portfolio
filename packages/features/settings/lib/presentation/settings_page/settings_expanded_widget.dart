@@ -2,8 +2,8 @@ import 'package:feature_settings/presentation/settings_page/widgets/setting_list
 import 'package:feature_settings/presentation/settings_page/widgets/settings_label_widget.dart';
 import 'package:flutter/material.dart';
 
-const _kSettingsFlex = 3;
-const _kLabelFlex = 2;
+const _kSettingsFlex = 4;
+const _kLabelFlex = 3;
 
 class SettingsExpandedWidget extends StatelessWidget {
   const SettingsExpandedWidget({super.key});

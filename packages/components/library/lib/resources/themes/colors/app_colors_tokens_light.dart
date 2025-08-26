@@ -9,7 +9,7 @@ class AppColorsTokensLight extends AppColorsTokens {
   Color get topNavigationSecondaryBackgroundColor => AppColors.cBlack;
 
   @override
-  Color get topNavigationPrimaryBackgroundColor => AppColors.cWhite;
+  Color get topNavigationPrimaryBackgroundColor => AppColors.cGray[50] ?? AppColors.cGray;
 
   @override
   Color get refreshIndicatorColor => AppColors.cPrimary[500] ?? AppColors.cPrimary;

@@ -40,7 +40,7 @@ class AppColorsTokensDark extends AppColorsTokens {
   Color get navigationProgressBarPrimary => AppColors.cPrimary[900] ?? AppColors.cPrimary;
 
   @override
-  Color get navigationTextColor => AppColors.cWhite;
+  Color get navigationTextColor => AppColors.cGray[200] ?? AppColors.cGray;
 
   //Badge
   @override
@@ -54,13 +54,13 @@ class AppColorsTokensDark extends AppColorsTokens {
   Color get textBrand => AppColors.cPrimary[100] ?? AppColors.cPrimary;
 
   @override
-  Color get textPrimary => AppColors.cGray[100] ?? AppColors.cGray;
+  Color get textPrimary => AppColors.cGray[25] ?? AppColors.cGray;
 
   @override
   Color get textSecondary => AppColors.cGray[300] ?? AppColors.cGray;
 
   @override
-  Color get textWhite => AppColors.cGray[100] ?? AppColors.cGray;
+  Color get textWhite => AppColors.cGray[25] ?? AppColors.cGray;
 
   @override
   Color get runsDotsDeselectedColor => AppColors.cGray[700] ?? AppColors.cBlack;
@@ -100,7 +100,7 @@ class AppColorsTokensDark extends AppColorsTokens {
   Color get buttonPrimaryPressedBackgroundColor => AppColors.cPrimary[100] ?? AppColors.cPrimary;
 
   @override
-  Color get buttonPrimaryTextColor => AppColors.cWhite;
+  Color get buttonPrimaryTextColor => AppColors.cGray[200] ?? AppColors.cGray;
 
   @override
   Color get buttonPrimaryDefaultBackgroundColor => AppColors.cPrimary[600] ?? AppColors.cPrimary;
@@ -183,13 +183,13 @@ class AppColorsTokensDark extends AppColorsTokens {
   Color get snackBarErrorBackgroundColor => AppColors.cError[200] ?? AppColors.cError;
 
   @override
-  Color get snackBarErrorTextColor => AppColors.cWhite;
+  Color get snackBarErrorTextColor => AppColors.cGray[200] ?? AppColors.cGray;
 
   @override
   Color get snackBarSuccessBackgroundColor => AppColors.cSuccess[200] ?? AppColors.cSuccess;
 
   @override
-  Color get snackBarSuccessTextColor => AppColors.cWhite;
+  Color get snackBarSuccessTextColor => AppColors.cGray[200] ?? AppColors.cGray;
 
   @override
   Color get overlayDarkBackgroundColor => AppColors.cBlack.withAlpha(200);
@@ -205,7 +205,7 @@ class AppColorsTokensDark extends AppColorsTokens {
   Color get bottomNavigationPrimaryColor => AppColors.cBlack;
 
   @override
-  Color get bottomNavigationSecondaryColor => AppColors.cWhite;
+  Color get bottomNavigationSecondaryColor => AppColors.cGray[200] ?? AppColors.cGray;
 
   //Shimmer
   @override
@@ -227,7 +227,7 @@ class AppColorsTokensDark extends AppColorsTokens {
   Color get iconSecondaryColor => AppColors.cGray[300] ?? AppColors.cGray;
 
   @override
-  Color get iconBackgroundColor => AppColors.cGray[500] ?? AppColors.cGray;
+  Color get iconBackgroundColor => AppColors.cGray[200] ?? AppColors.cGray;
 
   @override
   Color get registrationAvailableNegativeColor => (AppColors.cSuccess[500] ?? AppColors.cSuccess).withAlpha(200);
@@ -249,8 +249,8 @@ class AppColorsTokensDark extends AppColorsTokens {
   Color get doneActionKeyboardTextColor => const Color(0xFFFBFBFB);
 
   @override
-  Color get dividerColor => AppColors.cGray[25] ?? AppColors.cGray;
+  Color get dividerColor => AppColors.cGray[400] ?? AppColors.cGray;
 
   @override
-  Color get dividerSecondaryColor => AppColors.cGray[50] ?? AppColors.cGray;
+  Color get dividerSecondaryColor => AppColors.cGray[700] ?? AppColors.cGray;
 }

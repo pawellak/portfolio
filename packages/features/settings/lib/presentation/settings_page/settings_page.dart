@@ -24,6 +24,13 @@ class SettingsPage extends BasePage<SettingsCubit> {
               break;
           }
         },
-        child: const ClAdapter(expanded: SettingsExpandedWidget(), compact: SettingsCompactWidget()),
+        child: const CustomScrollView(
+          slivers: [
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: ClAdapter(expanded: SettingsExpandedWidget(), compact: SettingsCompactWidget()),
+            ),
+          ],
+        ),
       );
 }

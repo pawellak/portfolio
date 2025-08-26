@@ -2,7 +2,19 @@ import 'package:components_library/components_library_export.dart' show ClIcon, 
 import 'package:components_library/resources/resources_exports.dart' show Dimens;
 import 'package:components_library/widgets/container/cl_container.dart';
 import 'package:flutter/material.dart'
-    show BuildContext, Column, CrossAxisAlignment, EdgeInsets, Expanded, FontWeight, IconData, Row, SizedBox, StatelessWidget, Widget;
+    show
+        BuildContext,
+        Column,
+        CrossAxisAlignment,
+        EdgeInsets,
+        Expanded,
+        FontWeight,
+        IconData,
+        Row,
+        StatelessWidget,
+        Widget;
+
+const _kMaxDividerWidth = 500.0;
 
 class AboutMeSectionWidget extends StatelessWidget {
   const AboutMeSectionWidget({super.key, required this.icon, required this.title, required this.child});
@@ -20,10 +32,15 @@ class AboutMeSectionWidget extends StatelessWidget {
       children: [
         _AboutMeEducationTitleWidget(title: title, icon: icon),
         ClContainer(
-          width: double.infinity,
+          width: _kMaxDividerWidth,
           height: Dimens.dimen1,
           backgroundColor: context.colorTokens.dividerColor,
-          margin: const EdgeInsets.only(left: Dimens.dimen4, right: Dimens.dimen4, bottom: Dimens.dimen12,top: Dimens.dimen4),
+          margin: const EdgeInsets.only(
+            left: Dimens.dimen4,
+            right: Dimens.dimen4,
+            bottom: Dimens.dimen12,
+            top: Dimens.dimen4,
+          ),
         ),
         child,
       ],
