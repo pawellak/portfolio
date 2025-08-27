@@ -1,4 +1,5 @@
 import 'package:components_library/components_library_export.dart';
+import 'package:components_library/presentation/navigable/controller/navigable_controller.dart';
 import 'package:components_library/resources/dimens.dart' show Dimens;
 import 'package:components_library/widgets/container/cl_container.dart' show ClContainer;
 import 'package:flutter/material.dart';
@@ -23,7 +24,7 @@ class DrawerWidget extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children:
             AppMenuData.values.indexed
-                .map((e) => _DrawerItemWidget(navigationShell: navigationShell, menuIndex: e.$1, item: e.$2))
+                .map((e) => _DrawerItemWidget(navigationShell: navigationShell, index: e.$1, item: e.$2))
                 .toList(),
       ),
     ),

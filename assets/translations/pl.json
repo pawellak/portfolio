@@ -39,5 +39,9 @@
   "label.settings.isLightMode": "Jasny motyw",
   "label.settings.language": "Język",
   "label.settings.polish": "Polski",
-  "label.settings.english": "Angielski"
+  "label.settings.english": "Angielski",
+  "label.projects.page.title": "Wykonane oraz obecne projekty:",
+  "label.projects.page.description": "Konsekwentnie podchodzę do rozwiązywania problemów z wyraźnym naciskiem na dopasowanie rozwiązań do celów biznesowych.",
+  "label.projects.category.title": "Projekt: ",
+  "label.projects.category.period": "Doświadczenie: "
 }

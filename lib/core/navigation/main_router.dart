@@ -4,10 +4,11 @@ import 'package:feature_about_me/feature_about_me_impl.dart';
 import 'package:feature_about_me/navigation/about_me_router.dart';
 import 'package:feature_project_list/navigation/project_list_router.dart';
 import 'package:feature_settings/navigation/settings_router.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter/foundation.dart' show kDebugMode, kIsWeb;
 
 final GoRouter appRouter = GoRouter(
   initialLocation: FeatureAboutMeImpl.path,
+  debugLogDiagnostics: kDebugMode,
   routes: [
     StatefulShellRoute.indexedStack(
       branches: [

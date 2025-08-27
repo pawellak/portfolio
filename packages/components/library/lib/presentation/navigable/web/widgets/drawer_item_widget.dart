@@ -3,10 +3,10 @@ part of 'drawer_widget.dart';
 const _kButtonAlpha = 50;
 
 class _DrawerItemWidget extends StatefulWidget {
-  const _DrawerItemWidget({required this.navigationShell, required this.menuIndex, required this.item});
+  const _DrawerItemWidget({required this.navigationShell, required this.index, required this.item});
 
   final StatefulNavigationShell navigationShell;
-  final int menuIndex;
+  final int index;
   final AppMenuData item;
 
   @override
@@ -54,10 +54,7 @@ class _DrawerItemState extends State<_DrawerItemWidget> {
   );
 
   void _onItemTap(BuildContext context) {
-    widget.navigationShell.goBranch(
-      widget.menuIndex,
-      initialLocation: widget.menuIndex == widget.navigationShell.currentIndex,
-    );
+    NavigableController.onTap(context: context, navigationShell: widget.navigationShell, index: widget.index);
     Scaffold.of(context).closeDrawer();
   }
 }

@@ -6,7 +6,7 @@ class AppColorsTokensLight extends AppColorsTokens {
   const AppColorsTokensLight();
 
   @override
-  Color get topNavigationSecondaryBackgroundColor => AppColors.cBlack;
+  Color get topNavigationSecondaryBackgroundColor => AppColors.cGray[700] ?? AppColors.cGray;
 
   @override
   Color get topNavigationPrimaryBackgroundColor => AppColors.cGray[50] ?? AppColors.cGray;
@@ -25,7 +25,7 @@ class AppColorsTokensLight extends AppColorsTokens {
 
   //Bottom Navigation
   @override
-  Color get bottomNavigationPrimaryColor => AppColors.cBlack;
+  Color get bottomNavigationPrimaryColor => AppColors.cGray[700] ?? AppColors.cGray;
 
   @override
   Color get bottomNavigationSecondaryColor => AppColors.cWhite;

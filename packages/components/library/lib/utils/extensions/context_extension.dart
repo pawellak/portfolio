@@ -12,5 +12,7 @@ extension ContextExtensions on BuildContext {
 
   double get screenWidth => MediaQuery.sizeOf(this).width;
 
+  double get topPadding => MediaQuery.paddingOf(this).top;
+
   double get desktopPadding => clampDouble((screenWidth - 800) / 2, 0, double.infinity);
 }

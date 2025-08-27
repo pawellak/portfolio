@@ -14,4 +14,6 @@ abstract class FeatureWeather implements Feature {
 
 abstract class FeatureProjectList implements Feature {
   const FeatureProjectList();
+
+  String get projectListPageName;
 }

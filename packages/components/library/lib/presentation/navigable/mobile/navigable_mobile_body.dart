@@ -1,5 +1,6 @@
 import 'package:components_core/components_pub_dev_export.dart' show StatefulNavigationShell;
 import 'package:components_library/components_library_export.dart' show AppMenuData, ClScaffold, ThemeExtensions;
+import 'package:components_library/presentation/navigable/controller/navigable_controller.dart';
 import 'package:components_library/resources/dimens.dart';
 import 'package:components_library/widgets/container/cl_container.dart';
 import 'package:components_library/widgets/icons/cl_icon.dart';
@@ -33,7 +34,9 @@ class NavigableMobileBody extends StatelessWidget {
                     .map(
                       (menuItemData) => Expanded(
                         child: _BottomMenuItem(
-                          onTap: navigationShell.goBranch,
+                          onTap: (index) {
+                            NavigableController.onTap(context: context, navigationShell: navigationShell, index: index);
+                          },
                           activeIndex: navigationShell.currentIndex,
                           menuItemData: menuItemData,
                           itemIndex: menuItemData.index,

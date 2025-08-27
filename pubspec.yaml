@@ -24,12 +24,13 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  injectable_generator: 2.6.2
-  build_runner: 2.4.14
-  json_serializable: 6.9.0
+  build_runner: ^2.4.14
+  injectable_generator: ^2.7.0
+  json_serializable: ^6.9.5
 
 flutter:
   uses-material-design: true
   assets:
     - assets/translations/
     - assets/images/
+    - assets/services/local/features/projects/

@@ -39,5 +39,9 @@
   "label.settings.isLightMode": "Light theme",
   "label.settings.language": "Language",
   "label.settings.polish": "Polish",
-  "label.settings.english": "English"
+  "label.settings.english": "English",
+  "label.projects.title": "Executed projects",
+  "label.projects.description": "I consistently approach problem-solving with a clear focus on aligning solutions with the ]business objectives",
+  "label.projects.category.title": "Project: ",
+  "label.projects.category.period": "Experience: "
 }

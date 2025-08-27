@@ -5,11 +5,13 @@ import 'package:feature_settings/presentation/settings_page/settings_compact_wid
 import 'package:feature_settings/presentation/settings_page/settings_expanded_widget.dart';
 import 'package:flutter/material.dart';
 
+const _kPageName = 'settings-page';
+
 class SettingsPage extends BasePage<SettingsCubit> {
   const SettingsPage({super.key});
 
-  static const String name = 'settings-page';
-  static const String path = '/$name';
+  static const String name = _kPageName;
+  static const String path = '/$_kPageName';
 
   @override
   Widget buildPage(_) => BlocListener<SettingsCubit, SettingsState>(

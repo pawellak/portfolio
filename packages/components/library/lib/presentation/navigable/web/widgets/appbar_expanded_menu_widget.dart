@@ -1,6 +1,8 @@
-import 'package:components_core/components_pub_dev_export.dart' show StatefulNavigationShell, StringTranslateExtension;
+import 'package:components_core/components_pub_dev_export.dart'
+    show StatefulNavigationShell, StringTranslateExtension;
 import 'package:components_core/navigation/app_menu_data.dart' show AppMenuData;
 import 'package:components_library/components_library_export.dart' show ContextExtensions, ThemeExtensions;
+import 'package:components_library/presentation/navigable/controller/navigable_controller.dart';
 import 'package:components_library/resources/dimens.dart' show Dimens;
 import 'package:components_library/widgets/container/cl_container.dart';
 import 'package:components_library/widgets/label/label.dart' show Label;
@@ -30,7 +32,7 @@ class AppBarExpandedMenuWidget extends StatelessWidget {
                     (e) => _AppBarExpandedItemWidget(
                       item: e.$2,
                       onTap: () {
-                        _onMenuItemPressed(context, e.$1);
+                        NavigableController.onTap(context: context, navigationShell: navigationShell, index: e.$1);
                       },
                     ),
                   )
@@ -62,8 +64,4 @@ class AppBarExpandedMenuWidget extends StatelessWidget {
       ),
     ],
   );
-
-  void _onMenuItemPressed(BuildContext context, int index) {
-    navigationShell.goBranch(index, initialLocation: index == navigationShell.currentIndex);
-  }
 }

@@ -13,5 +13,7 @@ dependencies:
     path: ../../components/library
 
 dev_dependencies:
-  build_runner: any
   injectable_generator: any
+  json_serializable: ^6.9.5
+  json_annotation: any
+  build_runner: any

@@ -14,6 +14,7 @@ class ClImagePathWidget extends StatelessWidget {
     this.padding,
     this.margin,
     this.imageBorderRadius,
+    this.fit = BoxFit.fitHeight,
   });
 
   final String path;
@@ -24,6 +25,7 @@ class ClImagePathWidget extends StatelessWidget {
   final Color? backgroundColor;
   final EdgeInsets? padding;
   final EdgeInsets? margin;
+  final BoxFit fit;
 
   @override
   Widget build(BuildContext context) => ClContainer(
@@ -35,7 +37,7 @@ class ClImagePathWidget extends StatelessWidget {
     backgroundColor: backgroundColor ?? context.colorTokens.iconBackgroundColor,
     child: ClipRRect(
       borderRadius: imageBorderRadius ?? const BorderRadius.all(Radius.circular(Dimens.dimen6)),
-      child: Image.asset(path, fit: BoxFit.fitHeight),
+      child: Image.asset(path, fit: fit),
     ),
   );
 }

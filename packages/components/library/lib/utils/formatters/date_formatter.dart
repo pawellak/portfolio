@@ -16,4 +16,20 @@ abstract class DateFormatter {
       return AppConstants.emptyString;
     }
   }
+
+  static String formatDateRange({
+    required DateTime? dateTimeStart,
+    required DateTime? dateTimeEnd,
+    required String format,
+  }) {
+    return '${_dateTimeToString(dateTimeStart, format)} - ${_dateTimeToString(dateTimeEnd, format)}';
+  }
+
+  static String _dateTimeToString(DateTime? time, String format) {
+    if (time == null) {
+      return DateFormat(format).format(DateTime.now());
+    } else {
+      return DateFormat(format).format(time);
+    }
+  }
 }
