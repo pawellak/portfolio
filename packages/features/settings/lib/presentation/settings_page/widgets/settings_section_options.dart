@@ -1,14 +1,34 @@
-import 'package:components_library/components_library_export.dart';
+import 'package:components_library/components_library_export.dart'
+    show
+        AppLocale,
+        BlocBuilder,
+        ClImagePathWidget,
+        ClRadioListTile,
+        ClSwitch,
+        Label,
+        ReadContext,
+        ThemeExtensions,
+        ThemeModeExtensions,
+        WidgetExtension;
 import 'package:components_library/resources/dimens.dart';
 import 'package:components_library/resources/icons/app_image.dart';
 import 'package:components_library/widgets/container/cl_container.dart';
 import 'package:feature_settings/presentation/settings_page/bloc/settings_cubit.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart'
-    show Border, BuildContext, Colors, Column, CrossAxisAlignment, Icons, MainAxisAlignment, StatelessWidget, Widget;
+    show
+        Border,
+        BuildContext,
+        Colors,
+        Column,
+        CrossAxisAlignment,
+        EdgeInsets,
+        Icons,
+        MainAxisAlignment,
+        StatelessWidget,
+        Widget;
 
-class SettingListWidget extends StatelessWidget {
-  const SettingListWidget({super.key});
+class SettingSectionOptions extends StatelessWidget {
+  const SettingSectionOptions({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +70,8 @@ class SettingListWidget extends StatelessWidget {
               children: [
                 const Label('label.settings.language'),
                 ClRadioListTile<String>(
-                  suffixWidget: const ClImagePathWidget(
+                  suffixWidget: ClImagePathWidget(
+                    backgroundColor: context.colorTokens.flagBackgroundColor,
                     path: AppImage.flagPl,
                     width: Dimens.dimen44,
                   ),
@@ -60,7 +81,8 @@ class SettingListWidget extends StatelessWidget {
                   onChanged: cubit.onLanguageRadioChanged,
                 ),
                 ClRadioListTile<String>(
-                  suffixWidget: const ClImagePathWidget(
+                  suffixWidget: ClImagePathWidget(
+                    backgroundColor: context.colorTokens.flagBackgroundColor,
                     path: AppImage.flagEn,
                     width: Dimens.dimen44,
                   ),

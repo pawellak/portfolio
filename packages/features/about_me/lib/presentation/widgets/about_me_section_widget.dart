@@ -25,7 +25,7 @@ class AboutMeSectionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => ClContainer(
-    margin: const EdgeInsets.all(Dimens.dimen8),
+    margin: const EdgeInsets.only(top: Dimens.dimen16),
     padding: const EdgeInsets.all(Dimens.dimen12),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,

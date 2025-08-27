@@ -1,7 +1,7 @@
 {
   "label.about_me.title": "About me",
-  "label.about_me.description": "Hello I am passionate...",
   "label.about_me.download_cv": "Download CV",
+  "label.about_me.description": "<div style=\"font-family: Arial, sans-serif; line-height: 1.6;\">\n    <h4 style=\"text-align: justify;\">\n        For over <strong>3.5 years</strong>, I have been professionally creating mobile applications in <em>Flutter</em>, transforming business needs into intuitive, efficient solutions.\n    </h4>\n    <p style=\"text-align: justify;\">\n        My portfolio includes an application developed for a <strong>leading Polish energy company</strong>, used by over <strong>300,000 users</strong> and enjoying a <strong>4.7</strong> rating on the Google Play and App Stores. I am also the author of an application for a global warehousing company, awarded in the international <em>\"The Factory 2023\"</em> competition (among over 20 teams).\n    </p>\n    <p style=\"text-align: justify; \">\n        Complementing my experience is the completion of over <strong>10 diverse, smaller applications</strong>. Proficiency in native <em>iOS</em> and <em>Android</em> technologies provides solid support for configuring and optimizing Flutter projects.\n    </p>\n    <p style=\"text-align: justify; \">\n        My earlier career as an <strong>acoustics engineer</strong> equipped me with valuable <em>precision in analyzing technical documentation</em> and the ability to <em>build professional relationships with clients</em>.\n    </p>\n</div>",
   "label.about_me.education.title": "Education",
   "label.about_me.education.eng.degree": "Engineer",
   "label.about_me.education.eng.institution": "Wrocław University of Science and Technology",
@@ -15,19 +15,19 @@
   "label.about_me.experience.title": "Professional Experience",
   "label.about_me.experience.company_name.ecoplan": "Ecoplan",
   "label.about_me.experience.position.ecoplan": "Environmental Acoustician",
-  "label.about_me.experience.period.ecoplan": "2020.01-2021.01",
+  "label.about_me.experience.period.ecoplan": "2019.09-2020.04 (8 months)",
   "label.about_me.experience.description.ecoplan": "Acoustic measurements and design of noise protection measures in accordance with Polish Standards. Working with national authorities, creating technical documentation.",
   "label.about_me.experience.company_name.falcon_acoustics": "Falcon Acoustics",
   "label.about_me.experience.position.falcon_acoustics": "Building Acoustician",
-  "label.about_me.experience.period.falcon_acoustics": "2020.01-2021.01",
+  "label.about_me.experience.period.falcon_acoustics": "2020.04-2021.03 (1 year)",
   "label.about_me.experience.description.falcon_acoustics": "Acoustic measurements and design of acoustic solutions for newly constructed buildings. Working with architects, documentation, and clients.",
   "label.about_me.experience.company_name.svantek": "Svantek",
   "label.about_me.experience.position.svantek": "Electronics Engineer",
-  "label.about_me.experience.period.svantek": "2020.01-2021.01",
+  "label.about_me.experience.period.svantek": "2021.03-2022.06 (1 year 4 months)",
   "label.about_me.experience.description.svantek": "Commissioning, programming, and implementation of new solutions for sound analysis measuring devices.",
   "label.about_me.experience.company_name.sygnisoft": "Sygnisoft",
   "label.about_me.experience.position.sygnisoft": "Flutter Developer",
-  "label.about_me.experience.period.sygnisoft": "2020.01-2021.01",
+  "label.about_me.experience.period.sygnisoft": "2022.06 - currently (3 years 3 months)",
   "label.about_me.experience.description.sygnisoft": "Designing, implementing, and maintaining mobile applications for over 400,000 users.",
   "label.menu.portfolio": "Portfolio",
   "label.menu_item.projects": "Projects",
@@ -41,5 +41,3 @@
   "label.settings.polish": "Polish",
   "label.settings.english": "English"
 }
-
-

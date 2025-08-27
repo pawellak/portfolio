@@ -9,12 +9,11 @@ const _kPageName = 'about-me';
 const _kDefaultRoutePath = '/';
 
 class AboutMePage extends BasePage<AboutMeCubit> {
-  const AboutMePage({super.key}) : super(edgeInsets: EdgeInsets.zero);
+  const AboutMePage({super.key}) : super();
 
   static const String name = _kPageName;
   static const String path = _kDefaultRoutePath;
 
   @override
-  Widget buildPage(BuildContext context) =>
-      const SingleChildScrollView(child: ClAdapter(expanded: AboutMeExpanded(), compact: AboutMeCompact()));
+  Widget buildPage(BuildContext context) => const SingleChildScrollView(child: ClAdapter(expanded: AboutMeExpanded(), compact: AboutMeCompact()));
 }

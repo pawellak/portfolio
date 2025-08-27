@@ -50,6 +50,7 @@ abstract class AppColorsTokens extends ThemeExtension<AppColorsTokens> {
   abstract final Color iconPrimaryColor;
   abstract final Color iconSecondaryColor;
   abstract final Color iconBackgroundColor;
+  abstract final Color flagBackgroundColor;
 
   //Splash Screen
   abstract final Color splashScreenBackgroundColor;
@@ -112,8 +113,8 @@ abstract class AppColorsTokens extends ThemeExtension<AppColorsTokens> {
   abstract final Color overlayDarkBackgroundColor;
 
   abstract final Color registrationAvailableSuccessColor;
-
   abstract final Color registrationAvailableNegativeColor;
+
   abstract final Color shadowColor;
 
   abstract final Color doneActionKeyboardBackgroundColor;

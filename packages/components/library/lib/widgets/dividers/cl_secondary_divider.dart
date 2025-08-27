@@ -1,7 +1,7 @@
 import 'package:components_library/components_library_export.dart';
 import 'package:components_library/resources/dimens.dart';
 import 'package:components_library/widgets/container/cl_container.dart';
-import 'package:flutter/material.dart' show BuildContext, Color, EdgeInsets, StatelessWidget, Widget;
+import 'package:flutter/material.dart' show BuildContext, EdgeInsets, StatelessWidget, Widget;
 
 class ClSecondaryDivider extends StatelessWidget {
   const ClSecondaryDivider({super.key});

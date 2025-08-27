@@ -91,6 +91,9 @@ class AppColorsTokensLight extends AppColorsTokens {
   Color get containerBorderColor => AppColors.cBlack.withAlpha(60);
 
   @override
+  Color get flagBackgroundColor => AppColors.cGray[200] ?? AppColors.cGray;
+
+  @override
   Color get surfaceContainerIconPrimary => AppColors.cPrimary[300] ?? AppColors.cPrimary;
 
   //Button Ghost

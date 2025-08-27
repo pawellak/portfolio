@@ -9,19 +9,17 @@ class AboutMeSectionEducation extends StatelessWidget {
   const AboutMeSectionEducation({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return const AboutMeSectionWidget(
-      icon: FluentIcons.hat_graduation_16_regular,
-      title: 'label.about_me.education.title',
-      child: Column(
-        spacing: Dimens.dimen20,
-        children: [
-          _AboutMeEducationWidget(labelKey: 'label.about_me.education.msc_eng'),
-          _AboutMeEducationWidget(labelKey: 'label.about_me.education.eng'),
-        ],
-      ),
-    );
-  }
+  Widget build(BuildContext context) => const AboutMeSectionWidget(
+    icon: FluentIcons.hat_graduation_16_regular,
+    title: 'label.about_me.education.title',
+    child: Column(
+      spacing: Dimens.dimen20,
+      children: [
+        _AboutMeEducationWidget(labelKey: 'label.about_me.education.msc_eng'),
+        _AboutMeEducationWidget(labelKey: 'label.about_me.education.eng'),
+      ],
+    ),
+  );
 }
 
 class _AboutMeEducationWidget extends StatelessWidget {

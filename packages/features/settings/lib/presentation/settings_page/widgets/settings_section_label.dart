@@ -1,16 +1,27 @@
 import 'package:components_library/components_library_export.dart' show Label, ThemeExtensions, WidgetExtension;
 import 'package:components_library/resources/dimens.dart';
 import 'package:components_library/widgets/container/cl_container.dart';
-import 'package:flutter/material.dart' show BorderRadius, BuildContext, Column, CrossAxisAlignment, EdgeInsets, FontStyle, MainAxisSize, SizedBox, StatelessWidget, TextAlign, Widget;
+import 'package:flutter/material.dart'
+    show
+        BorderRadius,
+        BuildContext,
+        Column,
+        CrossAxisAlignment,
+        EdgeInsets,
+        FontStyle,
+        MainAxisSize,
+        StatelessWidget,
+        TextAlign,
+        Widget;
 
 const _quoteAuthor = 'Steve Jobs';
 
-class SettingsLabelWidget extends StatelessWidget {
-  const SettingsLabelWidget({super.key});
+class SettingsSectionLabel extends StatelessWidget {
+  const SettingsSectionLabel({super.key});
 
   @override
   Widget build(BuildContext context) => ClContainer(
-        margin:  const EdgeInsets.all(Dimens.dimen32),
+        margin: const EdgeInsets.all(Dimens.dimen32),
         borderRadius: BorderRadius.circular(Dimens.dimen8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
