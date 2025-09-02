@@ -1,7 +1,7 @@
 {
   "label.about_me.title": "About me",
   "label.about_me.download_cv": "Download CV",
-  "label.about_me.description": "<div style=\"font-family: Arial, sans-serif; line-height: 1.6;\">\n    <h4 style=\"text-align: justify;\">\n        For over <strong>3.5 years</strong>, I have been professionally creating mobile applications in <em>Flutter</em>, transforming business needs into intuitive, efficient solutions.\n    </h4>\n    <p style=\"text-align: justify;\">\n        My portfolio includes an application developed for a <strong>leading Polish energy company</strong>, used by over <strong>300,000 users</strong> and enjoying a <strong>4.7</strong> rating on the Google Play and App Stores. I am also the author of an application for a global warehousing company, awarded in the international <em>\"The Factory 2023\"</em> competition (among over 20 teams).\n    </p>\n    <p style=\"text-align: justify; \">\n        Complementing my experience is the completion of over <strong>10 diverse, smaller applications</strong>. Proficiency in native <em>iOS</em> and <em>Android</em> technologies provides solid support for configuring and optimizing Flutter projects.\n    </p>\n    <p style=\"text-align: justify; \">\n        My earlier career as an <strong>acoustics engineer</strong> equipped me with valuable <em>precision in analyzing technical documentation</em> and the ability to <em>build professional relationships with clients</em>.\n    </p>\n</div>",
+  "label.about_me.description": "<h3>For over 3.5 years, I have been professionally creating mobile applications in Flutter, transforming business needs into intuitive and efficient solutions.</h3><p>My portfolio includes an application developed for a <strong>leading Polish energy company</strong>, which is currently used by over <strong>300,000 active users</strong> and holds a user rating of <strong>4.7</strong> on the Google Play and App Store.</p><p>The application I created for a global logistics company <strong>won</strong> the international competition <strong>\"The Factory 2023\"</strong>, outperforming over 20 teams. The app's success was driven by integrating <strong>native</strong> features of the <strong>Zebra</strong> terminal, such as a 3D scanner, within the Flutter framework.</p><p>A practical knowledge of native <strong>iOS</strong> and <strong>Android</strong> technologies is the foundation of my work with Flutter, enabling deep optimization and project configuration. I have hands-on experience working directly with native code, including <strong>updating</strong> existing native applications.</p><p>My previous career as an <strong>acoustics engineer</strong> has equipped me with valuable <em>precision in analyzing technical documentation</em> and the ability to <em>build professional client relationships</em>.</p><p>My experience is complemented by the completion of <strong>over</strong> 10 diverse, smaller applications.</p><p>Selected examples of my work are available for review in the \"<strong>Projects</strong>\" section.</p>",
   "label.about_me.education.title": "Education",
   "label.about_me.education.eng.degree": "Engineer",
   "label.about_me.education.eng.institution": "Wrocław University of Science and Technology",
@@ -40,8 +40,9 @@
   "label.settings.language": "Language",
   "label.settings.polish": "Polish",
   "label.settings.english": "English",
+  "label.projects.page.title": "Completed and ongoing projects:",
   "label.projects.title": "Executed projects",
-  "label.projects.description": "I consistently approach problem-solving with a clear focus on aligning solutions with the ]business objectives",
+  "label.projects.description": "I consistently approach problem-solving with a clear focus on aligning solutions with the business objectives",
   "label.projects.category.title": "Project: ",
   "label.projects.category.period": "Experience: "
 }

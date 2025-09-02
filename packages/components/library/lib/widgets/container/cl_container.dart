@@ -15,6 +15,8 @@ class ClContainer extends StatelessWidget {
     this.width,
     this.border,
     this.height,
+    this.constraints,
+    this.clipBehavior = Clip.none,
   });
 
   final Widget? child;
@@ -27,6 +29,8 @@ class ClContainer extends StatelessWidget {
   final List<BoxShadow>? boxShadow;
   final BorderRadius? borderRadius;
   final BoxBorder? border;
+  final Clip clipBehavior;
+  final BoxConstraints? constraints;
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +42,8 @@ class ClContainer extends StatelessWidget {
   }
 
   Widget _buildChildWidget(BuildContext context) => Container(
+    constraints: constraints,
+    clipBehavior: clipBehavior,
     width: width,
     height: height,
     padding: padding ?? const EdgeInsets.all(Dimens.dimen16),

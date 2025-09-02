@@ -30,6 +30,7 @@ abstract class Dimens {
   static const double dimen100 = 100;
   static const double dimen120 = 120;
   static const double dimen150 = 150;
+  static const double dimen180 = 180;
   static const double dimen200 = 200;
   static const double dimen300 = 300;
 }

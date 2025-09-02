@@ -15,25 +15,7 @@ abstract class SnackBarController {
     );
   }
 
-  static Future<void> showDefaultSnackBar(BuildContext context, String message) async {
-    await _showSnackBar(
-      context,
-      message,
-      context.colorTokens.snackBarDefaultBackgroundColor,
-      context.colorTokens.snackBarDefaultTextColor,
-    );
-  }
-
-  static Future<void> showWarningSnackBar(BuildContext context, String message) async {
-    await _showSnackBar(
-      context,
-      message,
-      context.colorTokens.snackBarWarningBackgroundColor,
-      context.colorTokens.snackBarWarningTextColor,
-    );
-  }
-
-  static Future<void> showErrorSnackBar(BuildContext context, String message) async {
+   static Future<void> showErrorSnackBar(BuildContext context, String message) async {
     await _showSnackBar(
       context,
       message,

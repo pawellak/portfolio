@@ -84,7 +84,7 @@ class _LoadingOverlayState extends State<LoadingOverlay> {
             height: Dimens.dimen300,
             width: Dimens.dimen300,
             path: AppLottie.example,
-            color: context.colorTokens.textWhite,
+            color: context.colorTokens.iconPrimaryColor,
             repeatTimeInMs: _defaultLottieRoundTimeInMs,
           ),
         ),

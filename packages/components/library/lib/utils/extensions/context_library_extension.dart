@@ -7,10 +7,6 @@ extension ContextLibraryExtensions on BuildContext {
     SnackBarController.showErrorSnackBar(this, errorMessage);
   }
 
-  void showWarningToast(String errorMessage) {
-    SnackBarController.showWarningSnackBar(this, errorMessage);
-  }
-
   void showSuccessToast(String infoMessage) {
     SnackBarController.showSuccessSnackBar(this, infoMessage);
   }

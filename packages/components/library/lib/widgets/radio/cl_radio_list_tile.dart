@@ -27,23 +27,17 @@ class ClRadioListTile<T> extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
 
   @override
-  Widget build(BuildContext context) {
-    return RadioListTile.adaptive(
+  Widget build(BuildContext context) => RadioListTile.adaptive(
     contentPadding: padding,
     title: _buildWidget(context),
     value: value,
-
-
-
-
     groupValue: groupValue,
     onChanged: onChanged,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Dimens.dimen12)),
     tileColor: context.colorTokens.surfaceContainerPrimary,
     selectedTileColor: context.colorTokens.surfaceContainerPrimary,
-    fillColor: WidgetStateProperty.resolveWith<Color>((states) => context.colorTokens.checkboxEnabledBackgroundColor),
+    fillColor: WidgetStateProperty.resolveWith<Color>((states) => context.colorTokens.checkboxIconColor),
   );
-  }
 
   Widget _buildWidget(BuildContext context) {
     if (suffixWidget != null) {

@@ -1,17 +1,10 @@
-import 'package:components_library/utils/extensions/extensions_export.dart';
-import 'package:components_library/widgets/launcher/launcher.dart';
+import 'package:components_library/components_library_export.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart';
 
 class ClHtmlLabel extends StatelessWidget {
-  const ClHtmlLabel({
-    super.key,
-    required this.data,
-    this.onLinkTap,
-    this.style,
-    this.isOneLine = false,
-    this.justify = false,
-  });
+  ClHtmlLabel({required this.data, this.onLinkTap, this.style, this.isOneLine = false, this.justify = false})
+    : super(key: UniqueKey());
 
   final String data;
   final VoidCallback? onLinkTap;
@@ -24,31 +17,25 @@ class ClHtmlLabel extends StatelessWidget {
     if (data.isEmpty) {
       return const SizedBox();
     }
+
     return HtmlWidget(
       onErrorBuilder: (context, element, error) => const SizedBox(),
       data,
-      textStyle: style ?? context.textTheme.bodyMedium?.copyWith(color: context.colorTokens.textPrimary),
-      onTapUrl: (url) async {
-        if (url.isNotEmpty) {
-          await const Launcher().launchLink(url);
-        } else {
-          onLinkTap?.call();
+      customStylesBuilder: (element) {
+        switch (element.localName) {
+          case 'h1':
+            return {'color': _colorToHex(context.colorTokens.textH1)};
+          case 'h2':
+            return {'color': _colorToHex(context.colorTokens.textH2)};
+          case 'h3':
+            return {'color': _colorToHex(context.colorTokens.textH3)};
+          case 'h4':
+            return {'color': _colorToHex(context.colorTokens.textH4)};
         }
-        return true;
+        return {'color': _colorToHex(context.colorTokens.textPrimary)};
       },
-      customStylesBuilder: (element) => {'color': _buildColor(context.colorTokens.textPrimary)},
     );
   }
 
-  String _buildColor(Color color) {
-    final int32 =
-        _floatToInt8(color.a) << 24 |
-        _floatToInt8(color.r) << 16 |
-        _floatToInt8(color.g) << 8 |
-        _floatToInt8(color.b) << 0;
-
-    return '0x${int32.toRadixString(16)}';
-  }
-
-  int _floatToInt8(double x) => (x * 255.0).round() & 0xff;
+  String _colorToHex(Color color) => '#${color.toARGB32().toRadixString(16).substring(2, 8)}';
 }

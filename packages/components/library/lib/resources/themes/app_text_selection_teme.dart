@@ -6,7 +6,7 @@ abstract class AppTextSelectionThemes {
 
   static TextSelectionThemeData get dark => TextSelectionThemeData(
         cursorColor: AppColors.cPrimary[100],
-        selectionColor: AppColors.cGray[700],
+        selectionColor: AppColors.cSecondary[700],
         selectionHandleColor: AppColors.cPrimary[100],
       );
 

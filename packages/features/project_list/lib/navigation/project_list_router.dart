@@ -1,6 +1,6 @@
 import 'package:components_library/components_library_export.dart';
 import 'package:feature_project_list/presentation/project_list_page/project_list_page.dart';
-import 'package:feature_project_list/presentation/project_page/position_page.dart';
+import 'package:feature_project_list/presentation/project_page/project_page.dart';
 import 'package:flutter/material.dart';
 
 @injectable
@@ -20,11 +20,12 @@ class ProjectListRouter implements BaseRouter {
           GoRoute(
             path: '${ProjectPage.path}/:jobTitle',
             name: ProjectPage.name,
-            builder: (context, state) => ProjectPage(initialParams: state.pathParameters['jobTitle'], key: UniqueKey()),
+            builder: (context, state) => ProjectPage(initialParams: state.pathParameters['jobTitle']),
           ),
         ],
         builder: (context, state) {
-          return ProjectListPage(key: UniqueKey());
+          final locale = state.extra as String?;
+          return ProjectListPage(key: locale == null ? UniqueKey() : Key(locale));
         },
       ),
     ],

@@ -32,13 +32,11 @@ class _AboutMeEducationWidget extends StatelessWidget {
     crossAxisAlignment: CrossAxisAlignment.start,
     spacing: Dimens.dimen12,
     children: [
-      ClImagePathWidget(
+      const ClImagePathWidget(
         path: AppImage.pwr,
         width: Dimens.dimen64,
-        borderRadius: const BorderRadius.all(Radius.circular(Dimens.dimen8)),
-        imageBorderRadius: BorderRadius.zero,
-        backgroundColor: context.colorTokens.iconBackgroundColor,
-        padding: const EdgeInsets.all(Dimens.dimen6),
+        borderRadius: BorderRadius.all(Radius.circular(Dimens.dimen8)),
+        padding: EdgeInsets.all(Dimens.dimen6),
       ),
       Expanded(
         child: Column(

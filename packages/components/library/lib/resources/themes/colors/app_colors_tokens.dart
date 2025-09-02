@@ -4,33 +4,17 @@ import 'package:flutter/material.dart';
 abstract class AppColorsTokens extends ThemeExtension<AppColorsTokens> {
   const AppColorsTokens();
 
-  abstract final Color checkBoxSelectedColor;
-  abstract final Color checkboxEnabledBackgroundColor;
-  abstract final Color checkboxBorderColor;
-  abstract final Color checkboxTextColor;
+  //Project list Page
+  abstract final Color projectListBackgroundColor;
 
-  abstract final Color surfaceContainerIconBackground;
+  //Checkbox
+  abstract final Color checkboxIconColor;
 
   //Navigation
   abstract final Color navigationProgressBarPrimary;
   abstract final Color navigationProgressBarBackground;
   abstract final Color navigationTextColor;
-
-  //Badge
-  abstract final Color lightBadgeBackgroundColor;
-  abstract final Color lightBadgeTextColor;
-
-  abstract final Color loadingBackgroundColor;
-  abstract final Color surfaceContainerIconPrimary;
   abstract final Color navigationAdditionalTextColor;
-
-  //Shimmer
-  abstract final Color shimmerBaseColor;
-  abstract final Color shimmerHighlightColor;
-
-  abstract final Color scaffoldBackgroundColor;
-
-  //Top Navigation
   abstract final Color topNavigationSecondaryBackgroundColor;
   abstract final Color topNavigationPrimaryBackgroundColor;
 
@@ -38,69 +22,34 @@ abstract class AppColorsTokens extends ThemeExtension<AppColorsTokens> {
   abstract final Color bottomNavigationPrimaryColor;
   abstract final Color bottomNavigationSecondaryColor;
 
-  abstract final Color refreshIndicatorColor;
-
-  //Runs Dots color
-  abstract final Color runsDotsSelectedColor;
-  abstract final Color runsDotsDeselectedColor;
-
+  //More Navigation
   abstract final Color moreMenuColor;
   abstract final Color moreMenuColorText;
 
+  //Loading
+  abstract final Color loadingBackgroundColor;
+  abstract final Color shimmerBaseColor;
+  abstract final Color shimmerHighlightColor;
+
+  //Icons
   abstract final Color iconPrimaryColor;
-  abstract final Color iconSecondaryColor;
   abstract final Color iconBackgroundColor;
   abstract final Color flagBackgroundColor;
-
-  //Splash Screen
-  abstract final Color splashScreenBackgroundColor;
 
   //Text
   abstract final Color textPrimary;
   abstract final Color textSecondary;
-  abstract final Color textBrand;
-  abstract final Color textWhite;
-
-  //Button Ghost
-  abstract final Color buttonGhostDefaultColor;
-  abstract final Color buttonGhostPressedColor;
+  abstract final Color textH1;
+  abstract final Color textH2;
+  abstract final Color textH3;
+  abstract final Color textH4;
 
   //Button Primary
-  abstract final Color buttonPrimaryPressedBackgroundColor;
   abstract final Color buttonPrimaryTextColor;
   abstract final Color buttonPrimaryDefaultBackgroundColor;
-  abstract final Color buttonPrimaryDisabledBackgroundColor;
-  abstract final Color buttonPrimaryDisabledTextColor;
-
-  //Button Secondary
-  abstract final Color buttonSecondaryBackgroundColor;
-  abstract final Color buttonSecondaryPressedBackgroundColor;
-  abstract final Color buttonSecondaryTextColor;
-  abstract final Color buttonSecondaryStrokeColor;
-
-
-
-  //Text Field
-  abstract final Color textFieldBackgroundColor;
-  abstract final Color textFieldSecondaryBackgroundColor;
-  abstract final Color textFieldBorderPressedColor;
-  abstract final Color textFieldTextColor;
-  abstract final Color textFieldTextInputColor;
-  abstract final Color disabledFieldTextColor;
-  abstract final Color textFieldIconColor;
-  abstract final Color successFieldIconColor;
-  abstract final Color errorFieldTextColor;
-  abstract final Color errorFieldBorderColor;
-  abstract final Color textFieldSearchBackgroundColor;
-  abstract final Color textFieldDisabledBackgroundColor;
 
   //Snackbar
-  abstract final Color snackBarDefaultBackgroundColor;
-  abstract final Color snackBarDefaultTextColor;
   abstract final Color snackBarDefaultIconColor;
-  abstract final Color snackBarDefaultStrokeColor;
-  abstract final Color snackBarWarningBackgroundColor;
-  abstract final Color snackBarWarningTextColor;
   abstract final Color snackBarErrorBackgroundColor;
   abstract final Color snackBarErrorTextColor;
   abstract final Color snackBarSuccessBackgroundColor;
@@ -109,17 +58,9 @@ abstract class AppColorsTokens extends ThemeExtension<AppColorsTokens> {
   //Surface
   abstract final Color surfaceContainerPrimary;
   abstract final Color containerBorderColor;
-  abstract final Color surfaceContainerSecondary;
   abstract final Color overlayDarkBackgroundColor;
 
-  abstract final Color registrationAvailableSuccessColor;
-  abstract final Color registrationAvailableNegativeColor;
-
-  abstract final Color shadowColor;
-
-  abstract final Color doneActionKeyboardBackgroundColor;
-  abstract final Color doneActionKeyboardTextColor;
-
+  //Divider
   abstract final Color dividerColor;
   abstract final Color dividerSecondaryColor;
 }

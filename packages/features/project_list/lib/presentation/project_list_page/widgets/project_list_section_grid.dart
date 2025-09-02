@@ -12,7 +12,7 @@ class ProjectListSectionGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final columnItems = clampDouble(context.screenWidth / 500, 2, 4).ceil();
+    final columnItems = clampDouble(context.screenWidth / 600, 2, 4).ceil();
     final rowItems = (items.length / columnItems).ceil();
     return LayoutGrid(
       columnSizes: List.generate(columnItems, (_) => 1.fr),

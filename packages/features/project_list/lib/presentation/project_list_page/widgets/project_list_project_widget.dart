@@ -1,17 +1,18 @@
 import 'package:components_library/components_library_export.dart';
-import 'package:components_library/resources/resources_exports.dart' show AppColors, Dimens;
+import 'package:components_library/resources/resources_exports.dart' show Dimens;
 import 'package:feature_project_list/presentation/data/project_model.dart';
 import 'package:feature_project_list/presentation/project_list_page/project_list_page.dart';
-import 'package:feature_project_list/presentation/project_page/position_page.dart';
+import 'package:feature_project_list/presentation/project_page/project_page.dart';
 import 'package:flutter/material.dart';
 
-const _selectedSpreadRadius = 4.0;
-const _selectedBlurRadius = 5.0;
+const _selectedSpreadRadius = 2.0;
+const _selectedBlurRadius = 1.0;
 const _unselectedShadowRadius = 1.0;
-const _selectedShadowOffset = 4.0;
+const _selectedShadowOffset = 2.5;
 const _unselectedShadowOffset = 2.0;
 const _animationDurationInMs = 300;
 const _widgetMaxLines = 2;
+const _kImageRadius = 11.0;
 
 class ProjectListProjectWidget extends StatefulWidget {
   const ProjectListProjectWidget({super.key, required this.item});
@@ -48,7 +49,7 @@ class _CategoryWidgetState extends State<ProjectListProjectWidget> {
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: (isSelect ? AppColors.cPrimary[200] : AppColors.cPrimary[100]) ?? AppColors.cBlack,
+              color: context.colorTokens.iconPrimaryColor,
               spreadRadius: isSelect ? _selectedSpreadRadius : _unselectedShadowRadius,
               blurRadius: isSelect ? _selectedBlurRadius : _unselectedShadowRadius,
               offset:
@@ -57,22 +58,25 @@ class _CategoryWidgetState extends State<ProjectListProjectWidget> {
                       : const Offset(_unselectedShadowOffset, _unselectedShadowOffset),
             ),
           ],
-          border: Border.all(color: AppColors.cPrimary),
-          color: context.colorTokens.surfaceContainerPrimary,
+          border: Border.all(color: context.colorTokens.iconPrimaryColor),
+          color: context.colorTokens.projectListBackgroundColor,
           borderRadius: BorderRadius.circular(Dimens.dimen12),
         ),
         duration: const Duration(milliseconds: _animationDurationInMs),
         child: Column(
           children: [
             ClImagePathWidget(
+              constraints: const BoxConstraints(maxHeight: Dimens.dimen180),
+              width: double.infinity,
+              padding: EdgeInsets.zero,
               borderRadius: const BorderRadius.only(
-                topRight: Radius.circular(Dimens.dimen12),
-                topLeft: Radius.circular(Dimens.dimen12),
+                topLeft: Radius.circular(_kImageRadius),
+                topRight: Radius.circular(_kImageRadius),
               ),
               path: widget.item.shortDescriptionUrl,
-              fit: BoxFit.fitWidth,
+              fit: BoxFit.cover,
             ),
-            Container(color: AppColors.cPrimary, height: Dimens.dimen1),
+            Container(color: context.colorTokens.iconPrimaryColor, height: Dimens.dimen1),
             const SizedBox(height: Dimens.dimen12),
             ClKeyValueLabel(
               keyLabel: 'label.projects.category.title',

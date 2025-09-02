@@ -58,8 +58,6 @@ class _AboutMeExperienceWidget extends StatelessWidget {
               width: Dimens.dimen120,
               path: imagePath,
               borderRadius: const BorderRadius.all(Radius.circular(Dimens.dimen8)),
-              imageBorderRadius: BorderRadius.zero,
-              backgroundColor: context.colorTokens.iconBackgroundColor,
               padding: const EdgeInsets.all(Dimens.dimen6),
               margin: EdgeInsets.zero,
             ),

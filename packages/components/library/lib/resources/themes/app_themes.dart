@@ -11,16 +11,16 @@ abstract class AppThemes {
   static final appThemeLight = ThemeData(
     useMaterial3: true,
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.cPrimary),
-    scaffoldBackgroundColor: AppColors.cGray[100] ?? AppColors.cGray,
+    scaffoldBackgroundColor: AppColors.cSecondary[100] ?? AppColors.cSecondary,
     fontFamily: GoogleFonts.manrope().fontFamily,
     extensions: const [AppColorsTokensLight()],
     textTheme: AppTextThemes.appTextTheme,
     bottomSheetTheme: BottomSheetThemeData(
       constraints: const BoxConstraints(minWidth: double.infinity, minHeight: 200),
       showDragHandle: true,
-      modalBackgroundColor: AppColors.cGray[100] ?? AppColors.cGray,
+      modalBackgroundColor: AppColors.cSecondary[100] ?? AppColors.cSecondary,
       modalBarrierColor: AppColors.cPrimary[500]?.withAlpha(230) ?? AppColors.cPrimary,
-      backgroundColor: AppColors.cGray[100] ?? AppColors.cGray,
+      backgroundColor: AppColors.cSecondary[100] ?? AppColors.cSecondary,
     ),
     textSelectionTheme: AppTextSelectionThemes.light,
     pageTransitionsTheme: AppTransitionTheme.transitionLightMode,
@@ -29,8 +29,8 @@ abstract class AppThemes {
 
   static final appThemeDark = appThemeLight.copyWith(
     brightness: Brightness.dark,
-    colorScheme: ColorScheme.fromSeed(seedColor: AppColors.cGray),
-    scaffoldBackgroundColor: AppColors.cGray[900],
+    colorScheme: ColorScheme.fromSeed(seedColor: AppColors.cSecondary),
+    scaffoldBackgroundColor: AppColors.cSecondary[900],
     textSelectionTheme: AppTextSelectionThemes.dark,
     pageTransitionsTheme: AppTransitionTheme.transitionDarkMode,
     extensions: [const AppColorsTokensDark()],

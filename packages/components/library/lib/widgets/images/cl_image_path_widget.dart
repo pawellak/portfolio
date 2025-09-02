@@ -13,31 +13,30 @@ class ClImagePathWidget extends StatelessWidget {
     this.backgroundColor,
     this.padding,
     this.margin,
-    this.imageBorderRadius,
     this.fit = BoxFit.fitHeight,
+    this.constraints,
   });
 
   final String path;
   final double? width;
   final double? height;
   final BorderRadius? borderRadius;
-  final BorderRadius? imageBorderRadius;
   final Color? backgroundColor;
   final EdgeInsets? padding;
   final EdgeInsets? margin;
   final BoxFit fit;
+  final BoxConstraints? constraints;
 
   @override
   Widget build(BuildContext context) => ClContainer(
+    constraints: constraints,
+    clipBehavior: Clip.antiAlias,
     margin: margin,
     width: width,
     height: height,
     padding: padding ?? const EdgeInsets.symmetric(horizontal: Dimens.dimen4),
     borderRadius: borderRadius ?? const BorderRadius.all(Radius.circular(Dimens.dimen6)),
     backgroundColor: backgroundColor ?? context.colorTokens.iconBackgroundColor,
-    child: ClipRRect(
-      borderRadius: imageBorderRadius ?? const BorderRadius.all(Radius.circular(Dimens.dimen6)),
-      child: Image.asset(path, fit: fit),
-    ),
+    child: Image.asset(path, fit: fit),
   );
 }
