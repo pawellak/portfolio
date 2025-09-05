@@ -22,19 +22,21 @@ class AboutMeSectionExperience extends StatelessWidget {
   const AboutMeSectionExperience({super.key});
 
   @override
-  Widget build(BuildContext context) => const AboutMeSectionWidget(
-    icon: FluentIcons.book_compass_24_regular,
-    title: 'label.about_me.experience.title',
-    child: Column(
-      spacing: Dimens.dimen12,
-      children: [
-        _AboutMeExperienceWidget(labelKey: 'sygnisoft', imagePath: AppImage.sygnisoft),
-        _AboutMeExperienceWidget(labelKey: 'svantek', imagePath: AppImage.svantek),
-        _AboutMeExperienceWidget(labelKey: 'falcon_acoustics', imagePath: AppImage.falconAcoustics),
-        _AboutMeExperienceWidget(labelKey: 'ecoplan', imagePath: AppImage.ecoplan),
-      ],
-    ),
-  );
+  Widget build(BuildContext context) {
+    return const AboutMeSectionWidget(
+      icon: FluentIcons.book_compass_24_regular,
+      title: 'label.about_me.experience.title',
+      child: Column(
+        spacing: Dimens.dimen12,
+        children: [
+          _AboutMeExperienceWidget(labelKey: 'sygnisoft', imagePath: AppImage.sygnisoft),
+          _AboutMeExperienceWidget(labelKey: 'svantek', imagePath: AppImage.svantek),
+          _AboutMeExperienceWidget(labelKey: 'falcon_acoustics', imagePath: AppImage.falconAcoustics),
+          _AboutMeExperienceWidget(labelKey: 'ecoplan', imagePath: AppImage.ecoplan),
+        ],
+      ),
+    );
+  }
 }
 
 class _AboutMeExperienceWidget extends StatelessWidget {
@@ -75,20 +77,32 @@ class _AboutMeSectionExperienceCompanyWidget extends StatelessWidget {
   final String labelKey;
 
   @override
-  Widget build(BuildContext context) => Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      Label(
-        'label.about_me.experience.company_name.$labelKey',
-        style: context.textTheme.titleSmall,
-        fontWeight: FontWeight.bold,
-      ),
-      Label('label.about_me.experience.position.$labelKey', style: context.textTheme.bodyLarge),
-      Label(
-        'label.about_me.experience.period.$labelKey',
-        style: context.textTheme.bodyMedium,
-        color: context.colorTokens.textSecondary,
-      ),
-    ],
-  );
+  Widget build(BuildContext context) {
+    final periodStart = 'label.about_me.experience.period.start.$labelKey'.tr();
+    final periodEnd = 'label.about_me.experience.period.end.$labelKey'.tr();
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Label(
+          'label.about_me.experience.company_name.$labelKey',
+          style: context.textTheme.titleSmall,
+          fontWeight: FontWeight.bold,
+        ),
+        Label('label.about_me.experience.position.$labelKey', style: context.textTheme.bodyLarge),
+        Label(
+          '$periodStart - ${periodEnd.isEmpty ? 'label.date_time.now'.tr() : periodEnd}',
+          translate: false,
+          style: context.textTheme.bodyMedium,
+          color: context.colorTokens.textSecondary,
+        ),
+        Label(
+          DateFormatter.formatDateTimeToPeriod(periodStart, periodEnd),
+          translate: false,
+          style: context.textTheme.bodyMedium,
+          color: context.colorTokens.textSecondary,
+        ),
+      ],
+    );
+  }
 }

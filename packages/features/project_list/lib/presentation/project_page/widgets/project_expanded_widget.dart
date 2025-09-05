@@ -1,7 +1,12 @@
 import 'package:components_library/components_library_export.dart';
 import 'package:components_library/resources/dimens.dart';
+import 'package:components_library/widgets/container/cl_container.dart';
 import 'package:feature_project_list/presentation/data/project_model.dart';
-import 'package:flutter/material.dart' show BuildContext, Column, Expanded, Row, SizedBox, StatelessWidget, Widget;
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart'
+    show BoxFit, BuildContext, Colors, Column, EdgeInsets, Expanded, Row, SizedBox, StatelessWidget, Widget;
+
+const _kLabelFlex = 2;
 
 class ProjectExpandedWidget extends StatelessWidget {
   const ProjectExpandedWidget({super.key, required this.project});
@@ -9,17 +14,18 @@ class ProjectExpandedWidget extends StatelessWidget {
   final ProjectModel project;
 
   @override
-  Widget build(BuildContext context) => Column(
-    spacing: Dimens.dimen36,
-    children: [
-      const SizedBox(height: Dimens.dimen12),
-      _ProjectSectionHtml(description: project.introduction, imagePath: project.introductionUrl),
-      if (project.development.isNotEmpty)
-        _ProjectSectionHtml(description: project.development, imagePath: project.developmentUrl),
-      if (project.conclusion.isNotEmpty)
-        _ProjectSectionHtml(description: project.conclusion, imagePath: project.conclusionUrl),
-      const SizedBox(height: Dimens.dimen12),
-    ],
+  Widget build(BuildContext context) => SingleChildScrollView(
+    child: Column(
+      spacing: Dimens.dimen36,
+      children: [
+        const SizedBox(height: Dimens.dimen12),
+        _ProjectSectionHtml(description: project.introduction, imagePath: project.introductionUrl),
+        if (project.development.isNotEmpty)
+          _ProjectSectionHtml(description: project.development, imagePath: project.developmentUrl),
+        if (project.conclusion.isNotEmpty)
+          _ProjectSectionHtml(description: project.conclusion, imagePath: project.conclusionUrl),
+      ],
+    ),
   );
 }
 
@@ -30,10 +36,20 @@ class _ProjectSectionHtml extends StatelessWidget {
   final String imagePath;
 
   @override
-  Widget build(BuildContext context) => Row(
-    children: [
-      Expanded(flex: 2, child: ClHtmlLabel(data: description)),
-      Expanded(child: ClImagePathWidget(path: imagePath).addPaddingAll(Dimens.dimen20)),
-    ],
+  Widget build(BuildContext context) => ClContainer(
+    padding: const EdgeInsets.only(left: Dimens.dimen24,right: Dimens.dimen8,bottom: Dimens.dimen24,top: Dimens.dimen24),
+    child: Row(
+      children: [
+        Expanded(flex: _kLabelFlex, child: ClHtmlLabel(data: description)),
+        Expanded(
+          child: ClImagePathWidget(
+            backgroundColor: Colors.transparent,
+            path: imagePath,
+            fit: BoxFit.contain,
+            padding: EdgeInsets.zero,
+          ).addPaddingAll(Dimens.dimen20),
+        ),
+      ],
+    ),
   );
 }

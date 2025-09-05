@@ -1,9 +1,9 @@
 import 'package:another_flushbar/flushbar.dart';
+import 'package:components_core/components_pub_dev_export.dart' show FontAwesomeIcons;
 import 'package:components_library/resources/dimens.dart';
 import 'package:components_library/widgets/icons/cl_icon.dart';
-import 'package:components_library/widgets/label/label.dart';
+import 'package:components_library/widgets/label/label.dart' show Label;
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 const _toastDurationInSec = 3;
 
@@ -19,13 +19,13 @@ class ClSnackBarWidget extends Flushbar<void> {
     required String message,
     required this.widgetMargin,
   }) : super(
-          messageText: Label(message, color: textColor, style: textStyle),
-          duration: const Duration(seconds: _toastDurationInSec),
-          margin: const EdgeInsets.all(Dimens.dimen16),
-          shouldIconPulse: false,
-          flushbarPosition: FlushbarPosition.TOP,
-          borderRadius: const BorderRadius.all(Radius.circular(Dimens.dimen4)),
-        );
+         messageText: Label(message, color: textColor, style: textStyle),
+         duration: const Duration(seconds: _toastDurationInSec),
+         margin: const EdgeInsets.all(Dimens.dimen16),
+         shouldIconPulse: false,
+         flushbarPosition: FlushbarPosition.TOP,
+         borderRadius: const BorderRadius.all(Radius.circular(Dimens.dimen4)),
+       );
 
   final Color iconColor;
   final TextStyle? textStyle;
@@ -35,5 +35,6 @@ class ClSnackBarWidget extends Flushbar<void> {
   EdgeInsets get margin => EdgeInsets.symmetric(horizontal: widgetMargin);
 
   @override
-  Widget? get mainButton => IconButton(onPressed: dismiss, icon: ClIcon(path: FontAwesomeIcons.closedCaptioning, color: iconColor));
+  Widget? get mainButton =>
+      IconButton(onPressed: dismiss, icon: ClIcon(path: FontAwesomeIcons.closedCaptioning, color: iconColor));
 }

@@ -23,14 +23,12 @@ class ProjectPage extends BasePage<ProjectCubit> {
     buildWhen: (previous, current) => current is ProjectUpdateView,
     builder: (context, state) {
       if (state is ProjectUpdateView) {
-        return SingleChildScrollView(
-          child: ClAdapter(
-            expanded: ProjectExpandedWidget(project: state.project),
-            compact: ProjectCompactWidget(project: state.project),
-          ).addPaddingAll(Dimens.dimen12),
-        );
+        return ClAdapter(
+          expanded: ProjectExpandedWidget(project: state.project),
+          compact: ProjectCompactWidget(project: state.project),
+        ).addPaddingAll(Dimens.dimen12);
       } else {
-        return const ClShimmer(height: Dimens.dimen120);
+        return const ClLoadingIndicator();
       }
     },
   );

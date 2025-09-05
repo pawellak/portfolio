@@ -14,10 +14,17 @@ class ProjectListPage extends BasePage<ProjectListCubit> {
   static const String path = '/$_kPageName';
 
   @override
-  Widget buildPage(BuildContext context) => SingleChildScrollView(
-    child: const ClAdapter(
-      expanded: ProjectListExpandedWidget(),
-      compact: ProjectListCompactWidget(),
-    ).addPadding(bottom: Dimens.dimen32),
+  Widget buildPage(BuildContext context) => BlocBuilder<ProjectListCubit, ProjectListState>(
+    buildWhen: (previous, current) => current is ProjectListUpdateView,
+    builder: (context, state) {
+      if (state is ProjectListUpdateView) {
+        return ClAdapter(
+          expanded: ProjectListExpandedWidget(items: state.items),
+          compact: ProjectListCompactWidget(items: state.items),
+        ).addPadding(bottom: Dimens.dimen32);
+      } else {
+        return const ClLoadingIndicator();
+      }
+    },
   );
 }

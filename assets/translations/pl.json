@@ -1,6 +1,6 @@
 {
   "label.about_me.title": "O mnie",
-  "label.about_me.description": "<h3>Od ponad 3.5 roku profesjonalnie tworzę aplikacje mobilne we Flutterze, przekształcając potrzeby biznesowe w intuicyjne, wydajne rozwiązania.</h3><p>W moim dorobku znajduje się aplikacja stworzona dla <strong>czołowej polskiej firmy energetycznej</strong>, z kt&oacute;rej obecnie aktywnie korzysta ponad <strong>300 tysięcy użytkownik&oacute;w</strong> i kt&oacute;ra cieszy się oceną użytkownik&oacute;w <strong>4.7</strong> w sklepach Google Play i App Store.</p><p>Aplikacja, kt&oacute;rą stworzyłem dla globalnej firmy z branży logistycznej, <strong>zwyciężyła</strong> w międzynarodowym konkursie <strong>\"The Factory 2023\"</strong>, pokonując ponad 20 zespoł&oacute;w. Sukces aplikacji był możliwy dzięki integracji <strong>natywnych</strong> funkcji terminalu <strong>Zebra</strong>&nbsp;takich jak skaner 3D, w ramach technologii Flutter.</p><p>Praktyczna znajomość natywnych technologii <strong>iOS</strong> i <strong>Android</strong> jest fundamentem mojej pracy z Flutterem, umożliwiając głęboką optymalizację i konfigurację projekt&oacute;w. Posiadam doświadczenie w bezpośredniej pracy z kodem natywnym, w tym przy <strong>aktualizacji</strong> istniejących natywnych aplikacji.</p><p>Moja wcześniejsza kariera jako <strong>inżynier akustyk</strong> wyposażyła mnie w cenną <em>precyzję w analizie dokumentacji technicznej</em> oraz umiejętność <em>budowania profesjonalnych relacji z klientami</em>.</p><p>Uzupełnieniem mojego doświadczenia jest realizacja <strong>ponad</strong> 10 r&oacute;żnorodnych, mniejszych aplikacji.</p><p>Wybrane przykłady moich prac dostępne są do wglądu w zakładce \"<strong>Projekty</strong>\".</p>",
+  "label.about_me.description": "<h3>Od ponad 3.5 roku z pasją tworzę aplikacje mobilne we Flutterze, przekształcając złożone potrzeby biznesowe w proste i przyjemne w użyciu rozwiązania.</h3><p>Miałem przyjemność współtworzyć aplikację dla <strong>jednej z największych polskich firm energetycznych</strong>. Obecnie korzysta z niej aktywnie ponad <strong>300 tysięcy osób</strong>, a jej ocena na poziomie <strong>4.7</strong> w sklepach Google Play i App Store jest dla mnie powodem do dumy.</p><p>Szczególnie satysfakcjonującym projektem była aplikacja dla globalnej firmy logistycznej, która <strong>zdobyła główną nagrodę</strong> w międzynarodowym konkursie <strong>\"The Factory 2023\"</strong>, konkurując z ponad 20 zespołami. Kluczem do sukcesu okazała się tu integracja <strong>natywnych</strong> funkcji terminalu <strong>Zebra</strong>, takich jak skaner 3D, z możliwościami Fluttera.</p><p>Dobra znajomość technologii natywnych <strong>iOS</strong> i <strong>Android</strong> to dla mnie podstawa efektywnej pracy z Flutterem. Pozwala mi to na głębszą optymalizację i swobodną konfigurację projektów, a także na pracę bezpośrednio z kodem natywnym, w tym przy <strong>modernizacji</strong> istniejących aplikacji.</p><p>Zanim w pełni poświęciłem się programowaniu, jako <strong>inżynier akustyk</strong> nauczyłem się <em>dokładności w analizie dokumentacji technicznej</em> oraz sztuki <em>budowania wartościowych relacji z klientami</em> – umiejętności, które cenię do dziś.</p><p>Moje portfolio dopełnia realizacja <strong>kilkunastu</strong> innych, mniejszych aplikacji o różnorodnym charakterze.</p><p>Zapraszam do zapoznania się z wybranymi projektami w zakładce \"<strong>Projekty</strong>\".</p>",
   "label.about_me.download_cv": "Pobierz CV",
   "label.about_me.education.title": "Edukacja",
   "label.about_me.education.eng.degree": "Inżynier",
@@ -15,19 +15,23 @@
   "label.about_me.experience.title": "Professional Experience",
   "label.about_me.experience.company_name.ecoplan": "Ecoplan",
   "label.about_me.experience.position.ecoplan": "Akustyk Środowiskowy",
-  "label.about_me.experience.period.ecoplan": "2019.09-2020.04 (8 mies.)",
+  "label.about_me.experience.period.start.ecoplan": "2019.09",
+  "label.about_me.experience.period.end.ecoplan": "2020.05",
   "label.about_me.experience.description.ecoplan": "Pomiary akustyczne oraz projektowanie środków ochrony przed hasałem zgodnie z Polskimi Normami. Praca z organami krajowymi, tworzenie dokumentacji technicznych.",
   "label.about_me.experience.company_name.falcon_acoustics": "Falcon Acoustics",
   "label.about_me.experience.position.falcon_acoustics": "Akustyk Budowlany",
-  "label.about_me.experience.period.falcon_acoustics": "2020.04-2021.03 (1 rok)",
+  "label.about_me.experience.period.start.falcon_acoustics": "2020.04",
+  "label.about_me.experience.period.end.falcon_acoustics": "2021.04",
   "label.about_me.experience.description.falcon_acoustics": "Pomiary akustyczne oraz projektowanie rozwiązań akustycznych dla nowopowstających budynków. Praca z architektami, dokumentacją, klijentem.",
   "label.about_me.experience.company_name.svantek": "Svantek",
   "label.about_me.experience.position.svantek": "Elektronik",
-  "label.about_me.experience.period.svantek": "2021.03-2022.06 (1 rok 4 mies.)",
+  "label.about_me.experience.period.start.svantek": "2021.03",
+  "label.about_me.experience.period.end.svantek": "2022.06",
   "label.about_me.experience.description.svantek": "Uruchamienie, programowanie, wdrażanie nowych rozwiązań dla urządzeń pomiarowych służących do analizy dzwięku.",
   "label.about_me.experience.company_name.sygnisoft": "Sygnisoft",
   "label.about_me.experience.position.sygnisoft": "Flutter Developer",
-  "label.about_me.experience.period.sygnisoft": "2022.06 - obecnie (3 lata 3 mies.)",
+  "label.about_me.experience.period.start.sygnisoft": "2022.06",
+  "label.about_me.experience.period.end.sygnisoft": "",
   "label.about_me.experience.description.sygnisoft": "Projektowanie, wdrażanie oraz utrzmanie aplikacji mobilnych dla ponad 400 000 użytkowników.",
   "label.menu.portfolio": "Portfolio",
   "label.menu_item.projects": "Projekty",
@@ -43,5 +47,15 @@
   "label.projects.page.title": "Wykonane oraz obecne projekty:",
   "label.projects.page.description": "Konsekwentnie podchodzę do rozwiązywania problemów z wyraźnym naciskiem na dopasowanie rozwiązań do celów biznesowych.",
   "label.projects.category.title": "Projekt: ",
-  "label.projects.category.period": "Doświadczenie: "
+  "label.projects.category.period": "Doświadczenie: ",
+  "label.date_time.now": "Obecnie",
+  "label.date_time.one_year": "rok",
+  "label.date_time.two_years": "lata",
+  "label.date_time.five_years": "lat",
+  "label.date_time.one_month": "miesiąc",
+  "label.date_time.two_months": "miesiące",
+  "label.date_time.five_months": "miesięcy"
 }
+
+
+

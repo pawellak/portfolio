@@ -10,6 +10,9 @@ abstract class AppColorsTokens extends ThemeExtension<AppColorsTokens> {
   //Checkbox
   abstract final Color checkboxIconColor;
 
+  //Contact
+  abstract final Color contactBackgroundColor;
+
   //Navigation
   abstract final Color navigationProgressBarPrimary;
   abstract final Color navigationProgressBarBackground;
@@ -44,9 +47,12 @@ abstract class AppColorsTokens extends ThemeExtension<AppColorsTokens> {
   abstract final Color textH3;
   abstract final Color textH4;
 
-  //Button Primary
+  //Button
   abstract final Color buttonPrimaryTextColor;
   abstract final Color buttonPrimaryDefaultBackgroundColor;
+
+  abstract final Color iconButtonIconColor;
+  abstract final Color iconButtonBackgroundColor;
 
   //Snackbar
   abstract final Color snackBarDefaultIconColor;

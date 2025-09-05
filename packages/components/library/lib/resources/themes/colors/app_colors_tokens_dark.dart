@@ -13,6 +13,10 @@ class AppColorsTokensDark extends AppColorsTokens {
   @override
   Color get checkboxIconColor => AppColors.cPrimary[100] ?? AppColors.cPrimary;
 
+  //Contact
+  @override
+  Color get contactBackgroundColor => AppColors.cSecondary[700] ?? AppColors.cSecondary;
+
   //Navigation
   @override
   Color get navigationProgressBarBackground => AppColors.cPrimary[200] ?? AppColors.cPrimary;
@@ -49,7 +53,7 @@ class AppColorsTokensDark extends AppColorsTokens {
 
   //Loading
   @override
-  Color get loadingBackgroundColor => AppColors.cPrimary[600] ?? AppColors.cPrimary;
+  Color get loadingBackgroundColor => AppColors.cPrimary[75] ?? AppColors.cPrimary;
 
   @override
   Color get shimmerBaseColor => AppColors.cSecondary[800] ?? AppColors.cSecondary;
@@ -75,23 +79,29 @@ class AppColorsTokensDark extends AppColorsTokens {
   Color get textSecondary => AppColors.cSecondary[300] ?? AppColors.cSecondary;
 
   @override
-  Color get textH1 => AppColors.cSuccess[75] ?? AppColors.cSuccess;
+  Color get textH1 => AppColors.cSuccess[200] ?? AppColors.cSuccess;
 
   @override
-  Color get textH2 => AppColors.cSuccess[100] ?? AppColors.cSuccess;
+  Color get textH2 => AppColors.cSuccess[200] ?? AppColors.cSuccess;
 
   @override
-  Color get textH3 => AppColors.cSuccess[200] ?? AppColors.cSuccess;
+  Color get textH3 => AppColors.cSuccess[100] ?? AppColors.cSuccess;
 
   @override
-  Color get textH4 => AppColors.cSuccess[200] ?? AppColors.cSuccess;
+  Color get textH4 => AppColors.cSuccess[75] ?? AppColors.cSuccess;
 
   //Button Primary
   @override
   Color get buttonPrimaryTextColor => AppColors.cSecondary[200] ?? AppColors.cSecondary;
 
   @override
-  Color get buttonPrimaryDefaultBackgroundColor => AppColors.cPrimary[600] ?? AppColors.cPrimary;
+  Color get buttonPrimaryDefaultBackgroundColor => AppColors.cSuccess[300] ?? AppColors.cPrimary;
+
+  @override
+  Color get iconButtonBackgroundColor => AppColors.cSecondary[300] ?? AppColors.cSecondary;
+
+  @override
+  Color get iconButtonIconColor => AppColors.cSecondary[500] ?? AppColors.cSecondary;
 
   //Snackbar
   @override
@@ -131,4 +141,5 @@ class AppColorsTokensDark extends AppColorsTokens {
 
   @override
   AppColorsTokensDark lerp(ThemeExtension<AppColorsTokens>? other, double t) => const AppColorsTokensDark();
+
 }

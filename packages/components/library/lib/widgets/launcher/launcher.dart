@@ -14,6 +14,26 @@ mixin class Launcher {
     }
   }
 
+  /// Call [phoneNumber] in the default phone.
+  Future<void> call(String phoneNumber) async {
+    try {
+      final uri = Uri.parse('tel:$phoneNumber');
+      await _tryToLaunchUrl(uri);
+    } catch (e) {
+      //no-op
+    }
+  }
+
+  /// Call [mail] in the default phone.
+  Future<void> mailTo(String mail) async {
+    try {
+      final uri = Uri.parse('mailto:$mail');
+      await _tryToLaunchUrl(uri);
+    } catch (e) {
+      //no-op
+    }
+  }
+
   ///Passes [uri] to the underlying platform for handling.
   Future<void> _tryToLaunchUrl(Uri uri) async {
     if (await launchUrl(uri)) {

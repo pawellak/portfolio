@@ -1,4 +1,4 @@
-import 'package:components_library/components_library_export.dart';
+import 'package:components_library/components_library_export.dart' show AutoSizeGroup, BaseCubit, BaseState, injectable;
 
 part 'about_me_state.dart';
 
@@ -6,6 +6,7 @@ part 'about_me_state.dart';
 class AboutMeCubit extends BaseCubit<AboutMeState> {
   AboutMeCubit() : super(AboutMeInitial());
 
-  @override
-  Future<void> initialMethod() async {}
+  final _contactGroup = AutoSizeGroup();
+
+  AutoSizeGroup get contactGroup => _contactGroup;
 }

@@ -2,7 +2,6 @@ import 'package:components_core/utilis/app_constants.dart';
 import 'package:components_library/components_library_export.dart';
 import 'package:components_library/resources/dimens.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ClElevatedButton extends StatelessWidget {
   const ClElevatedButton({super.key, this.label, required this.onPressed, required this.icon, this.width, this.child});

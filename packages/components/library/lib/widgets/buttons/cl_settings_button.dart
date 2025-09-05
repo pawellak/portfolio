@@ -2,7 +2,6 @@ import 'package:components_library/components_library_export.dart';
 import 'package:components_library/resources/dimens.dart';
 import 'package:components_library/widgets/container/cl_container.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ClSettingsButton extends StatelessWidget {
   const ClSettingsButton({

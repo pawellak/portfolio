@@ -83,7 +83,7 @@ class _LoadingOverlayState extends State<LoadingOverlay> {
           child: ClLottie(
             height: Dimens.dimen300,
             width: Dimens.dimen300,
-            path: AppLottie.example,
+            path: AppLottie.loading,
             color: context.colorTokens.iconPrimaryColor,
             repeatTimeInMs: _defaultLottieRoundTimeInMs,
           ),

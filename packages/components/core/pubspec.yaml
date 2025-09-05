@@ -25,6 +25,9 @@ dependencies:
   provider: ^6.1.5+1
   flutter_layout_grid: ^2.0.8
   json_annotation: ^4.9.0
+  font_awesome_flutter: ^10.8.0
+  auto_size_text: ^3.0.0
+
 
 dev_dependencies:
   injectable_generator: any
