@@ -1,5 +1,4 @@
 export 'package:json_annotation/json_annotation.dart';
-
 export 'configs/configs_export.dart';
 export 'controllers/controllers_export.dart';
 export 'di/di_export.dart';

@@ -1,5 +1,6 @@
 import 'package:components_library/components_library_export.dart';
 import 'package:components_library/resources/dimens.dart' show Dimens;
+import 'package:components_library/widgets/container/cl_container.dart';
 import 'package:feature_project_list/presentation/data/project_model.dart';
 import 'package:flutter/material.dart';
 
@@ -9,20 +10,24 @@ class ProjectCompactWidget extends StatelessWidget {
   final ProjectModel project;
 
   @override
-  Widget build(BuildContext context) => Column(
-    spacing: Dimens.dimen12,
-    children: [
-      ClImagePathWidget(
-        borderRadius: const BorderRadius.all(Radius.circular(Dimens.dimen12)),
-        path: project.shortDescriptionUrl,
-        fit: BoxFit.fitWidth,
-      ),
-      _ProjectSectionHtml(description: project.introduction, imagePath: project.introductionUrl),
-      if (project.development.isNotEmpty)
-        _ProjectSectionHtml(description: project.development, imagePath: project.developmentUrl),
-      if (project.conclusion.isNotEmpty)
-        _ProjectSectionHtml(description: project.conclusion, imagePath: project.conclusionUrl),
-    ],
+  Widget build(BuildContext context) => SingleChildScrollView(
+    child: Column(
+      spacing: Dimens.dimen12,
+      children: [
+        ClImagePathWidget(
+          width: double.infinity,
+          borderRadius: const BorderRadius.all(Radius.circular(Dimens.dimen12)),
+          backgroundColor: Colors.transparent,
+          path: project.shortDescriptionUrl,
+          fit: BoxFit.contain,
+        ),
+        _ProjectSectionHtml(description: project.introduction, imagePath: project.introductionUrl),
+        if (project.development.isNotEmpty)
+          _ProjectSectionHtml(description: project.development, imagePath: project.developmentUrl),
+        if (project.conclusion.isNotEmpty)
+          _ProjectSectionHtml(description: project.conclusion, imagePath: project.conclusionUrl),
+      ],
+    ),
   );
 }
 
@@ -33,10 +38,16 @@ class _ProjectSectionHtml extends StatelessWidget {
   final String imagePath;
 
   @override
-  Widget build(BuildContext context) => Column(
-    children: [
-      ClHtmlLabel(data: description),
-      ClImagePathWidget(path: imagePath, height: 350).addPaddingAll(Dimens.dimen20),
-    ],
+  Widget build(BuildContext context) => ClContainer(
+    child: Column(
+      children: [
+        ClHtmlLabel(data: description),
+        ClImagePathWidget(
+          path: imagePath,
+          height: Dimens.dimen350,
+          backgroundColor: Colors.transparent,
+        ).addPaddingAll(Dimens.dimen20),
+      ],
+    ),
   );
 }

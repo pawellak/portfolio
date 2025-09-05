@@ -71,6 +71,7 @@ class SettingSectionOptions extends StatelessWidget {
                 const Label('label.settings.language'),
                 ClRadioListTile<String>(
                   suffixWidget: ClImagePathWidget(
+                    padding: const EdgeInsets.symmetric(horizontal: Dimens.dimen4),
                     backgroundColor: context.colorTokens.flagBackgroundColor,
                     path: AppImage.flagPl,
                     width: Dimens.dimen44,
@@ -82,6 +83,7 @@ class SettingSectionOptions extends StatelessWidget {
                 ),
                 ClRadioListTile<String>(
                   suffixWidget: ClImagePathWidget(
+                    padding: const EdgeInsets.symmetric(horizontal: Dimens.dimen4),
                     backgroundColor: context.colorTokens.flagBackgroundColor,
                     path: AppImage.flagEn,
                     width: Dimens.dimen44,

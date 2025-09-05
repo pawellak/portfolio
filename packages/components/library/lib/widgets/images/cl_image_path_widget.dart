@@ -34,7 +34,7 @@ class ClImagePathWidget extends StatelessWidget {
     margin: margin,
     width: width,
     height: height,
-    padding: padding ?? const EdgeInsets.symmetric(horizontal: Dimens.dimen4),
+    padding: padding ?? EdgeInsets.zero,
     borderRadius: borderRadius ?? const BorderRadius.all(Radius.circular(Dimens.dimen6)),
     backgroundColor: backgroundColor ?? context.colorTokens.iconBackgroundColor,
     child: Image.asset(path, fit: fit),

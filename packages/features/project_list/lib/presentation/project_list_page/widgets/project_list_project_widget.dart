@@ -3,7 +3,8 @@ import 'package:components_library/resources/resources_exports.dart' show Dimens
 import 'package:feature_project_list/presentation/data/project_model.dart';
 import 'package:feature_project_list/presentation/project_list_page/project_list_page.dart';
 import 'package:feature_project_list/presentation/project_page/project_page.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'
+    show AnimatedContainer, Border, BorderRadius, BoxConstraints, BoxDecoration, BoxFit, BoxShadow, BuildContext, Column, Container, CrossAxisAlignment, EdgeInsets, FontWeight, GestureDetector, Icons, MouseRegion, Offset, Radius, SizedBox, Spacer, State, StatefulWidget, SystemMouseCursors, Widget;
 
 const _selectedSpreadRadius = 2.0;
 const _selectedBlurRadius = 1.0;
@@ -15,9 +16,10 @@ const _widgetMaxLines = 2;
 const _kImageRadius = 11.0;
 
 class ProjectListProjectWidget extends StatefulWidget {
-  const ProjectListProjectWidget({super.key, required this.item});
+  const ProjectListProjectWidget({super.key, required this.item, this.isSpacer = false});
 
   final ProjectModel item;
+  final bool isSpacer;
 
   @override
   State<ProjectListProjectWidget> createState() => _CategoryWidgetState();
@@ -64,6 +66,7 @@ class _CategoryWidgetState extends State<ProjectListProjectWidget> {
         ),
         duration: const Duration(milliseconds: _animationDurationInMs),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ClImagePathWidget(
               constraints: const BoxConstraints(maxHeight: Dimens.dimen180),
@@ -111,6 +114,13 @@ class _CategoryWidgetState extends State<ProjectListProjectWidget> {
             ClHtmlLabel(
               data: widget.item.shortDescription,
             ).addSymmetricPadding(horizontal: Dimens.dimen12, vertical: Dimens.dimen8),
+            if (widget.isSpacer) const Spacer(),
+            const ClIconButton(
+              margin: EdgeInsets.zero,
+              size: Dimens.dimen30,
+              path: Icons.next_plan_outlined,
+              isShadow: true,
+            ).addPadding(bottom: Dimens.dimen16, right: Dimens.dimen16),
           ],
         ),
       ),

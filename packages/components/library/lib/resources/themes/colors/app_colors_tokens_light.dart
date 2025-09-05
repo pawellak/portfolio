@@ -13,6 +13,10 @@ class AppColorsTokensLight extends AppColorsTokens {
   @override
   Color get checkboxIconColor => AppColors.cSecondary[600] ?? AppColors.cPrimary;
 
+  //Contact
+  @override
+  Color get contactBackgroundColor => AppColors.cSecondary[200] ?? AppColors.cPrimary;
+
   //Navigation
   @override
   Color get navigationProgressBarBackground => AppColors.cPrimary[200] ?? AppColors.cPrimary;
@@ -47,7 +51,7 @@ class AppColorsTokensLight extends AppColorsTokens {
   Color get moreMenuColorText => AppColors.cPrimary;
 
   @override
-  Color get loadingBackgroundColor => AppColors.cPrimary[400] ?? AppColors.cPrimary;
+  Color get loadingBackgroundColor => AppColors.cSecondary[500] ?? AppColors.cPrimary;
 
   @override
   Color get shimmerBaseColor => AppColors.cSecondary[50] ?? AppColors.cSecondary;
@@ -72,7 +76,7 @@ class AppColorsTokensLight extends AppColorsTokens {
   Color get textSecondary => AppColors.cSecondary[500] ?? AppColors.cSecondary;
 
   @override
-  Color get textH1 => AppColors.cSuccess[500] ?? AppColors.cSuccess;
+  Color get textH1 => AppColors.cSuccess[400] ?? AppColors.cSuccess;
 
   @override
   Color get textH2 => AppColors.cSuccess[400] ?? AppColors.cSuccess;
@@ -88,7 +92,13 @@ class AppColorsTokensLight extends AppColorsTokens {
   Color get buttonPrimaryTextColor => AppColors.cWhite;
 
   @override
-  Color get buttonPrimaryDefaultBackgroundColor => AppColors.cPrimary;
+  Color get iconButtonBackgroundColor => AppColors.cSecondary[300] ?? AppColors.cSecondary;
+
+  @override
+  Color get iconButtonIconColor => AppColors.cSecondary[700] ?? AppColors.cSecondary;
+
+  @override
+  Color get buttonPrimaryDefaultBackgroundColor => AppColors.cSuccess[100] ?? AppColors.cPrimary;
 
   @override
   Color get snackBarDefaultIconColor => AppColors.cWhite;

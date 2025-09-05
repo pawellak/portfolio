@@ -5,6 +5,11 @@ import 'package:feature_project_list/presentation/project_list_page/widgets/proj
     show ProjectListProjectWidget;
 import 'package:flutter/material.dart';
 
+const _kScreenDividerWidth = 600;
+const _kMinScreenGrid = 2.0;
+const _kMaxScreenGrid = 4.0;
+const _kNumberOfFractional = 1;
+
 class ProjectListSectionGrid extends StatelessWidget {
   const ProjectListSectionGrid({super.key, required this.items});
 
@@ -12,12 +17,16 @@ class ProjectListSectionGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final columnItems = clampDouble(context.screenWidth / 600, 2, 4).ceil();
-    final rowItems = (items.length / columnItems).ceil();
+    final columnItems = _getColumnItems(context);
     return LayoutGrid(
-      columnSizes: List.generate(columnItems, (_) => 1.fr),
-      rowSizes: List.generate(rowItems, (_) => auto),
-      children: items.map((e) => ProjectListProjectWidget(item: e)).toList(),
+      columnSizes: List.generate(columnItems, (_) => _kNumberOfFractional.fr),
+      rowSizes: List.generate(_getRowItems(columnItems), (_) => auto),
+      children: items.map((e) => ProjectListProjectWidget(item: e, isSpacer: true)).toList(),
     );
   }
+
+  int _getColumnItems(BuildContext context) =>
+      clampDouble(context.screenWidth / _kScreenDividerWidth, _kMinScreenGrid, _kMaxScreenGrid).ceil();
+
+  int _getRowItems(int columnItems) => (items.length / columnItems).ceil();
 }
