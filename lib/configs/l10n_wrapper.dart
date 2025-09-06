@@ -1,4 +1,7 @@
-import 'package:components_library/components_library_export.dart' show AppLocale, EasyLocalization;
+import 'dart:ui';
+
+import 'package:components_library/components_library_export.dart'
+    show AppLocale, AppSettingsRepository, EasyLocalization, getIt;
 import 'package:flutter/material.dart' show StatelessWidget, Widget;
 import 'package:pawellak_portfolio/core/i18n/labels_loader.dart';
 
@@ -14,8 +17,10 @@ class L10nWrapper extends StatelessWidget {
     supportedLocales: AppLocale.supportedLocales,
     path: _translationsPath,
     assetLoader: const LabelsLoader(),
-    startLocale: AppLocale.pl,
-    fallbackLocale: AppLocale.pl,
+    startLocale: _currentAppLocale,
+    fallbackLocale: _currentAppLocale,
     child: child,
   );
+
+  Locale get _currentAppLocale => Locale(getIt<AppSettingsRepository>().currentLocale);
 }

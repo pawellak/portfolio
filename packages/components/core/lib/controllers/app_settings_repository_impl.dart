@@ -1,4 +1,4 @@
-import 'package:components_core/controllers/app_settings_repository.dart';
+import 'package:components_core/components_core_export.dart';
 import 'package:flutter/material.dart' show ThemeMode;
 import 'package:injectable/injectable.dart' show Injectable;
 import 'package:shared_preferences/shared_preferences.dart' show SharedPreferences;
@@ -8,7 +8,7 @@ const String _prefsKeyThemeModeIndex = 'prefs_theme_mode_index';
 const String _prefsKeyLocaleCode = 'prefs_locale_code';
 
 // Default Values
-const String _defaultLocaleCode = 'en';
+final String _defaultLocaleCode = AppLocale.en.languageCode;
 const ThemeMode _defaultAppThemeMode = ThemeMode.system;
 
 @Injectable(as: AppSettingsRepository)

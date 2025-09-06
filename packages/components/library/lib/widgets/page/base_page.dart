@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 
 abstract class BasePage<T extends BaseCubit> extends StatelessWidget {
   const BasePage({super.key, this.canPop = true, EdgeInsets? edgeInsets, this.initialParams, this.isBackArrow = false})
-    : _edgeInsets = edgeInsets ?? const EdgeInsets.only(left: Dimens.dimen16, right: Dimens.dimen16);
+    : _edgeInsets = edgeInsets ?? const EdgeInsets.symmetric(horizontal: Dimens.dimen16);
 
   final bool canPop;
   final dynamic initialParams;
@@ -29,12 +29,12 @@ abstract class BasePage<T extends BaseCubit> extends StatelessWidget {
               ..initialParams(initialParams),
     child: Builder(
       builder:
-          (providerContext) => PopScope(
-            canPop: canPop,
-            onPopInvokedWithResult: (didPop, result) {
-              onBackPressed(context);
-            },
-            child: SafeArea(
+          (providerContext) => SafeArea(
+            child: PopScope(
+              canPop: canPop,
+              onPopInvokedWithResult: (didPop, result) {
+                onBackPressed(context);
+              },
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
