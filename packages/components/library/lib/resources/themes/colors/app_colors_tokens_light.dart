@@ -133,8 +133,8 @@ class AppColorsTokensLight extends AppColorsTokens {
   Color get dividerSecondaryColor => AppColors.cSecondary[300] ?? AppColors.cSecondary;
 
   @override
-  AppColorsTokensLight copyWith() => const AppColorsTokensLight();
+  AppColorsTokens copyWith() => this;
 
   @override
-  AppColorsTokensLight lerp(ThemeExtension<AppColorsTokens>? other, double t) => const AppColorsTokensLight();
+  AppColorsTokens lerp(ThemeExtension<AppColorsTokens>? other, double t) => this;
 }

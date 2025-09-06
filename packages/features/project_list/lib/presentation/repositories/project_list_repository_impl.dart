@@ -15,11 +15,7 @@ class ProjectListRepositoryImpl implements ProjectListRepository {
   @override
   Future<List<ProjectModel>> getProjectList() async {
     try {
-      final json = await client.localFileByPath(
-        feature: 'projects',
-        fileName: 'projects',
-        locale: _repository.currentLocale,
-      );
+      final json = await client.localFileByPath(feature: 'project_list', locale: _repository.currentLocale);
       return _onGetFileSuccess(json);
     } catch (e) {
       if (kDebugMode) {

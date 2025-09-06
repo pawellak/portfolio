@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 
 const _kPageName = 'settings-page';
 
+const _kDurationForSwitchAnimation = Duration(milliseconds: 200);
+
 class SettingsPage extends BasePage<SettingsCubit> {
   const SettingsPage({super.key});
 
@@ -18,7 +20,7 @@ class SettingsPage extends BasePage<SettingsCubit> {
         listener: (context, state) async {
           switch (state) {
             case SettingsUpdateTheme():
-              context.read<AppSettingsProvider>().refreshApp();
+              await _handleToggleTheme(context);
             case SettingsUpdateLocale():
               final currentLocal = context.read<SettingsCubit>().currentLocale;
               await context.setLocale(Locale(currentLocal));
@@ -35,4 +37,11 @@ class SettingsPage extends BasePage<SettingsCubit> {
           ],
         ),
       );
+
+  Future<void> _handleToggleTheme(BuildContext context) async {
+    await Future<void>.delayed(_kDurationForSwitchAnimation);
+    if (context.mounted) {
+      context.read<AppSettingsProvider>().refreshApp();
+    }
+  }
 }

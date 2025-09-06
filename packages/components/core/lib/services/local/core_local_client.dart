@@ -3,7 +3,6 @@ abstract class CoreLocalClient {
 
   Future<Map<String, dynamic>> localFileByPath({
     required String feature,
-    required String fileName,
     required String locale,
   });
 }

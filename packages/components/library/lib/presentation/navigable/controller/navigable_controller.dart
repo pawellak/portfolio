@@ -7,7 +7,7 @@ class NavigableController {
     required StatefulNavigationShell navigationShell,
     required int index,
   }) {
-    if (AppMenuData.projects.index == index) {
+    if (AppMenuData.projectList.index == index) {
       context.goNamed(
         getIt<FeatureProjectList>().projectListPageName,
         extra: getIt<AppSettingsRepository>().currentLocale,

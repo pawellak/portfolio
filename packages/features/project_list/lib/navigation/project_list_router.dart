@@ -20,7 +20,14 @@ class ProjectListRouter implements BaseRouter {
           GoRoute(
             path: '${ProjectPage.path}/:jobTitle',
             name: ProjectPage.name,
-            builder: (context, state) => ProjectPage(initialParams: state.pathParameters['jobTitle']),
+            pageBuilder:
+                (context, state) => CustomTransitionPage<void>(
+                  key: state.pageKey,
+                  child: ProjectPage(initialParams: state.pathParameters['jobTitle']),
+                  transitionsBuilder: (context, animation, secondaryAnimation, child) => child,
+                  transitionDuration: Duration.zero,
+                  reverseTransitionDuration: Duration.zero,
+                ),
           ),
         ],
         builder: (context, state) {
