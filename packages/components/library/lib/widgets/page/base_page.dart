@@ -30,6 +30,7 @@ abstract class BasePage<T extends BaseCubit> extends StatelessWidget {
     child: Builder(
       builder:
           (providerContext) => SafeArea(
+            bottom: false,
             child: PopScope(
               canPop: canPop,
               onPopInvokedWithResult: (didPop, result) {

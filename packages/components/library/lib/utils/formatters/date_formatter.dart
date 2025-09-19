@@ -1,7 +1,8 @@
 import 'package:components_core/components_pub_dev_export.dart';
 import 'package:components_core/utilis/app_constants.dart';
 
-const dateFormatDDMMYYYY = 'dd.MM.yyyy';
+const dateFormatMMYYYY = 'MM.yyyy';
+const _regexDatePeriod = r'\$\{DATE_PERIOD:(\d{4}\.\d{2})\}';
 
 abstract class DateFormatter {
   const DateFormatter();
@@ -31,9 +32,33 @@ abstract class DateFormatter {
     }
   }
 
-  static String formatDateTimeToPeriod(String start, String end) {
-    var dateTimeStart = _getDataTimeFromYYYYMM(start);
-    var dateTimeEnd = _getDataTimeFromYYYYMM(end);
+  static String formatPeriodPlaceholder(String inputText) {
+    String result = inputText;
+
+    final Iterable<RegExpMatch> allMatches = RegExp(_regexDatePeriod).allMatches(inputText);
+
+    for (final RegExpMatch match in allMatches.toList().reversed) {
+      if (match.groupCount > 0) {
+        final time = match.group(1)!;
+        final myGroup = match.group(0)!;
+
+        final replacement = formatDateTimeToPeriodString(start: time, addConnector: true);
+        result = result.replaceAll(myGroup, replacement);
+      }
+    }
+    return result;
+  }
+
+  static String formatDateTimeToPeriodString({required String start, String? end, bool addConnector = false}) =>
+      _formatDateTimePeriod(
+        _getDataTimeFromYYYYMM(start),
+        end != null ? _getDataTimeFromYYYYMM(end) : null,
+        addConnector,
+      );
+
+  static String _formatDateTimePeriod(DateTime dateStart, DateTime? dateEnd, bool addConnector) {
+    var dateTimeStart = dateStart;
+    var dateTimeEnd = dateEnd ?? DateTime.now();
 
     if (dateTimeEnd.isBefore(dateTimeStart)) {
       final temp = dateTimeStart;
@@ -64,7 +89,7 @@ abstract class DateFormatter {
       return '$value $many';
     }
 
-    var yearsString = '';
+    var yearsString = AppConstants.emptyString;
     if (years > 0) {
       yearsString = formatUnit(
         years,
@@ -74,7 +99,7 @@ abstract class DateFormatter {
       );
     }
 
-    var monthsString = '';
+    var monthsString = AppConstants.emptyString;
     if (months > 0 || (years == 0 && months == 0)) {
       monthsString = formatUnit(
         months,
@@ -82,6 +107,8 @@ abstract class DateFormatter {
         'label.date_time.two_months'.tr(),
         'label.date_time.five_months'.tr(),
       );
+
+      monthsString = addConnector ? '${'label.date_time.and'.tr()} $monthsString' : monthsString;
     }
 
     if (yearsString.isNotEmpty && monthsString.isNotEmpty && months > 0) {
@@ -91,7 +118,12 @@ abstract class DateFormatter {
     } else if (monthsString.isNotEmpty) {
       return monthsString;
     } else if (years == 0 && months == 0) {
-      return formatUnit(0, 'miesiąc', 'miesiące', 'miesięcy'); // "0 miesięcy"
+      return formatUnit(
+        0,
+        'label.date_time.one_month'.tr(),
+        'label.date_time.two_years'.tr(),
+        'label.date_time.five_months'.tr(),
+      );
     } else {
       return '0';
     }

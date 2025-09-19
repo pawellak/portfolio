@@ -97,7 +97,7 @@ class _AboutMeSectionExperienceCompanyWidget extends StatelessWidget {
           color: context.colorTokens.textSecondary,
         ),
         Label(
-          DateFormatter.formatDateTimeToPeriod(periodStart, periodEnd),
+          DateFormatter.formatDateTimeToPeriodString(start:  periodStart,end:  periodEnd),
           translate: false,
           style: context.textTheme.bodyMedium,
           color: context.colorTokens.textSecondary,

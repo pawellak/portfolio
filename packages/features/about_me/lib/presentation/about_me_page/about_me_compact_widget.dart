@@ -10,7 +10,8 @@ class AboutMeCompact extends StatelessWidget {
   const AboutMeCompact({super.key});
 
   @override
-  Widget build(BuildContext context) => const Column(
+  Widget build(BuildContext context) {
+    return const Column(
     spacing: Dimens.dimen8,
     children: [
       AboutMeSectionContact(),
@@ -19,4 +20,5 @@ class AboutMeCompact extends StatelessWidget {
       AboutMeSectionExperience(),
     ],
   ).addPadding(top: Dimens.dimen12, bottom: Dimens.dimen12);
+  }
 }

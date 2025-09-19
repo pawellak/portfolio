@@ -4,7 +4,31 @@ import 'package:feature_project_list/presentation/data/project_model.dart';
 import 'package:feature_project_list/presentation/project_list_page/project_list_page.dart';
 import 'package:feature_project_list/presentation/project_page/project_page.dart';
 import 'package:flutter/material.dart'
-    show AnimatedContainer, Border, BorderRadius, BoxConstraints, BoxDecoration, BoxFit, BoxShadow, BuildContext, Column, Container, CrossAxisAlignment, EdgeInsets, FontWeight, GestureDetector, Icons, MouseRegion, Offset, Radius, SizedBox, Spacer, State, StatefulWidget, SystemMouseCursors, Widget;
+    show
+        AnimatedContainer,
+        Border,
+        BorderRadius,
+        BoxConstraints,
+        BoxDecoration,
+        BoxFit,
+        BoxShadow,
+        BuildContext,
+        Column,
+        Container,
+        CrossAxisAlignment,
+        EdgeInsets,
+        FontWeight,
+        GestureDetector,
+        Icons,
+        MouseRegion,
+        Offset,
+        Radius,
+        SizedBox,
+        Spacer,
+        State,
+        StatefulWidget,
+        SystemMouseCursors,
+        Widget;
 
 const _selectedSpreadRadius = 2.0;
 const _selectedBlurRadius = 1.0;
@@ -103,7 +127,7 @@ class _CategoryWidgetState extends State<ProjectListProjectWidget> {
               valueLabel: DateFormatter.formatDateRange(
                 dateTimeStart: widget.item.dateStart,
                 dateTimeEnd: widget.item.dateEnd,
-                format: dateFormatDDMMYYYY,
+                format: dateFormatMMYYYY,
               ),
               valueTranslate: false,
               valueStyle: context.textTheme.bodySmall?.copyWith(
