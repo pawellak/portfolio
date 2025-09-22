@@ -1,5 +1,5 @@
 {
-  "length": 10,
+  "length": 11,
   "result": [
     {
       "id": "0",
@@ -117,7 +117,7 @@
     {
       "id": "8",
       "title": "Quiz&Money",
-      "shortDescription": "<p><strong>Funkcjonalność aplikacji:</strong></p><ul><li>Gra wieloosobowa</li><li>Teleturniej online</li><li>Ranking</li></ul>",
+      "shortDescription": "<p><strong>Funkcjonalność aplikacji:</strong></p><ul><li>Natywny Android - Kotlin</li><li>Gra wieloosobowa</li><li>Teleturniej online</li><li>Ranking</li></ul>",
       "shortDescriptionUrl": "assets/features/project_list/images/quiz.png",
       "introduction": "<h1>Quiz &amp;&amp; Money</h1><h2 class=\"\\&quot;header-landing__title\\&quot;\" style=\"text-align: center;\">Graj w Quizy Wygrywaj nagrody</h2><h4>Quiz&rsquo;n&rsquo;Money to quizowa gra online, w kt&oacute;rej gracze rywalizują ze sobą w r&oacute;żnych kategoriach wiedz.</h4><h4>Gracze mogą wybierać spośr&oacute;d r&oacute;żnych kategorii pytań i rywalizować z innymi zawodnikami z całego świata. Gracze mogą zdobywać punkty i rywalizować w rankingach.</h4>",
       "introductionUrl": "assets/features/project_list/images/quiz_1.png",
@@ -137,6 +137,20 @@
       "introductionUrl": "assets/features/project_list/images/pico_1.png",
       "development": "<p>Zakres obowiązk&oacute;w:&nbsp;</p>\n<ul>\n<li>Integracja sprzętowa: Podłączanie i konfiguracja czujnik&oacute;w z mikrokontrolerem Raspberry Pi Pico</li>\n<li>Rozw&oacute;j oprogramowania embedded: Tworzenie oprogramowania dla Raspberry Pi Pico do akwizycji i przetwarzania danych z czujnik&oacute;w.</li>\n<li>Komunikacja sieciowa: Implementacja połączenia Raspberry Pi Pico z siecią Wi-Fi w celu transmisji danych.</li>\n<li>Rozw&oacute;j aplikacji mobilnej: Projektowanie i implementacja aplikacji mobilnej do wizualizacji danych i interakcji z systemem.</li>\n</ul>",
       "developmentUrl": "assets/features/project_list/images/pico_2.png",
+      "conclusion": "",
+      "conclusionUrl": "",
+      "dateStart": "2025-10-10T01:00:00.000",
+      "dateEnd": null
+    },
+    {
+      "id": "10",
+      "title": "Udemy",
+      "shortDescription": "<p><strong>Inwestycja w umiejętności:</strong></p><ul><li>Flutter</li><li>Natywny iOS</li><li>Natywny Android</li></ul>",
+      "shortDescriptionUrl": "assets/features/project_list/images/udemy.png",
+      "introduction": "<h1>Udemy</h1><h3>Poprzez realizację licznych projektów na Udemy – zarówno natywnych (Kotlin, Swift), jak i we Flutterze – zyskałem cenne doświadczenie i głębsze zrozumienie architektury oraz najlepszych praktyk w budowaniu aplikacji Flutter.</h3>",
+      "introductionUrl": "assets/features/project_list/images/udemy_1.png",
+      "development": "",
+      "developmentUrl": "",
       "conclusion": "",
       "conclusionUrl": "",
       "dateStart": "2025-10-10T01:00:00.000",

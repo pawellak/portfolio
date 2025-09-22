@@ -118,7 +118,7 @@
     {
       "id": "8",
       "title": "Quiz&Money",
-      "shortDescription": "<p><strong>Application Features:</strong></p><ul><li>Multiplayer game</li><li>Online game show</li><li>Ranking</li></ul>",
+      "shortDescription": "<p><strong>Application Features:</strong></p><ul><li>Native Android - Kotlin</li><li>Multiplayer game</li><li>Online game show</li><li>Ranking</li></ul>",
       "shortDescriptionUrl": "assets/features/project_list/images/quiz.png",
       "introduction": "<h1>Quiz &amp;&amp; Money</h1><h2 class=\"\\&quot;header-landing__title\\&quot;\" style=\"text-align: center;\">Play Quizzes, Win Prizes</h2><h4>Quiz'n'Money is an online quiz game where players compete in various knowledge categories.</h4><h4>Players can choose from different question categories and compete against other participants from around the world. Players can earn points and compete in rankings.</h4>",
       "introductionUrl": "assets/features/project_list/images/quiz_1.png",
@@ -141,6 +141,20 @@
       "conclusion": "",
       "conclusionUrl": "",
       "dateStart": "2025-10-10T01:00:00.000",
+      "dateEnd": null
+    },
+    {
+      "id": "10",
+      "title": "Udemy",
+      "shortDescription": "<p><strong>Investing in Skills:</strong></p><ul><li>Flutter</li><li>Native iOS</li><li>Native Android</li></ul>",
+      "shortDescriptionUrl": "assets/features/project_list/images/udemy.png",
+      "introduction": "<h1>Udemy</h1><h3>By completing numerous projects on Udemy – both native (Kotlin, Swift) and in Flutter – I gained valuable experience and a deeper understanding of architecture and best practices in building Flutter applications.</h3>",
+      "introductionUrl": "assets/features/project_list/images/udemy_1.png",
+      "development": "",
+      "developmentUrl": "",
+      "conclusion": "",
+      "conclusionUrl": "",
+      "dateStart": "2020-10-10T01:00:00.000",
       "dateEnd": null
     }
   ]
