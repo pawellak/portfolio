@@ -1,5 +1,5 @@
 {
-  "length": 9,
+  "length": 10,
   "result": [
     {
       "id": "0",
@@ -61,15 +61,15 @@
     {
       "id": "4",
       "title": "Portfolio",
-      "shortDescription": "<p><strong>Application Features:</strong></p><ul><li>Multiplayer game</li><li>Online game show</li><li>Ranking</li></ul>",
+      "shortDescription": "<p><strong>Application Features:</strong></p><ul><li>About Me</li><li>Projects</li><li>Settings</li><li>Android, iOS, Web</li></ul><p style=\"text-align: center;\"><strong><span style=\"color: #ff6600;\">The applications from my portfolio have reached over 400,000 users.</span></strong></p>",
       "shortDescriptionUrl": "assets/features/project_list/images/portfolio.png",
-      "introduction": "<h1>Quiz &amp;&amp; Money</h1><h2 class=\"\\&quot;header-landing__title\\&quot;\" style=\"text-align: center;\">Play Quizzes, Win Prizes</h2><h4>Quiz'n'Money is an online quiz game where players compete in various knowledge categories.</h4><h4>Players can choose from different question categories and compete against other participants from around the world. Players can earn points and compete in rankings.</h4>",
-      "introductionUrl": "assets/features/project_list/images/quiz_1.png",
-      "development": "<h2>Key Application Features:</h2><ul><li>Online game</li><li>Reward system</li><li>Player ranking</li><li>Multiplayer game</li><li>Timed gameplay</li><li>First come, first served</li><li>Login via Google Authenticate</li></ul>",
-      "developmentUrl": "assets/features/project_list/images/quiz_2.png",
-      "conclusion": "<h2>Scope of Responsibilities:</h2><ul><li>Manual testing</li><li>Communication with the backend</li><li>Bug reporting</li><li>Working in a multi-person team</li><li>Executing predefined scenarios</li><li>Collaboration with a Native Android Developer</li></ul>",
-      "conclusionUrl": "assets/features/project_list/images/quiz_3.png",
-      "dateStart": "2022-08-25T01:00:00.000",
+      "introduction": "<h1>Portfolio</h1><h2 style=\"text-align: center;\">Flutter and Passion in Service of Everyday Life</h2><h3>One Codebase, Multiple Platforms, Endless Conveniences</h3>",
+      "introductionUrl": "assets/features/project_list/images/portfolio_1.png",
+      "development": "<h2>Key Application Features:</h2><ul><li>Information about my experience and passion</li><li>Native experience on iOS, Android, and Web</li><li>Responsive design: support for small and large screens</li><li>Access to application settings</li><li>Modular architecture</li></ul>",
+      "developmentUrl": "assets/features/project_list/images/portfolio_2.png",
+      "conclusion": "<h2>I work effectively both independently and as part of a team, delivering high-quality code on time.</h2><h3>I focus on development and providing valuable solutions for clients and application users.</h3>",
+      "conclusionUrl": "assets/features/project_list/images/portfolio_3.png",
+      "dateStart": "2021-01-01T01:00:00.000",
       "dateEnd": null
     },
     {
@@ -127,6 +127,20 @@
       "conclusion": "<h2>Scope of Responsibilities:</h2><ul><li>Manual testing</li><li>App maintaining</li><li>Communication with the backend</li><li>Bug reporting</li><li>Working in a multi-person team</li><li>Executing predefined scenarios</li><li>Collaboration with a Native Android Developer</li></ul>",
       "conclusionUrl": "assets/features/project_list/images/quiz_3.png",
       "dateStart": "2022-08-25T01:00:00.000",
+      "dateEnd": null
+    },
+    {
+      "id": "9",
+      "title": "Smart Home",
+      "shortDescription": "<p><strong>Application Features:</strong></p><ul><li>Measuring Electricity Usage</li><li>Motion and smoke detection</li><li>Wi-Fi and Bluetooth</li></ul>",
+      "shortDescriptionUrl": "assets/features/project_list/images/pico.png",
+      "introduction": "<h1>Smart Home</h1><h3>The project aims to develop a system for monitoring electricity consumption by tenants and supervising fire safety.</h3>",
+      "introductionUrl": "assets/features/project_list/images/pico_1.png",
+      "development": "<p>Scope of Responsibilities:&nbsp;</p>\n<ul>\n<li>Hardware Integration: Connecting and configuring sensors with the Raspberry Pi Pico microcontroller.</li>\n<li>Embedded Software Development: Creating software for the Raspberry Pi Pico for data acquisition and processing from sensors.</li>\n<li>Network Communication: Implementing the Raspberry Pi Pico's connection to a Wi-Fi network for data transmission.</li>\n<li>Mobile Application Development: Designing and implementing a mobile application for data visualization and system interaction.</li>\n</ul>",
+      "developmentUrl": "assets/features/project_list/images/pico_2.png",
+      "conclusion": "",
+      "conclusionUrl": "",
+      "dateStart": "2025-10-10T01:00:00.000",
       "dateEnd": null
     }
   ]
