@@ -2,6 +2,7 @@ import 'package:components_library/components_library_export.dart';
 import 'package:components_library/resources/dimens.dart' show Dimens;
 import 'package:components_library/widgets/container/cl_container.dart';
 import 'package:feature_project_list/presentation/data/project_model.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 
 class ProjectCompactWidget extends StatelessWidget {
@@ -14,6 +15,7 @@ class ProjectCompactWidget extends StatelessWidget {
     child: Column(
       spacing: Dimens.dimen12,
       children: [
+        const SizedBox(),
         ClImagePathWidget(
           width: double.infinity,
           borderRadius: const BorderRadius.all(Radius.circular(Dimens.dimen12)),
@@ -26,6 +28,7 @@ class ProjectCompactWidget extends StatelessWidget {
           _ProjectSectionHtml(description: project.development, imagePath: project.developmentUrl),
         if (project.conclusion.isNotEmpty)
           _ProjectSectionHtml(description: project.conclusion, imagePath: project.conclusionUrl),
+        if (kIsWeb) const SizedBox(),
       ],
     ),
   );

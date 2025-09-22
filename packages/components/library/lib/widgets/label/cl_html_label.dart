@@ -3,19 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart';
 
 class ClHtmlLabel extends StatelessWidget {
-  ClHtmlLabel({required this.data, this.onLinkTap, this.style, this.isOneLine = false, this.justify = false})
-    : super(key: UniqueKey());
+  ClHtmlLabel({required this.data}) : super(key: UniqueKey());
 
   final String data;
-  final VoidCallback? onLinkTap;
-  final TextStyle? style;
-  final bool isOneLine;
-  final bool justify;
 
   @override
   Widget build(BuildContext context) {
+    String data = this.data;
+
     if (data.isEmpty) {
       return const SizedBox();
+    } else {
+      data = DateFormatter.formatPeriodPlaceholder(data);
     }
 
     return HtmlWidget(

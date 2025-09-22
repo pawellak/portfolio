@@ -9,6 +9,7 @@ class PortfolioAppRouter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaterialApp.router(
+    debugShowCheckedModeBanner: false,
     themeAnimationDuration: Duration.zero,
     localizationsDelegates: context.localizationDelegates,
     color: AppColors.cPrimary,

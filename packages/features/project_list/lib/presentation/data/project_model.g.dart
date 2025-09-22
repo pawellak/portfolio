@@ -10,7 +10,6 @@ ProjectModel _$ProjectModelFromJson(Map<String, dynamic> json) => ProjectModel(
   id: json['id'] as String,
   title: json['title'] as String,
   shortDescription: json['shortDescription'] as String,
-  role: json['role'] as String,
   dateStart:
       json['dateStart'] == null
           ? null
@@ -26,5 +25,4 @@ ProjectModel _$ProjectModelFromJson(Map<String, dynamic> json) => ProjectModel(
   developmentUrl: json['developmentUrl'] as String,
   conclusion: json['conclusion'] as String,
   conclusionUrl: json['conclusionUrl'] as String,
-  category: json['category'] as String,
 );

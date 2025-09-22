@@ -8,7 +8,6 @@ class ProjectModel {
     required this.id,
     required this.title,
     required this.shortDescription,
-    required this.role,
     required this.dateStart,
     required this.dateEnd,
     required this.shortDescriptionUrl,
@@ -18,7 +17,6 @@ class ProjectModel {
     required this.developmentUrl,
     required this.conclusion,
     required this.conclusionUrl,
-    required this.category,
   });
 
   factory ProjectModel.fromJson(Map<String, Object?> json) => _$ProjectModelFromJson(json);
@@ -33,8 +31,6 @@ class ProjectModel {
   final String developmentUrl;
   final String conclusion;
   final String conclusionUrl;
-  final String role;
-  final String category;
   final DateTime? dateStart;
   final DateTime? dateEnd;
 }
