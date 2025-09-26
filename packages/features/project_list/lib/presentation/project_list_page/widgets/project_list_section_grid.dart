@@ -5,7 +5,7 @@ import 'package:feature_project_list/presentation/project_list_page/widgets/proj
     show ProjectListProjectWidget;
 import 'package:flutter/material.dart';
 
-const _kScreenDividerWidth = 600;
+const _kScreenDividerWidth = 650;
 const _kMinScreenGrid = 2.0;
 const _kMaxScreenGrid = 4.0;
 const _kNumberOfFractional = 1;
