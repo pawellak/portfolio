@@ -1,11 +1,9 @@
-export 'package:auto_size_text/auto_size_text.dart';
 export 'package:collection/collection.dart';
+export 'package:dio/dio.dart';
 export 'package:easy_localization/easy_localization.dart';
-export 'package:fluentui_system_icons/fluentui_system_icons.dart';
 export 'package:flutter_bloc/flutter_bloc.dart';
-export 'package:flutter_layout_grid/flutter_layout_grid.dart';
-export 'package:font_awesome_flutter/font_awesome_flutter.dart';
 export 'package:get_it/get_it.dart';
 export 'package:go_router/go_router.dart';
 export 'package:injectable/injectable.dart';
 export 'package:provider/provider.dart';
+export 'package:url_launcher/url_launcher.dart';

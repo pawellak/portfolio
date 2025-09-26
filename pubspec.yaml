@@ -20,6 +20,8 @@ dependencies:
     path: packages/features/settings
   feature_project_list:
     path: packages/features/project_list
+  feature_curriculum_vitae:
+    path: packages/features/curriculum_vitae
 
 #  flutter_native_splash: ^2.4.6
 #  flutter_launcher_icons: ^0.14.4
@@ -28,9 +30,11 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  build_runner: ^2.4.14
-  injectable_generator: ^2.7.0
-  json_serializable: ^6.9.5
+
+  # Code Generation
+  build_runner: 2.5.4
+  injectable_generator: 2.7.0
+  json_serializable: 6.9.5
 
 flutter:
   uses-material-design: true

@@ -55,5 +55,6 @@
   "label.date_time.one_month": "miesiąc",
   "label.date_time.two_months": "miesiące",
   "label.date_time.five_months": "miesięcy",
-  "label.date_time.and": "i"
+  "label.date_time.and": "i",
+  "label.menu_item.cv" : "CV"
 }

@@ -1,3 +1,4 @@
+// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
@@ -12,6 +13,8 @@ import 'package:components_core/di/core_package.module.dart' as _i960;
 import 'package:components_library/di/library_package.module.dart' as _i144;
 import 'package:feature_about_me/di/feature_about_me_package.module.dart'
     as _i102;
+import 'package:feature_curriculum_vitae/di/feature_curriculum_vitae_package.module.dart'
+    as _i584;
 import 'package:feature_project_list/di/feature_project_list_package.module.dart'
     as _i214;
 import 'package:feature_settings/di/feature_settings_package.module.dart'
@@ -20,17 +23,14 @@ import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
 extension GetItInjectableX on _i174.GetIt {
-// initializes the registration of main-scope dependencies inside of GetIt
+  // initializes the registration of main-scope dependencies inside of GetIt
   Future<_i174.GetIt> init({
     String? environment,
     _i526.EnvironmentFilter? environmentFilter,
   }) async {
-    final gh = _i526.GetItHelper(
-      this,
-      environment,
-      environmentFilter,
-    );
+    final gh = _i526.GetItHelper(this, environment, environmentFilter);
     await _i504.FeatureSettingsPackageModule().init(gh);
+    await _i584.FeatureCurriculumVitaePackageModule().init(gh);
     await _i214.FeatureProjectListPackageModule().init(gh);
     await _i102.FeatureAboutMePackageModule().init(gh);
     await _i960.ComponentsCorePackageModule().init(gh);

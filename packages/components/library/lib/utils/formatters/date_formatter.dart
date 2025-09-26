@@ -5,7 +5,7 @@ const dateFormatMMYYYY = 'MM.yyyy';
 const _regexDatePeriod = r'\$\{DATE_PERIOD:(\d{4}\.\d{2})\}';
 
 abstract class DateFormatter {
-  const DateFormatter();
+  const DateFormatter._();
 
   static String formatDateRange({
     required DateTime? dateTimeStart,
