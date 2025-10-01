@@ -12,6 +12,9 @@ dependencies:
   components_library:
     path: ../../components/library
 
+  pdf: 3.11.3
+  printing: 5.14.2
+
   # Code Generation
   build_runner: 2.5.4
   injectable_generator: 2.7.0

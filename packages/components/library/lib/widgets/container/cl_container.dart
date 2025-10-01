@@ -49,7 +49,7 @@ class ClContainer extends StatelessWidget {
     padding: padding ?? const EdgeInsets.all(Dimens.dimen16),
     margin: margin,
     decoration: BoxDecoration(
-      border: border,
+      border: border ?? Border.all(color: context.colorTokens.containerBorderColor),
       boxShadow: boxShadow,
       color: backgroundColor ?? context.colorTokens.surfaceContainerPrimary,
       borderRadius: borderRadius ?? BorderRadius.circular(Dimens.dimen12),

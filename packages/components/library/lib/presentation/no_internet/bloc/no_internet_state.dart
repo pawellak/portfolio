@@ -4,7 +4,9 @@ abstract class NoInternetState extends BaseState {
   const NoInternetState();
 }
 
-class InitialNoInternet extends NoInternetState {}
+class InitialNoInternet extends NoInternetState {
+  const InitialNoInternet();
+}
 
 class ShowLoading extends NoInternetState {
   const ShowLoading(this.isLoading);

@@ -1,5 +1,6 @@
 import 'package:components_library/components_library_export.dart';
 import 'package:components_library/resources/dimens.dart';
+import 'package:components_library/widgets/container/cl_container.dart';
 import 'package:flutter/material.dart';
 
 class ClRadioListTile<T> extends StatelessWidget {
@@ -27,16 +28,20 @@ class ClRadioListTile<T> extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
 
   @override
-  Widget build(BuildContext context) => RadioListTile.adaptive(
-    contentPadding: padding,
-    title: _buildWidget(context),
-    value: value,
-    groupValue: groupValue,
-    onChanged: onChanged,
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Dimens.dimen12)),
-    tileColor: context.colorTokens.surfaceContainerPrimary,
-    selectedTileColor: context.colorTokens.surfaceContainerPrimary,
-    fillColor: WidgetStateProperty.resolveWith<Color>((states) => context.colorTokens.checkboxIconColor),
+  Widget build(BuildContext context) => ClContainer(
+    backgroundColor: context.colorTokens.secondaryBackgroundColor,
+    padding: EdgeInsets.zero,
+    child: RadioListTile.adaptive(
+      contentPadding: padding,
+      title: _buildWidget(context),
+      value: value,
+      groupValue: groupValue,
+      onChanged: onChanged,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Dimens.dimen12)),
+      tileColor: context.colorTokens.secondaryBackgroundColor,
+      selectedTileColor: context.colorTokens.secondaryBackgroundColor,
+      fillColor: WidgetStateProperty.resolveWith<Color>((states) => context.colorTokens.checkboxIconColor),
+    ),
   );
 
   Widget _buildWidget(BuildContext context) {

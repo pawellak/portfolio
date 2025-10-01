@@ -1,0 +1,96 @@
+{
+  "length": 11,
+  "result": [
+    {
+      "id": "0",
+      "title": "Moja Enea",
+      "description_start": "Funkcjonalność aplikacji:",
+      "description": "Ponad 150 widoków\nSzczegóły umowy\n>E-opłaty za prąd",
+      "description_end": "Funkcjonalność aplikacji:",
+      "shortDescription": "Ponad 300+ tyś użytkowników i ocena 4.7 w sklepach",
+      "shortDescriptionUrl": "assets/images/project_list/enea.png",
+      "dateStart": "2023-08-25T01:00:00.000",
+      "dateEnd": null
+    },
+    {
+      "id": "1",
+      "title": "Leksykon EJ",
+      "shortDescription": "<p><strong>Funkcjonalność aplikacji:</strong></p><ul><li>Tłumaczenia</li><li>Historia</li><li>Słownik</li></ul>",
+      "shortDescriptionUrl": "assets/images/project_list/leksykon.png",
+      "dateStart": "2022-06-01T01:00:00.000",
+      "dateEnd": "2022-08-01T01:00:00.000"
+    },
+    {
+      "id": "2",
+      "title": "ID Logistics",
+      "shortDescription": "<p><strong>Funkcjonalność aplikacji:</strong></p><ul><li>Zgłaszanie awarii</li><li>Skaner Zebra</li><li>Komunikacja</li></ul><p  style=\"text-align: center;\" ><strong><span  style=\"color: #ff6600;\">Zwycięzca międzynarodowego konkursu &bdquo;The Factory 2023&rdquo;</strong></p>",
+      "shortDescriptionUrl": "assets/images/project_list/idlogistics.png",
+      "dateStart": "2023-09-01T01:00:00.000",
+      "dateEnd": "2024-02-01T01:00:00.000"
+    },
+    {
+      "id": "3",
+      "title": "Maraton Warszawski",
+      "shortDescription": "<p><strong>Funkcjonalność aplikacji:</strong></p><ul><li>Personalizacja</li><li>Zapisy na biegi</li><li>Autoryzacja</li></ul>",
+      "shortDescriptionUrl": "assets/images/project_list/maraton.png",
+      "dateStart": "2025-06-01T01:00:00.000",
+      "dateEnd": null
+    },
+    {
+      "id": "4",
+      "title": "Portfolio",
+      "shortDescription": "<p><strong>Funkcjonalność aplikacji:</strong></p><ul><li>O mnie</li><li>Projekty</li><li>Ustawienia</li><li>Android, iOS, Web</li></ul><p style=\"text-align: center;\"><strong><span style=\"color: #ff6600;\">Aplikacje z mojego portfolio dotarły do ponad 400 tysięcy użytkownik&oacute;w.</span></strong></p>",
+      "shortDescriptionUrl": "assets/images/project_list/portfolio.png",
+      "dateStart": "2021-01-01T01:00:00.000",
+      "dateEnd": null
+    },
+    {
+      "id": "5",
+      "title": "Zdrowy Ty",
+      "shortDescription": "<p><strong>Funkcjonalność aplikacji:</strong></p><ul><li>Regularne badania</li><li>Multimedia</li><li>Offline</li></ul>",
+      "shortDescriptionUrl": "assets/images/project_list/healthy.png",
+      "dateStart": "2024-06-01T01:00:00.000",
+      "dateEnd": "2024-08-01T01:00:00.000"
+    },
+    {
+      "id": "6",
+      "title": "Concierge",
+      "shortDescription": "<p><strong>Funkcjonalność aplikacji:</strong></p><ul><li>ponad 40 unikalnych widoków</li><li>2 modułowe aplikacje </li><li>concierge</li><li>rezerwacje</li></ul>",
+      "shortDescriptionUrl": "assets/images/project_list/concierge.png",
+      "dateStart": "2023-04-25T01:00:00.000",
+      "dateEnd": "2023-09-25T01:00:00.000"
+    },
+    {
+      "id": "7",
+      "title": "Pam 365",
+      "shortDescription": "<p><strong>Funkcjonalność aplikacji:</strong></p>\n<ul>\n<li>3 modułowe aplikacje</li>\n<li>backend (Firebase)</li>\n<li>zarządzanie</li>\n<li>wynajem</li>\n<li>serwis</li>\n</ul>",
+      "shortDescriptionUrl": "assets/images/project_list/pam.png",
+      "dateStart": "2022-09-01T01:00:00.000",
+      "dateEnd": "2023-04-01T01:00:00.000"
+    },
+    {
+      "id": "8",
+      "title": "Quiz&Money",
+      "shortDescription": "<p><strong>Funkcjonalność aplikacji:</strong></p><ul><li>Natywny Android - Kotlin</li><li>Gra wieloosobowa</li><li>Teleturniej online</li><li>Ranking</li></ul>",
+      "shortDescriptionUrl": "assets/images/project_list/quiz.png",
+      "dateStart": "2022-08-25T01:00:00.000",
+      "dateEnd": null
+    },
+    {
+      "id": "9",
+      "title": "Smart Home",
+      "shortDescription": "<p><strong>Funkcjonalność aplikacji:</strong></p><ul><li>Pomiar zużytego prądu</li><li>Detekcja ruchu oraz dymu</li><li>Wi-fi oraz bluetooth</li></ul>",
+      "shortDescriptionUrl": "assets/images/project_list/pico.png",
+      "dateStart": "2025-10-10T01:00:00.000",
+      "dateEnd": null
+    },
+    {
+      "id": "10",
+      "title": "Udemy",
+      "shortDescription": "<p><strong>Inwestycja w umiejętności:</strong></p><ul><li>Flutter</li><li>Natywny iOS</li><li>Natywny Android</li></ul>",
+      "shortDescriptionUrl": "assets/images/project_list/udemy.png",
+      "dateStart": "2025-10-10T01:00:00.000",
+      "dateEnd": null
+    }
+  ]
+}

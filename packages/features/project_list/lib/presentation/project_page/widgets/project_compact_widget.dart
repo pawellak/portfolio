@@ -1,7 +1,7 @@
 import 'package:components_library/components_library_export.dart';
 import 'package:components_library/resources/dimens.dart' show Dimens;
 import 'package:components_library/widgets/container/cl_container.dart';
-import 'package:feature_project_list/presentation/data/project_model.dart';
+import 'package:feature_project_list/data/project_model.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 

@@ -7,3 +7,9 @@ sealed class CurriculumVitaeState extends BaseState {
 class CurriculumVitaeInitial extends CurriculumVitaeState {
   const CurriculumVitaeInitial();
 }
+
+class CurriculumVitaeUpdateView extends CurriculumVitaeState {
+  const CurriculumVitaeUpdateView(this.pdfData);
+
+  final pw.Document pdfData;
+}

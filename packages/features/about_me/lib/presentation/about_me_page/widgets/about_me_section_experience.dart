@@ -47,7 +47,7 @@ class _AboutMeExperienceWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => ClContainer(
-    border: Border.all(color: context.colorTokens.dividerSecondaryColor),
+    backgroundColor: context.colorTokens.secondaryBackgroundColor,
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       spacing: Dimens.dimen8,

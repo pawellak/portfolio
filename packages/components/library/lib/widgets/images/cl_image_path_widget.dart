@@ -29,6 +29,7 @@ class ClImagePathWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => ClContainer(
+    border: const Border(),
     constraints: constraints,
     clipBehavior: Clip.antiAlias,
     margin: margin,

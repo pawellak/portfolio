@@ -13,6 +13,10 @@ import 'package:feature_curriculum_vitae/navigation/curriculum_vitae_router.dart
     as _i581;
 import 'package:feature_curriculum_vitae/presentation/curriculum_vitae_page/bloc/curriculum_vitae_cubit.dart'
     as _i239;
+import 'package:feature_curriculum_vitae/repositories/curriculum_vitae_repository.dart'
+    as _i576;
+import 'package:feature_curriculum_vitae/repositories/curriculum_vitae_repository_impl.dart'
+    as _i1072;
 import 'package:injectable/injectable.dart' as _i526;
 
 class FeatureCurriculumVitaePackageModule extends _i526.MicroPackageModule {
@@ -21,8 +25,14 @@ class FeatureCurriculumVitaePackageModule extends _i526.MicroPackageModule {
   _i687.FutureOr<void> init(_i526.GetItHelper gh) {
     gh.factory<_i581.CurriculumVitaeRouter>(
         () => const _i581.CurriculumVitaeRouter());
-    gh.factory<_i239.CurriculumVitaeCubit>(() => _i239.CurriculumVitaeCubit());
+    gh.factory<_i576.CurriculumVitaeRepository>(
+        () => _i1072.CurriculumVitaRepositoryImpl(
+              gh<_i965.CoreLocalClient>(),
+              gh<_i965.AppSettingsRepository>(),
+            ));
     gh.singleton<_i965.FeatureCurriculumVitae>(
         () => const _i838.FeatureCurriculumVitaeImpl());
+    gh.factory<_i239.CurriculumVitaeCubit>(() =>
+        _i239.CurriculumVitaeCubit(gh<_i576.CurriculumVitaeRepository>()));
   }
 }

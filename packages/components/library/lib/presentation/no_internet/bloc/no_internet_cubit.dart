@@ -8,7 +8,7 @@ const _durationForLoadingInSec = 2;
 
 @injectable
 class NoInternetCubit extends BaseCubit<NoInternetState> {
-  NoInternetCubit(this._noInternetRepository) : super(InitialNoInternet());
+  NoInternetCubit(this._noInternetRepository) : super(const InitialNoInternet());
 
   final INoInternetRepository _noInternetRepository;
 

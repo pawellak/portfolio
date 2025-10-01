@@ -12,6 +12,7 @@ class NoInternetPage extends BasePage<NoInternetCubit> {
 
   @override
   Widget buildPage(BuildContext context) => BlocListener<NoInternetCubit, NoInternetState>(
+    listenWhen: (previous, current) => current is ShowLoading,
     listener: (context, state) {
       switch (state) {
         case ShowLoading():
