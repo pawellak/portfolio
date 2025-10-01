@@ -1,4 +1,3 @@
-import 'package:components_core/utilis/app_constants.dart';
 import 'package:components_library/components_library_export.dart';
 import 'package:components_library/resources/dimens.dart';
 import 'package:flutter/material.dart';

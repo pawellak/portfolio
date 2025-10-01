@@ -1,6 +1,6 @@
 import 'package:components_library/components_library_export.dart';
 import 'package:components_library/presentation/navigable/web/widgets/appbar_menu_widget.dart';
-import 'package:components_library/presentation/navigable/web/widgets/drawer_widget.dart' show DrawerWidget;
+import 'package:components_library/presentation/navigable/web/widgets/drawer_widget.dart';
 import 'package:components_library/resources/dimens.dart' show Dimens;
 import 'package:components_library/widgets/container/cl_container.dart';
 import 'package:flutter/material.dart';

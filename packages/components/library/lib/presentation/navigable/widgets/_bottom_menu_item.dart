@@ -1,4 +1,4 @@
-part of '../navigable_mobile_body.dart';
+part of 'navigable_mobile_menu.dart';
 
 class _BottomMenuItem extends StatelessWidget {
   const _BottomMenuItem({
@@ -29,7 +29,12 @@ class _BottomMenuItem extends StatelessWidget {
           path: _isActive ? menuItemData.selectedIcon : menuItemData.unselectedIcon,
           color: _iconColor(context),
         ),
-        Label(menuItemData.label, color: _iconColor(context)),
+        Label(
+          menuItemData.label,
+          color: _iconColor(context),
+          textAlign: TextAlign.center,
+          style: context.textTheme.bodySmall,
+        ),
       ],
     ),
   );

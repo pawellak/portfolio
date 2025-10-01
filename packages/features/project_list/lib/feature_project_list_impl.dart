@@ -9,5 +9,5 @@ class FeatureProjectListImpl implements FeatureProjectList {
   static const String path = ProjectListPage.path;
 
   @override
-  String get projectListPageName => name;
+  String get pageName => name;
 }

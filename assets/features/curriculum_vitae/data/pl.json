@@ -1,0 +1,126 @@
+{
+  "length": 12,
+  "result": [
+    {
+      "id": "0",
+      "title": "Moja Enea",
+      "description": "Architektura i Skalowalność:",
+      "advantages": "Flutter (BLoC) | 200+ Widoków | Integracje Natywne | Technical Lead",
+      "additional": "Główny deweloper, ponad 350+ tys. użytkowników i ocena 4.7",
+      "imageUrl": "assets/images/project_list/enea.png",
+      "dateStart": "2023-08-25T01:00:00.000",
+      "dateEnd": null
+    },
+    {
+      "id": "1",
+      "title": "ID Logistics",
+      "description": "Rozwiązania dla Przemysłu:",
+      "advantages": "Raportowanie Problemów | Skaner Zebra | Flutter | Natywny Android",
+      "additional": "Zwycięzca międzynarodowego konkursu 'The Factory 2023'",
+      "imageUrl": "assets/images/project_list/idlogistics.png",
+      "dateStart": "2023-09-01T01:00:00.000",
+      "dateEnd": "2024-02-01T01:00:00.000"
+    },
+    {
+      "id": "2",
+      "title": "Leksykon EJ",
+      "description": "Funkcje Aplikacji:",
+      "advantages": "Tłumaczenia | Dostępność Cyfrowa | Historia | Słownik | Figma",
+      "additional": "Dwujęzyczny leksykon terminów branży jądrowej z dostępem offline",
+      "imageUrl": "assets/images/project_list/leksykon.png",
+      "dateStart": "2022-06-01T01:00:00.000",
+      "dateEnd": "2022-08-01T01:00:00.000"
+    },
+
+    {
+      "id": "3",
+      "title": "Maraton Warszawski",
+      "description": "Funkcje Aplikacji:",
+      "advantages": "Rejestracja na Bieg | Autoryzacja | Zakupy | Historia | Logowanie Społecznościowe | MVP | Onboarding",
+      "additional": "",
+      "imageUrl": "assets/images/project_list/maraton.png",
+      "dateStart": "2025-06-01T01:00:00.000",
+      "dateEnd": null
+    },
+    {
+      "id": "4",
+      "title": "Portfolio",
+      "description": "O Mnie:",
+      "advantages": "Flutter | Android | iOS | IoT | Web\nŁącznie ponad 450 000 zadowolonych użytkowników",
+      "additional": "",
+      "imageUrl": "assets/images/project_list/portfolio.png",
+      "dateStart": "2025-07-01T01:00:00.000",
+      "dateEnd": null
+    },
+    {
+      "id": "5",
+      "title": "Zdrowy Ty",
+      "description": "Funkcje Aplikacji:",
+      "advantages": "Regularne Badania | Audio | Wideo | Offline | Powiadomienia | Ankiety | Zalecenia Medyczne",
+      "additional": "",
+      "imageUrl": "assets/images/project_list/healthy.png",
+      "dateStart": "2024-06-01T01:00:00.000",
+      "dateEnd": "2024-08-01T01:00:00.000"
+    },
+    {
+      "id": "6",
+      "title": "Concierge",
+      "description": "Architektura Modułowa:",
+      "advantages": "Rezerwacje eventów | 40+ Widoków | 2 Moduły | Płatności (Stripe) | Firebase",
+      "additional": "",
+      "imageUrl": "assets/images/project_list/concierge.png",
+      "dateStart": "2023-04-25T01:00:00.000",
+      "dateEnd": "2023-09-25T01:00:00.000"
+    },
+    {
+      "id": "7",
+      "title": "Pam 365",
+      "description": "Aplikacja i Backend:",
+      "advantages": "Rezerwacje apartamentów | Backend (Firebase) | Cloud Functions | 3 Moduły | Figma",
+      "additional": "",
+      "imageUrl": "assets/images/project_list/pam.png",
+      "dateStart": "2022-09-01T01:00:00.000",
+      "dateEnd": "2023-04-01T01:00:00.000"
+    },
+    {
+      "id": "8",
+      "title": "Smart Home",
+      "description": "Rozwiązania IoT:",
+      "advantages": "Zarządzanie apartamentem | Bluetooth | Raspberry Pi | Internet of Things | ADC | GPIO | Timers | Flutter",
+      "additional": "",
+      "imageUrl": "assets/images/project_list/pico.png",
+      "dateStart": "2025-09-09T01:00:00.000",
+      "dateEnd": null
+    },
+    {
+      "id": "9",
+      "title": "Quiz & Money",
+      "description": "Rozwój Natywny:",
+      "advantages": "Gra Wieloosobowa | Android (Kotlin) | Teleturniej Online | Utrzymanie",
+      "additional": "",
+      "imageUrl": "assets/images/project_list/quiz.png",
+      "dateStart": "2022-08-25T01:00:00.000",
+      "dateEnd": null
+    },
+    {
+      "id": "10",
+      "title": "Prototypy i R&D",
+      "description": "Kluczowe Technologie:",
+      "advantages": "Dziesiątki prototypów badających nowe technologie i rozwiązania",
+      "additional": "",
+      "imageUrl": "assets/images/project_list/prototypes.png",
+      "dateStart": "2021-01-02T01:00:00.000",
+      "dateEnd": null
+    },
+    {
+      "id": "11",
+      "title": "Edukacja i Rozwój",
+      "description": "Ciągłe Doskonalenie:",
+      "advantages": "Setki godzin kursów, szkoleń i spotkań branżowych",
+      "additional": "",
+      "imageUrl": "assets/images/project_list/udemy.png",
+      "dateStart": "2021-01-02T01:00:00.000",
+      "dateEnd": null
+    }
+  ]
+}

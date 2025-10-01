@@ -8,6 +8,12 @@ abstract class FeatureSettings implements Feature {
   const FeatureSettings();
 }
 
+abstract class FeatureCurriculumVitae implements Feature {
+  const FeatureCurriculumVitae();
+
+  String get pageName;
+}
+
 abstract class FeatureWeather implements Feature {
   const FeatureWeather();
 }
@@ -15,5 +21,5 @@ abstract class FeatureWeather implements Feature {
 abstract class FeatureProjectList implements Feature {
   const FeatureProjectList();
 
-  String get projectListPageName;
+  String get pageName;
 }

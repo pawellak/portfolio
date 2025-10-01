@@ -12,11 +12,13 @@ class ClLottie extends StatefulWidget {
     this.boxFit,
     this.repeatTimeInMs,
     this.blendMode,
+    this.isStatic = false,
   });
 
   final String path;
   final Color? color;
   final double? width;
+  final bool isStatic;
   final double? height;
   final BoxFit? boxFit;
   final int? repeatTimeInMs;
@@ -32,31 +34,49 @@ class _ClLottieState extends State<ClLottie> with SingleTickerProviderStateMixin
   @override
   void initState() {
     super.initState();
+    _setupController();
+  }
+
+  @override
+  void didUpdateWidget(covariant ClLottie oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.repeatTimeInMs != oldWidget.repeatTimeInMs || widget.isStatic != oldWidget.isStatic) {
+      _controller?.dispose();
+      _setupController();
+    }
+  }
+
+  void _setupController() {
     final repeatTimeInMs = widget.repeatTimeInMs;
-    if (repeatTimeInMs != null) {
-      _controller = AnimationController(
-        duration: Duration(milliseconds: repeatTimeInMs),
-        vsync: this, // the SingleTickerProviderStateMixin
-      )..repeat();
+    if (repeatTimeInMs != null && !widget.isStatic) {
+      _controller = AnimationController(duration: Duration(milliseconds: repeatTimeInMs), vsync: this)..repeat();
+    } else {
+      _controller = null;
     }
   }
 
   @override
-  Widget build(BuildContext context) => ColorFiltered(
-        colorFilter: ColorFilter.mode(
-          widget.color ?? Colors.transparent,
-          //set dst to turn off blend mode
-          widget.blendMode ?? BlendMode.srcIn,
-        ),
-        child: Lottie.asset(
-          repeat: _controller != null,
-          widget.path,
-          width: widget.width ?? Dimens.dimen200,
-          height: widget.height ?? Dimens.dimen200,
-          fit: widget.boxFit ?? BoxFit.contain,
-          controller: _controller,
-        ),
-      );
+  Widget build(BuildContext context) {
+    final lottieWidget = Lottie.asset(
+      widget.path,
+      animate: !widget.isStatic,
+      repeat: _controller != null,
+      controller: _controller,
+      width: widget.width ?? Dimens.dimen200,
+      height: widget.height ?? Dimens.dimen200,
+      fit: widget.boxFit ?? BoxFit.contain,
+    );
+
+    final color = widget.color;
+    if (color == null) {
+      return lottieWidget;
+    }
+
+    return ColorFiltered(
+      colorFilter: ColorFilter.mode(color, widget.blendMode ?? BlendMode.srcIn),
+      child: lottieWidget,
+    );
+  }
 
   @override
   void dispose() {

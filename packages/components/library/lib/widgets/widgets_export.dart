@@ -9,4 +9,5 @@ export 'launcher/launcher_export.dart';
 export 'loading/loading_export.dart';
 export 'page/page_export.dart';
 export 'radio/radio_exports.dart';
+export 'scroll/scroll_export.dart';
 export 'switch/cl_switch.dart';

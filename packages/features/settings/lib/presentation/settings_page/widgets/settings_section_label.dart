@@ -23,23 +23,26 @@ class SettingsSectionLabel extends StatelessWidget {
   Widget build(BuildContext context) => ClContainer(
         margin: const EdgeInsets.all(Dimens.dimen32),
         borderRadius: BorderRadius.circular(Dimens.dimen8),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          mainAxisSize: MainAxisSize.min,
-          spacing: Dimens.dimen20,
-          children: [
-            Label(
-              'label.settings.quote',
-              textAlign: TextAlign.center,
-              style: context.textTheme.bodyLarge?.copyWith(fontStyle: FontStyle.italic),
-            ),
-            Label(
-              _quoteAuthor,
-              color: context.colorTokens.textSecondary,
-              textAlign: TextAlign.right,
-              translate: false,
-            ),
-          ],
-        ).addPaddingAll(Dimens.dimen16),
+        child: ClContainer(
+          backgroundColor: context.colorTokens.secondaryBackgroundColor,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisSize: MainAxisSize.min,
+            spacing: Dimens.dimen20,
+            children: [
+              Label(
+                'label.settings.quote',
+                textAlign: TextAlign.center,
+                style: context.textTheme.bodyLarge?.copyWith(fontStyle: FontStyle.italic),
+              ),
+              Label(
+                _quoteAuthor,
+                color: context.colorTokens.textSecondary,
+                textAlign: TextAlign.right,
+                translate: false,
+              ),
+            ],
+          ).addPaddingAll(Dimens.dimen16),
+        ),
       );
 }

@@ -4,7 +4,7 @@ part 'about_me_state.dart';
 
 @injectable
 class AboutMeCubit extends BaseCubit<AboutMeState> {
-  AboutMeCubit() : super(AboutMeInitial());
+  AboutMeCubit() : super(const AboutMeInitial());
 
   final _contactGroup = AutoSizeGroup();
 

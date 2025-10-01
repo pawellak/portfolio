@@ -1,4 +1,4 @@
-import 'package:url_launcher/url_launcher.dart';
+import 'package:components_core/components_pub_dev_export.dart' show launchUrl;
 
 /// A class for launching URL and making phone calls.
 mixin class Launcher {

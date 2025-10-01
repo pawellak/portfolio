@@ -1,7 +1,6 @@
-import 'package:components_core/components_pub_dev_export.dart'
-    show StatefulNavigationShell, StringTranslateExtension;
-import 'package:components_core/navigation/app_menu_data.dart' show AppMenuData;
-import 'package:components_library/components_library_export.dart' show ContextExtensions, ThemeExtensions;
+import 'package:components_core/components_pub_dev_export.dart' show StatefulNavigationShell, StringTranslateExtension;
+import 'package:components_library/components_library_export.dart' show ClScroll, ContextExtensions, ThemeExtensions;
+import 'package:components_library/navigation/app_menu_data.dart';
 import 'package:components_library/presentation/navigable/controller/navigable_controller.dart';
 import 'package:components_library/resources/dimens.dart' show Dimens;
 import 'package:components_library/widgets/container/cl_container.dart';
@@ -23,20 +22,23 @@ class AppBarExpandedMenuWidget extends StatelessWidget {
         width: double.infinity,
         height: Dimens.dimen72,
         borderRadius: BorderRadius.zero,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          spacing: Dimens.dimen16,
-          children:
-              AppMenuData.values.indexed
-                  .map(
-                    (e) => _AppBarExpandedItemWidget(
-                      item: e.$2,
-                      onTap: () {
-                        NavigableController.onTap(context: context, navigationShell: navigationShell, index: e.$1);
-                      },
-                    ),
-                  )
-                  .toList(),
+        child: ClScroll(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            spacing: Dimens.dimen16,
+            children:
+                AppMenuData.values.indexed
+                    .map(
+                      (e) => _AppBarExpandedItemWidget(
+                        item: e.$2,
+                        onTap: () {
+                          NavigableController.onTap(context: context, navigationShell: navigationShell, index: e.$1);
+                        },
+                      ),
+                    )
+                    .toList(),
+          ),
         ),
       ),
       ClContainer(
