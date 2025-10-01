@@ -1,4 +1,4 @@
-import 'package:feature_project_list/presentation/data/project_model.dart';
+import 'package:feature_project_list/data/project_model.dart';
 import 'package:feature_project_list/presentation/project_list_page/widgets/project_list_project_widget.dart'
     show ProjectListProjectWidget;
 import 'package:flutter/material.dart';

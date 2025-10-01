@@ -20,6 +20,8 @@ dependencies:
     path: packages/features/settings
   feature_project_list:
     path: packages/features/project_list
+  feature_curriculum_vitae:
+    path: packages/features/curriculum_vitae
 
 #  flutter_native_splash: ^2.4.6
 #  flutter_launcher_icons: ^0.14.4
@@ -28,43 +30,49 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  build_runner: ^2.4.14
-  injectable_generator: ^2.7.0
-  json_serializable: ^6.9.5
+
+  # Code Generation
+  build_runner: 2.5.4
+  injectable_generator: 2.7.0
+  json_serializable: 6.9.5
 
 flutter:
   uses-material-design: true
   assets:
-    - assets/translations/
-    - assets/images/
-    - assets/logo/
-    - assets/lottie/
-    - assets/features/project_list/images/
+    - assets/app/
+    - assets/features/curriculum_vitae/data/
     - assets/features/project_list/data/
+    - assets/fonts/
+    - assets/images/
+    - assets/images/companies/
+    - assets/images/icons/
+    - assets/images/project_list/
+    - assets/lottie/
+    - assets/translations/
 
 #flutter_native_splash:
 #  color: "#012f80"
-#  image: assets/images/splash.png
+#  image: assets/app/splash.png
 #  color_dark: "#012f80"
-#  image_dark: assets/images/splash.png
+#  image_dark: assets/app/splash.png
 #  android_12:
-#    image: assets/images/splash_a12.png
+#    image: assets/app/splash_a12.png
 #    icon_background_color: "#012f80"
-#    image_dark: assets/images/splash_a12.png
+#    image_dark: assets/app/splash_a12.png
 #    icon_background_color_dark: "#012f80"
 #  ios: true
 #  web: true
 #
 #flutter_launcher_icons:
-#  image_path: "assets/logo/logo.png"
-#  image_path_ios: "assets/logo/logo.png"
-#  adaptive_icon_foreground: "assets/logo/icon_foreground.png"
+#  image_path: "assets/app/logo.png"
+#  image_path_ios: "assets/app/logo.png"
+#  adaptive_icon_foreground: "assets/app/icon_foreground.png"
 #  android: true
 #  ios: true
 #  adaptive_icon_background: "#012f80"
 #  remove_alpha_ios: true
 #  web:
 #    generate: true
-#    image_path: "assets/logo/logo.png"
+#    image_path: "assets/app/logo.png"
 #    background_color: "#012f80"
 #    theme_color: "#012f80"

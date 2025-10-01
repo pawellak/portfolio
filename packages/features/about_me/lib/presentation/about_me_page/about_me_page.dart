@@ -15,5 +15,6 @@ class AboutMePage extends BasePage<AboutMeCubit> {
   static const String path = _kDefaultRoutePath;
 
   @override
-  Widget buildPage(BuildContext context) => const SingleChildScrollView(child: ClAdapter(expanded: AboutMeExpanded(), compact: AboutMeCompact()));
+  Widget buildPage(BuildContext context) =>
+      const SingleChildScrollView(child: ClAdapter(expanded: AboutMeExpanded(), compact: AboutMeCompact()));
 }

@@ -2,6 +2,7 @@ import 'package:components_library/components_library_export.dart'
     show GoRouter, NavigableMobileBody, NavigableWebBody, StatefulShellRoute, getIt;
 import 'package:feature_about_me/feature_about_me_impl.dart';
 import 'package:feature_about_me/navigation/about_me_router.dart';
+import 'package:feature_curriculum_vitae/navigation/curriculum_vitae_router.dart';
 import 'package:feature_project_list/navigation/project_list_router.dart';
 import 'package:feature_settings/navigation/settings_router.dart';
 import 'package:flutter/foundation.dart' show kDebugMode, kIsWeb;
@@ -14,6 +15,7 @@ final GoRouter appRouter = GoRouter(
       branches: [
         getIt<AboutMeRouter>().statefulShellBranch,
         getIt<ProjectListRouter>().statefulShellBranch,
+        getIt<CurriculumVitaeRouter>().statefulShellBranch,
         getIt<SettingsRouter>().statefulShellBranch,
       ],
       builder:

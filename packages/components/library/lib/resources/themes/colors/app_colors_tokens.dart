@@ -7,6 +7,9 @@ abstract class AppColorsTokens extends ThemeExtension<AppColorsTokens> {
   //Project list Page
   abstract final Color projectListBackgroundColor;
 
+  //Project list Page
+  abstract final Color secondaryBackgroundColor;
+
   //Checkbox
   abstract final Color checkboxIconColor;
 

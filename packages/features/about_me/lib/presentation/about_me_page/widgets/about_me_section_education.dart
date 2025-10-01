@@ -2,6 +2,7 @@ import 'package:components_library/components_library_export.dart'
     show ClImagePathWidget, FluentIcons, Label, ThemeExtensions;
 import 'package:components_library/resources/dimens.dart';
 import 'package:components_library/resources/icons/app_image.dart';
+import 'package:components_library/widgets/container/cl_container.dart';
 import 'package:feature_about_me/presentation/widgets/about_me_section_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -9,15 +10,18 @@ class AboutMeSectionEducation extends StatelessWidget {
   const AboutMeSectionEducation({super.key});
 
   @override
-  Widget build(BuildContext context) => const AboutMeSectionWidget(
+  Widget build(BuildContext context) =>  AboutMeSectionWidget(
     icon: FluentIcons.hat_graduation_16_regular,
     title: 'label.about_me.education.title',
-    child: Column(
-      spacing: Dimens.dimen20,
-      children: [
-        _AboutMeEducationWidget(labelKey: 'label.about_me.education.msc_eng'),
-        _AboutMeEducationWidget(labelKey: 'label.about_me.education.eng'),
-      ],
+    child: ClContainer(
+      backgroundColor: context.colorTokens.secondaryBackgroundColor,
+      child: const Column(
+        spacing: Dimens.dimen20,
+        children: [
+          _AboutMeEducationWidget(labelKey: 'label.about_me.education.msc_eng'),
+          _AboutMeEducationWidget(labelKey: 'label.about_me.education.eng'),
+        ],
+      ),
     ),
   );
 }

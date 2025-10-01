@@ -89,10 +89,10 @@ class _AboutMeContactWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MouseRegion(
-    cursor: onTap != null? SystemMouseCursors.click : MouseCursor.defer,
+    cursor: onTap != null ? SystemMouseCursors.click : MouseCursor.defer,
     child: ClContainer(
       onTap: onTap,
-      backgroundColor: context.colorTokens.contactBackgroundColor,
+      backgroundColor: context.colorTokens.secondaryBackgroundColor,
       borderRadius: const BorderRadius.all(Radius.circular(Dimens.dimen8)),
       padding: const EdgeInsets.all(Dimens.dimen4),
       child: Row(

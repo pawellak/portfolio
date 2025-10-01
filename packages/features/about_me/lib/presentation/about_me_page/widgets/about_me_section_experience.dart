@@ -5,7 +5,6 @@ import 'package:components_library/widgets/container/cl_container.dart';
 import 'package:feature_about_me/presentation/widgets/about_me_section_widget.dart';
 import 'package:flutter/material.dart'
     show
-        Border,
         BorderRadius,
         BuildContext,
         Column,
@@ -22,21 +21,19 @@ class AboutMeSectionExperience extends StatelessWidget {
   const AboutMeSectionExperience({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return const AboutMeSectionWidget(
-      icon: FluentIcons.book_compass_24_regular,
-      title: 'label.about_me.experience.title',
-      child: Column(
-        spacing: Dimens.dimen12,
-        children: [
-          _AboutMeExperienceWidget(labelKey: 'sygnisoft', imagePath: AppImage.sygnisoft),
-          _AboutMeExperienceWidget(labelKey: 'svantek', imagePath: AppImage.svantek),
-          _AboutMeExperienceWidget(labelKey: 'falcon_acoustics', imagePath: AppImage.falconAcoustics),
-          _AboutMeExperienceWidget(labelKey: 'ecoplan', imagePath: AppImage.ecoplan),
-        ],
-      ),
-    );
-  }
+  Widget build(BuildContext context) => const AboutMeSectionWidget(
+    icon: FluentIcons.book_compass_24_regular,
+    title: 'label.about_me.experience.title',
+    child: Column(
+      spacing: Dimens.dimen12,
+      children: [
+        _AboutMeExperienceWidget(labelKey: 'sygnisoft', imagePath: AppImage.sygnisoft),
+        _AboutMeExperienceWidget(labelKey: 'svantek', imagePath: AppImage.svantek),
+        _AboutMeExperienceWidget(labelKey: 'falcon_acoustics', imagePath: AppImage.falconAcoustics),
+        _AboutMeExperienceWidget(labelKey: 'ecoplan', imagePath: AppImage.ecoplan),
+      ],
+    ),
+  );
 }
 
 class _AboutMeExperienceWidget extends StatelessWidget {
@@ -47,7 +44,7 @@ class _AboutMeExperienceWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => ClContainer(
-    border: Border.all(color: context.colorTokens.dividerSecondaryColor),
+    backgroundColor: context.colorTokens.secondaryBackgroundColor,
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       spacing: Dimens.dimen8,
@@ -97,7 +94,7 @@ class _AboutMeSectionExperienceCompanyWidget extends StatelessWidget {
           color: context.colorTokens.textSecondary,
         ),
         Label(
-          DateFormatter.formatDateTimeToPeriodString(start:  periodStart,end:  periodEnd),
+          DateFormatter.formatDateTimeToPeriodString(start: periodStart, end: periodEnd),
           translate: false,
           style: context.textTheme.bodyMedium,
           color: context.colorTokens.textSecondary,

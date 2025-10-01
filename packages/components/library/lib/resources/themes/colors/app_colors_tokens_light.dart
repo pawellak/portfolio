@@ -7,7 +7,11 @@ class AppColorsTokensLight extends AppColorsTokens {
 
   //Project list Page
   @override
-  Color get projectListBackgroundColor => AppColors.cSecondary[100] ?? AppColors.cSecondary;
+  Color get projectListBackgroundColor => AppColors.cSecondary[25] ?? AppColors.cSecondary;
+
+  //Project list Page
+  @override
+  Color get secondaryBackgroundColor => AppColors.cSecondary[25] ?? AppColors.cSecondary;
 
   //Checkbox
   @override
@@ -117,7 +121,7 @@ class AppColorsTokensLight extends AppColorsTokens {
 
   //Surface
   @override
-  Color get surfaceContainerPrimary => AppColors.cWhite;
+  Color get surfaceContainerPrimary => AppColors.cPrimary[50] ?? AppColors.cPrimary;
 
   @override
   Color get containerBorderColor => AppColors.cBlack.withAlpha(60);

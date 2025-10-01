@@ -5,7 +5,7 @@ const dateFormatMMYYYY = 'MM.yyyy';
 const _regexDatePeriod = r'\$\{DATE_PERIOD:(\d{4}\.\d{2})\}';
 
 abstract class DateFormatter {
-  const DateFormatter();
+  const DateFormatter._();
 
   static String formatDateRange({
     required DateTime? dateTimeStart,
@@ -57,7 +57,7 @@ abstract class DateFormatter {
       );
 
   static String _formatDateTimePeriod(DateTime dateStart, DateTime? dateEnd, bool addConnector) {
-    var dateTimeStart = dateStart;
+    var dateTimeStart = dateStart.subtract(const Duration(days: 31));
     var dateTimeEnd = dateEnd ?? DateTime.now();
 
     if (dateTimeEnd.isBefore(dateTimeStart)) {
