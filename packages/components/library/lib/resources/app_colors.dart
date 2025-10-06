@@ -6,7 +6,7 @@ abstract class AppColors {
   static const cTransparent = Colors.transparent;
 
   static const MaterialColor cPrimary = MaterialColor(0xFF2B539B, <int, Color>{
-    50: Color(0xFFE6EAF3),
+    50: Color(0xFFE3F2FD),
     75: Color(0xFF96AACE),
     100: Color(0xFF96AACE),
     200: Color(0xFF2B539B),

@@ -6,3 +6,4 @@ export 'navigation/navigation_export.dart';
 export 'presentation/presentation_export.dart';
 export 'providers/providers_export.dart';
 export 'services/services_export.dart';
+export 'utilis/utilis_export.dart';

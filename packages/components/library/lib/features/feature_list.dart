@@ -8,6 +8,10 @@ abstract class FeatureSettings implements Feature {
   const FeatureSettings();
 }
 
+abstract class FeatureCurriculumVitae implements Feature {
+  const FeatureCurriculumVitae();
+}
+
 abstract class FeatureWeather implements Feature {
   const FeatureWeather();
 }

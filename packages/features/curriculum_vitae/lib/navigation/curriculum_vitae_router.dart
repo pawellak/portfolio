@@ -1,0 +1,25 @@
+import 'package:components_library/components_library_export.dart';
+import 'package:feature_curriculum_vitae/presentation/curriculum_vitae_page/curriculum_vitae_page.dart';
+import 'package:flutter/cupertino.dart';
+
+@injectable
+class CurriculumVitaeRouter implements BaseRouter {
+  const CurriculumVitaeRouter();
+
+  @override
+  List<RouteBase> get routes => [];
+
+  @override
+  StatefulShellBranch get statefulShellBranch => StatefulShellBranch(
+    routes: [
+      GoRoute(
+        path: CurriculumVitaePage.path,
+        name: CurriculumVitaePage.name,
+        builder: (context, state) {
+          final locale = state.extra as String?;
+          return CurriculumVitaePage(key: locale == null ? UniqueKey() : Key(locale));
+        },
+      ),
+    ],
+  );
+}

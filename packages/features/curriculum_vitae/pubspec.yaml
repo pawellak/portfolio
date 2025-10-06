@@ -1,0 +1,21 @@
+name: feature_curriculum_vitae
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  components_library:
+    path: ../../components/library
+
+  pdf: 3.11.3
+  printing: 5.14.2
+
+  # Code Generation
+  build_runner: 2.5.4
+  injectable_generator: 2.7.0
+  json_serializable: 6.9.5

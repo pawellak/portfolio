@@ -2,6 +2,7 @@ import 'package:components_library/components_library_export.dart';
 import 'package:components_library/presentation/no_internet/bloc/no_internet_cubit.dart';
 import 'package:components_library/resources/dimens.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class NoInternetPage extends BasePage<NoInternetCubit> {
   const NoInternetPage({super.key});
@@ -11,6 +12,7 @@ class NoInternetPage extends BasePage<NoInternetCubit> {
 
   @override
   Widget buildPage(BuildContext context) => BlocListener<NoInternetCubit, NoInternetState>(
+    listenWhen: (previous, current) => current is ShowLoading,
     listener: (context, state) {
       switch (state) {
         case ShowLoading():

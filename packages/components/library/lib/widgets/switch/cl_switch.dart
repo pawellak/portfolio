@@ -23,13 +23,12 @@ class ClSwitch extends StatelessWidget {
   @override
   Widget build(BuildContext context) => InkWell(
     borderRadius: const BorderRadius.all(Radius.circular(Dimens.dimen12)),
-
     onTap: () {
       onChanged(!value);
     },
     child: Ink(
       decoration: BoxDecoration(
-        color: context.colorTokens.surfaceContainerPrimary,
+        color: context.colorTokens.secondaryBackgroundColor,
         borderRadius: BorderRadius.circular(Dimens.dimen12),
       ),
       child: Row(
@@ -41,10 +40,10 @@ class ClSwitch extends StatelessWidget {
             crossFadeState: value ? CrossFadeState.showFirst : CrossFadeState.showSecond,
             duration: const Duration(seconds: 1),
           ),
-          Expanded(child: Label(value ? labelSelected : labelUnselected,fontWeight: FontWeight.w600,)),
+          Expanded(child: Label(value ? labelSelected : labelUnselected, fontWeight: FontWeight.w600)),
           Switch.adaptive(value: value, onChanged: onChanged),
         ],
-      ).addPaddingAll(Dimens.dimen12),
+      ),
     ),
   );
 }
