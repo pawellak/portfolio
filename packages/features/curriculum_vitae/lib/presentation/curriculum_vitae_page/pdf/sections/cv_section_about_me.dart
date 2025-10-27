@@ -16,10 +16,10 @@ class CvSectionAboutMe extends pw.StatelessWidget {
     child: PfContainer(
       border: pw.Border.all(color: PdfColors.grey300),
       backgroundColor: PdfColors.white,
-      padding: const pw.EdgeInsets.all(Dimens.dimen12),
+      padding: const pw.EdgeInsets.all(Dimens.dimen6),
       child: pw.Column(
         children: [
-          for (final label in descriptionLabels) ...[PfRichText(label), pw.SizedBox(height: Dimens.dimen4)],
+          for (final label in descriptionLabels) ...[PfRichText(label), pw.SizedBox(height: Dimens.dimen3)],
         ],
       ),
     ),

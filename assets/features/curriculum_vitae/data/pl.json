@@ -6,7 +6,7 @@
       "title": "Moja Enea",
       "description": "Architektura i Skalowalność:",
       "advantages": "Flutter (BLoC) | 200+ Widoków | Integracje Natywne | Technical Lead",
-      "additional": "Główny deweloper, ponad 350+ tys. użytkowników i ocena 4.7",
+      "additional": "Główny deweloper, ponad 350+ tys. użytkowników i ocena 4.7/5.0",
       "imageUrl": "assets/images/project_list/enea.png",
       "dateStart": "2023-08-25T01:00:00.000",
       "dateEnd": null
@@ -21,11 +21,12 @@
       "dateStart": "2023-09-01T01:00:00.000",
       "dateEnd": "2024-02-01T01:00:00.000"
     },
+
     {
       "id": "2",
       "title": "Leksykon EJ",
       "description": "Funkcje Aplikacji:",
-      "advantages": "Tłumaczenia | Dostępność Cyfrowa | Historia | Słownik | Figma",
+      "advantages": "Tłumaczenia | Dostępność Cyfrowa | Projekt rządowy | Figma",
       "additional": "Dwujęzyczny leksykon terminów branży jądrowej z dostępem offline",
       "imageUrl": "assets/images/project_list/leksykon.png",
       "dateStart": "2022-06-01T01:00:00.000",

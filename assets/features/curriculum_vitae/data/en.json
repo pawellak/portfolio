@@ -6,7 +6,7 @@
       "title": "Moja Enea",
       "description": "Architecture & Scalability:",
       "advantages": "Flutter (BLoC) | 200+ Views | Native Integrations | Technical Leader",
-      "additional": "Lead developer of a high-rated (4.7) app with 350,000+ active users.",
+      "additional": "Lead developer of a high-rated (4.7) app with 350,000+ active users",
       "imageUrl": "assets/images/project_list/enea.png",
       "dateStart": "2023-08-25T01:00:00.000",
       "dateEnd": null
@@ -25,8 +25,8 @@
       "id": "2",
       "title": "Leksykon EJ",
       "description": "Application Features:",
-      "advantages": "Translations | Digital Accessibility | History | Dictionary | Figma",
-      "additional": "A bilingual lexicon of nuclear industry terms with offline access",
+      "advantages": "Translations | Digital Accessibility | Government Project | Figma",
+      "additional": "A lexicon of nuclear industry terms with offline access (rated 5.0)",
       "imageUrl": "assets/images/project_list/leksykon.png",
       "dateStart": "2022-06-01T01:00:00.000",
       "dateEnd": "2022-08-01T01:00:00.000"
