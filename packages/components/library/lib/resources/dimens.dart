@@ -5,9 +5,11 @@ abstract class Dimens {
   static const double dimen3 = 3;
   static const double dimen4 = 4;
   static const double dimen6 = 6;
+  static const double dimen7 = 7;
   static const double dimen8 = 8;
   static const double dimen9 = 9;
   static const double dimen10 = 10;
+  static const double dimen11 = 11;
   static const double dimen12 = 12;
   static const double dimen14 = 14;
   static const double dimen16 = 16;
@@ -32,6 +34,7 @@ abstract class Dimens {
   static const double dimen85 = 85;
   static const double dimen90 = 90;
   static const double dimen100 = 100;
+  static const double dimen110 = 110;
   static const double dimen120 = 120;
   static const double dimen126 = 126;
   static const double dimen150 = 150;

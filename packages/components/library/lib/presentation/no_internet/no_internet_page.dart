@@ -24,7 +24,7 @@ class NoInternetPage extends BasePage<NoInternetCubit> {
     child: Column(
       children: [
         const Spacer(),
-        const Center(child: ClIcon(path: FontAwesomeIcons.globe, size: Dimens.dimen64)),
+        Center(child: ClIcon(path: FontAwesomeIcons.globe.data, size: Dimens.dimen64)),
         const Spacer(),
         Label(
           textAlign: TextAlign.center,

@@ -8,4 +8,7 @@ class FeatureCurriculumVitaeImpl implements FeatureCurriculumVitae {
 
   static const String name = CurriculumVitaePage.name;
   static const String path = CurriculumVitaePage.path;
+
+  @override
+  String get pageName => name;
 }

@@ -19,51 +19,47 @@ class CvSectionProjects extends pw.StatelessWidget {
   final List<ProjectCvModel> modelList;
 
   @override
-  pw.Widget build(pw.Context context) {
-    final partitionedRows = _partition(modelList, _kRowItems);
+  pw.Widget build(pw.Context context) => CvTitleContainer(
+    icon: FluentIcons.book_database_24_regular,
+    margin: Dimens.dimen0,
+    title: 'label.cv.section.projects',
+    child: pw.Column(children: _buildBody(_partition(modelList))),
+  );
 
-    return CvTitleContainer(
-      icon: FluentIcons.book_database_24_regular,
-      margin: Dimens.dimen0,
-      title: 'label.cv.section.projects',
-      child: pw.Column(
-        children: [
-          for (int i = 0; i < partitionedRows.length; i++) ...[
-            pw.Row(
-              crossAxisAlignment: pw.CrossAxisAlignment.start,
-              children: [
-                for (int j = 0; j < partitionedRows[i].length; j++) ...[
-                  pw.Expanded(child: _CvSectionProject(partitionedRows[i][j])),
-                  if (j < partitionedRows[i].length - 1) pw.SizedBox(width: Dimens.dimen12),
-                ],
-                if (partitionedRows[i].length < _kRowItems)
-                  pw.Expanded(flex: _kRowItems - partitionedRows[i].length, child: pw.Container()),
-              ],
-            ),
-            if (i < partitionedRows.length - 1) pw.SizedBox(height: Dimens.dimen12),
-          ],
-        ],
-      ),
-    );
-  }
-
-  List<List<ProjectCvModel>> _partition(List<ProjectCvModel> list, int size) {
+  List<List<ProjectCvModel>> _partition(List<ProjectCvModel> list) {
     final result = <List<ProjectCvModel>>[];
-    for (var i = 0; i < list.length; i += size) {
-      result.add(list.sublist(i, i + size > list.length ? list.length : i + size));
+    for (var i = 0; i < list.length; i += _kRowItems) {
+      result.add(list.sublist(i, i + _kRowItems > list.length ? list.length : i + _kRowItems));
     }
     return result;
   }
+
+  List<pw.Widget> _buildBody(List<List<ProjectCvModel>> partitionedRows) => [
+    for (int i = 0; i < partitionedRows.length; i++) ...[
+      pw.Row(
+        crossAxisAlignment: pw.CrossAxisAlignment.start,
+        children: [
+          for (int j = 0; j < partitionedRows[i].length; j++) ...[
+            pw.Expanded(child: _CvSectionProjectWidget(partitionedRows[i][j])),
+            if (j < partitionedRows[i].length - 1) pw.SizedBox(width: Dimens.dimen12),
+          ],
+          if (partitionedRows[i].length < _kRowItems)
+            pw.Expanded(flex: _kRowItems - partitionedRows[i].length, child: pw.Container()),
+        ],
+      ),
+      if (i < partitionedRows.length - 1) pw.SizedBox(height: Dimens.dimen12),
+    ],
+  ];
 }
 
-class _CvSectionProject extends pw.StatelessWidget {
-  _CvSectionProject(this.model);
+class _CvSectionProjectWidget extends pw.StatelessWidget {
+  _CvSectionProjectWidget(this.model);
 
   final ProjectCvModel model;
 
   @override
   pw.Widget build(pw.Context context) => PfContainer(
-    height: model.additional.isEmpty ? Dimens.dimen170 : Dimens.dimen180,
+    height: model.additional.isEmpty ? Dimens.dimen170 : 187,
     backgroundColor: PdfColors.white,
     child: PfColumn(
       crossAxisAlignment: pw.CrossAxisAlignment.start,
@@ -76,6 +72,11 @@ class _CvSectionProject extends pw.StatelessWidget {
             mainAxisAlignment: pw.MainAxisAlignment.start,
             children: [
               PfLabel(model.title, textAlign: pw.TextAlign.center, fontWeight: pw.FontWeight.bold),
+              PfLabel(
+                '${DateFormatter.formatDateRange(dateTimeStart: model.dateStart, dateTimeEnd: model.dateEnd, format: dateFormatMMYYYY)} (${DateFormatter.formatDateTimePeriod(model.dateStart, model.dateEnd, false)})',
+                textAlign: pw.TextAlign.center,
+                style: const pw.TextStyle(fontSize: 8, color: PdfColors.grey900),
+              ),
               pw.SizedBox(height: Dimens.dimen3),
               if (model.additional.isNotEmpty) ...[
                 PfLabel(

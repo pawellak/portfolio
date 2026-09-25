@@ -4,7 +4,7 @@ version: 0.0.1
 publish_to: none
 
 environment:
-  sdk: ^3.7.2
+  sdk: ^3.12.2
 
 dependencies:
   flutter:
@@ -15,14 +15,14 @@ dependencies:
 
   # UI & Styling
   another_flushbar: 1.12.30
-  google_fonts: 6.2.1
+  google_fonts: 8.2.1
   lottie: 3.3.1
   shimmer: 3.0.0
   flutter_widget_from_html_core: 0.16.0
   auto_size_text: 3.0.0
   fluentui_system_icons: 1.1.273
   flutter_layout_grid: 2.0.8
-  font_awesome_flutter: 10.8.0
+  font_awesome_flutter: 11.0.0
 
 dev_dependencies:
   flutter_test:

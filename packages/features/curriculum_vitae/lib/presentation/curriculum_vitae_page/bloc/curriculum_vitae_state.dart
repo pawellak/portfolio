@@ -11,5 +11,5 @@ class CurriculumVitaeInitial extends CurriculumVitaeState {
 class CurriculumVitaeUpdateView extends CurriculumVitaeState {
   const CurriculumVitaeUpdateView(this.pdfData);
 
-  final pw.Document pdfData;
+  final Uint8List pdfData;
 }

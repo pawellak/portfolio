@@ -50,13 +50,13 @@ abstract class DateFormatter {
   }
 
   static String formatDateTimeToPeriodString({required String start, String? end, bool addConnector = false}) =>
-      _formatDateTimePeriod(
+      formatDateTimePeriod(
         _getDataTimeFromYYYYMM(start),
         end != null ? _getDataTimeFromYYYYMM(end) : null,
         addConnector,
       );
 
-  static String _formatDateTimePeriod(DateTime dateStart, DateTime? dateEnd, bool addConnector) {
+  static String formatDateTimePeriod(DateTime dateStart, DateTime? dateEnd, bool addConnector) {
     var dateTimeStart = dateStart.subtract(const Duration(days: 31));
     var dateTimeEnd = dateEnd ?? DateTime.now();
 

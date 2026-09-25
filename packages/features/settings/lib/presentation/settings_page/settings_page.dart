@@ -1,5 +1,12 @@
 import 'package:components_library/components_library_export.dart'
-    show AppSettingsProvider, BasePage, BlocListener, BuildContextEasyLocalizationExtension, ClAdapter, ReadContext;
+    show
+        AppSettingsProvider,
+        BasePage,
+        BlocListener,
+        BuildContextEasyLocalizationExtension,
+        ClAdapter,
+        ClScroll,
+        ReadContext;
 import 'package:feature_settings/presentation/settings_page/bloc/settings_cubit.dart';
 import 'package:feature_settings/presentation/settings_page/settings_compact_widget.dart';
 import 'package:feature_settings/presentation/settings_page/settings_expanded_widget.dart';
@@ -17,26 +24,19 @@ class SettingsPage extends BasePage<SettingsCubit> {
 
   @override
   Widget buildPage(_) => BlocListener<SettingsCubit, SettingsState>(
-        listener: (context, state) async {
-          switch (state) {
-            case SettingsUpdateTheme():
-              await _handleToggleTheme(context);
-            case SettingsUpdateLocale():
-              final currentLocal = context.read<SettingsCubit>().currentLocale;
-              await context.setLocale(Locale(currentLocal));
-            case SettingsInitial():
-              break;
-          }
-        },
-        child: const CustomScrollView(
-          slivers: [
-            SliverFillRemaining(
-              hasScrollBody: false,
-              child: ClAdapter(expanded: SettingsExpandedWidget(), compact: SettingsCompactWidget()),
-            ),
-          ],
-        ),
-      );
+    listener: (context, state) async {
+      switch (state) {
+        case SettingsUpdateTheme():
+          await _handleToggleTheme(context);
+        case SettingsUpdateLocale():
+          final currentLocal = context.read<SettingsCubit>().currentLocale;
+          await context.setLocale(Locale(currentLocal));
+        case SettingsInitial():
+          break;
+      }
+    },
+    child: const ClScroll(child: ClAdapter(expanded: SettingsExpandedWidget(), compact: SettingsCompactWidget())),
+  );
 
   Future<void> _handleToggleTheme(BuildContext context) async {
     await Future<void>.delayed(_kDurationForSwitchAnimation);

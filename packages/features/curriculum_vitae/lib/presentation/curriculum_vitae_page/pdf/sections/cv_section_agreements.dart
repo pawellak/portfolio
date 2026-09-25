@@ -1,5 +1,4 @@
 import 'package:components_library/resources/dimens.dart';
-
 import 'package:feature_curriculum_vitae/presentation/widgets/pf_label.dart';
 import 'package:pdf/widgets.dart' as pw;
 

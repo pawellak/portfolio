@@ -4,7 +4,7 @@
     {
       "id": "0",
       "title": "My Enea",
-      "shortDescription": "<p><strong>Application Functionality:</strong></p><ul><li>Over 150 views</li><li>Contract details</li><li>E-payments for electricity</li><li>E-invoice</li></ul>",
+      "shortDescription": "<p><strong>Application Functionality:</strong></p><ul><li>Over 200 views</li><li>Contract details</li><li>E-payments for electricity</li><li>E-invoice</li></ul>",
       "shortDescriptionUrl": "assets/images/project_list/enea.png",
       "introduction": "<h1>My Enea - Your Energy Under Control</h1><p>&nbsp;</p><h2>Quick and easy access to bills and account status in one intuitive place</h2><p>&nbsp;</p><h4>A modern mobile application designed with customer comfort in mind</h4>",
       "introductionUrl": "assets/images/project_list/enea_1.png",
@@ -60,7 +60,7 @@
     {
       "id": "4",
       "title": "Portfolio",
-      "shortDescription": "<p><strong>Application Functionality:</strong></p><ul><li>About Me</li><li>Projects</li><li>Settings</li><li>Android, iOS, Web</li></ul><p style=\"text-align: center;\"><strong><span style=\"color: #ff6600;\">The applications in my portfolio have reached over 400,000 users.</span></strong></p>",
+      "shortDescription": "<p><strong>Application Functionality:</strong></p><ul><li>About Me</li><li>Projects</li><li>Settings</li><li>Android, iOS, Web</li></ul><p style=\"text-align: center;\"><strong><span style=\"color: #ff6600;\">The applications in my portfolio have reached over 450,000 users.</span></strong></p>",
       "shortDescriptionUrl": "assets/images/project_list/portfolio.png",
       "introduction": "<h1>Portfolio</h1><h2 style=\"text-align: center;\">Flutter and Passion in Service of Everyday Life</h2><h3>One code, many platforms, endless conveniences</h3>",
       "introductionUrl": "assets/images/project_list/portfolio_1.png",
@@ -68,7 +68,7 @@
       "developmentUrl": "assets/images/project_list/portfolio_2.png",
       "conclusion": "<h2>I work effectively both independently and in a team, delivering high-quality code on time.</h2><h3>I focus on development and delivering valuable solutions for clients and application users.</h3>",
       "conclusionUrl": "assets/images/project_list/portfolio_3.png",
-      "dateStart": "2021-01-01T01:00:00.000",
+      "dateStart": "2025-07-01T01:00:00.000",
       "dateEnd": null
     },
     {
@@ -143,16 +143,16 @@
     },
     {
       "id": "10",
-      "title": "Udemy",
-      "shortDescription": "<p><strong>Investing in skills:</strong></p><ul><li>Flutter</li><li>Native iOS</li><li>Native Android</li></ul>",
+      "title": "Education & Development",
+      "shortDescription": "<p><strong>Investing in skills:</strong></p><ul><li>Flutter</li><li>Native iOS</li><li>Native Android</li><li>IoT</li></ul>",
       "shortDescriptionUrl": "assets/images/project_list/udemy.png",
-      "introduction": "<h1>Udemy</h1><h3>By completing numerous projects on Udemy – both native (Kotlin, Swift) and in Flutter – I gained valuable experience and a deeper understanding of architecture and best practices in building Flutter applications.</h3>",
-      "introductionUrl": "assets/images/project_list/udemy_1.png",
+      "introduction": "<h1>Education & Development</h1><h3>By completing numerous projects – both native (Kotlin, Swift) and in Flutter – I gained valuable experience and a deeper understanding of architecture and best practices in building Flutter applications.</h3>",
+      "introductionUrl": "assets/images/project_list/prototypes.png",
       "development": "",
       "developmentUrl": "",
       "conclusion": "",
       "conclusionUrl": "",
-      "dateStart": "2025-10-10T01:00:00.000",
+      "dateStart": "2020-06-10T01:00:00.000",
       "dateEnd": null
     }
   ]

@@ -20,18 +20,17 @@ class CvSectionSocial extends pw.StatelessWidget {
     height: Dimens.dimen126,
     margin: const pw.EdgeInsets.only(left: Dimens.dimen12),
     child: PfColumn(
-
       children: [
-        _AboutMeSocialWidget(title: 'Portfolio:', description: 'pawellak.github.io', icon: portfolio),
-        _AboutMeSocialWidget(title: 'Github:', description: 'github.com/pawellak', icon: github),
-        _AboutMeSocialWidget(title: 'LinkedIn:', description: 'linkedin.com/in/pawellak93', icon: linked),
+        _CvSectionSocialWidget(title: 'Portfolio:', description: 'pawellak.github.io', icon: portfolio),
+        _CvSectionSocialWidget(title: 'Github:', description: 'github.com/pawellak', icon: github),
+        _CvSectionSocialWidget(title: 'LinkedIn:', description: 'linkedin.com/in/pawellak93', icon: linked),
       ],
     ),
   );
 }
 
-class _AboutMeSocialWidget extends pw.StatelessWidget {
-  _AboutMeSocialWidget({required this.title, required this.description, required this.icon});
+class _CvSectionSocialWidget extends pw.StatelessWidget {
+  _CvSectionSocialWidget({required this.title, required this.description, required this.icon});
 
   final String title;
   final String description;
@@ -47,10 +46,18 @@ class _AboutMeSocialWidget extends pw.StatelessWidget {
       crossAxisAlignment: pw.CrossAxisAlignment.center,
       children: [
         PfSizeBox(width: Dimens.dimen4),
-        PfImagePathWidget(image: icon, width: Dimens.dimen16, horizontalRadius: Dimens.dimen4),
+        PfImagePathWidget(image: icon, width: Dimens.dimen16, horizontalRadius: Dimens.dimen1,verticalRadius: Dimens.dimen1),
         PfSizeBox(width: Dimens.dimen4),
-        PfLabel(title, fontWeight: pw.FontWeight.bold,style: const pw.TextStyle(fontSize: Dimens.dimen10)),
-        pw.Expanded(child: PfLabel(description, color: pw.PdfColors.grey800, textAlign: pw.TextAlign.end,style: const pw.TextStyle(fontSize: Dimens.dimen10))),
+        PfLabel(title, translate: false, fontWeight: pw.FontWeight.bold, style: const pw.TextStyle(fontSize: Dimens.dimen10)),
+        pw.Expanded(
+          child: PfLabel(
+            description,
+            color: pw.PdfColors.grey800,
+            textAlign: pw.TextAlign.end,
+            translate: false,
+            style: const pw.TextStyle(fontSize: Dimens.dimen10),
+          ),
+        ),
         PfSizeBox(width: Dimens.dimen4),
       ],
     ),

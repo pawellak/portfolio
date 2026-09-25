@@ -1,4 +1,4 @@
-import 'package:components_library/components_library_export.dart' show FluentIcons, StringTranslateExtension;
+import 'package:components_library/components_library_export.dart' show FluentIcons;
 import 'package:components_library/resources/dimens.dart';
 import 'package:feature_curriculum_vitae/presentation/widgets/pf_column.dart';
 import 'package:feature_curriculum_vitae/presentation/widgets/pf_container.dart';
@@ -25,10 +25,7 @@ class CvSectionContact extends pw.StatelessWidget {
     height: Dimens.dimen126,
     child: PfRow(
       children: [
-        PfImagePathWidget(
-          image: profileImage,
-          width: Dimens.dimen80,
-        ),
+        PfImagePathWidget(image: profileImage),
         PfSizeBox(width: Dimens.dimen12),
         pw.Expanded(
           child: PfColumn(
@@ -40,10 +37,10 @@ class CvSectionContact extends pw.StatelessWidget {
                 style: const pw.TextStyle(color: pw.PdfColors.black, fontSize: Dimens.dimen14),
                 fontWeight: pw.FontWeight.bold,
               ),
-              _AboutMeContactWidget(description: _kPhoneContact, icon: FluentIcons.phone_16_regular),
-              _AboutMeContactWidget(description: _kEmail, icon: FluentIcons.mail_16_regular),
-              _AboutMeContactWidget(
-                description: 'label.about_me.office_place'.tr(),
+              _CvSectionContactWidget(description: _kPhoneContact, icon: FluentIcons.phone_16_regular),
+              _CvSectionContactWidget(description: _kEmail, icon: FluentIcons.mail_16_regular),
+              _CvSectionContactWidget(
+                description: 'label.about_me.office_place',
                 icon: FluentIcons.city_16_regular,
                 translate: true,
               ),
@@ -55,8 +52,8 @@ class CvSectionContact extends pw.StatelessWidget {
   );
 }
 
-class _AboutMeContactWidget extends pw.StatelessWidget {
-  _AboutMeContactWidget({required this.description, required this.icon, this.translate = false});
+class _CvSectionContactWidget extends pw.StatelessWidget {
+  _CvSectionContactWidget({required this.description, required this.icon, this.translate = false});
 
   final String description;
   final IconData icon;
@@ -66,13 +63,20 @@ class _AboutMeContactWidget extends pw.StatelessWidget {
   pw.Widget build(pw.Context context) => PfContainer(
     border: pw.Border.all(color: pw.PdfColors.grey300),
     backgroundColor: pw.PdfColors.white,
-    padding: const pw.EdgeInsets.symmetric(vertical:  3,horizontal: Dimens.dimen8),
+    padding: const pw.EdgeInsets.symmetric(vertical: Dimens.dimen3, horizontal: Dimens.dimen8),
     margin: const pw.EdgeInsets.only(top: Dimens.dimen4, right: Dimens.dimen4, bottom: Dimens.dimen4),
     child: PfRow(
       children: [
         PfIcon(icon, color: pw.PdfColors.grey600),
         PfSizeBox(width: Dimens.dimen8),
-        pw.Expanded(child: PfLabel(description, color: pw.PdfColors.grey800, translate: translate,style: const pw.TextStyle(fontSize: Dimens.dimen10))),
+        pw.Expanded(
+          child: PfLabel(
+            description,
+            color: pw.PdfColors.grey800,
+            translate: translate,
+            style: const pw.TextStyle(fontSize: Dimens.dimen10),
+          ),
+        ),
       ],
     ),
   );

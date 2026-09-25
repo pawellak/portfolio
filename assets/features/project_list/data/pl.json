@@ -4,7 +4,7 @@
     {
       "id": "0",
       "title": "Moja Enea",
-      "shortDescription": "<p><strong>Funkcjonalność aplikacji:</strong></p><ul><li>Ponad 150 widoków</li><li>Szczegóły umowy</li><li>E-opłaty za prąd</li><li>E-faktura</li></ul>",
+      "shortDescription": "<p><strong>Funkcjonalność aplikacji:</strong></p><ul><li>Ponad 200 widoków</li><li>Szczegóły umowy</li><li>E-opłaty za prąd</li><li>E-faktura</li></ul>",
       "shortDescriptionUrl": "assets/images/project_list/enea.png",
       "introduction": "<h1>Moja Enea - Twoja Energia Pod Kontrolą</h1><p>&nbsp;</p><h2>Szybki i prosty dostęp do rachunk&oacute;w i stanu konta w jednym, intuicyjnym miejscu</h2><p>&nbsp;</p><h4>Nowoczesna aplikacja mobilna, zaprojektowana z myślą o komforcie Klient&oacute;w</h4>",
       "introductionUrl": "assets/images/project_list/enea_1.png",
@@ -43,7 +43,6 @@
       "dateStart": "2023-09-01T01:00:00.000",
       "dateEnd": "2024-02-01T01:00:00.000"
     },
-
     {
       "id": "3",
       "title": "Maraton Warszawski",
@@ -61,7 +60,7 @@
     {
       "id": "4",
       "title": "Portfolio",
-      "shortDescription": "<p><strong>Funkcjonalność aplikacji:</strong></p><ul><li>O mnie</li><li>Projekty</li><li>Ustawienia</li><li>Android, iOS, Web</li></ul><p style=\"text-align: center;\"><strong><span style=\"color: #ff6600;\">Aplikacje z mojego portfolio dotarły do ponad 400 tysięcy użytkownik&oacute;w.</span></strong></p>",
+      "shortDescription": "<p><strong>Funkcjonalność aplikacji:</strong></p><ul><li>O mnie</li><li>Projekty</li><li>Ustawienia</li><li>Android, iOS, Web</li></ul><p style=\"text-align: center;\"><strong><span style=\"color: #ff6600;\">Aplikacje z mojego portfolio dotarły do ponad 450 tysięcy użytkownik&oacute;w.</span></strong></p>",
       "shortDescriptionUrl": "assets/images/project_list/portfolio.png",
       "introduction": "<h1>Portfolio</h1><h2 style=\"text-align: center;\">Flutter i pasja w służbie codzienności</h2><h3>Jeden kod, wiele platform, nieskończone ułatwienia</h3>",
       "introductionUrl": "assets/images/project_list/portfolio_1.png",
@@ -69,7 +68,7 @@
       "developmentUrl": "assets/images/project_list/portfolio_2.png",
       "conclusion": "<h2>Efektywnie pracuję samodzielnie i w zespole, tworząc wysokiej jakości kod na czas.</h2><h3>Stawiam na rozw&oacute;j i dostarczanie wartościowych rozwiązań dla klient&oacute;w i użytkownik&oacute;w aplikacji.</h3>",
       "conclusionUrl": "assets/images/project_list/portfolio_3.png",
-      "dateStart": "2021-01-01T01:00:00.000",
+      "dateStart": "2025-07-01T01:00:00.000",
       "dateEnd": null
     },
     {
@@ -144,16 +143,16 @@
     },
     {
       "id": "10",
-      "title": "Udemy",
-      "shortDescription": "<p><strong>Inwestycja w umiejętności:</strong></p><ul><li>Flutter</li><li>Natywny iOS</li><li>Natywny Android</li></ul>",
+      "title": "Edukacja i Rozwój",
+      "shortDescription": "<p><strong>Inwestycja w umiejętności:</strong></p><ul><li>Flutter</li><li>Natywny iOS</li><li>Natywny Android</li><li>IoT</li></ul>",
       "shortDescriptionUrl": "assets/images/project_list/udemy.png",
-      "introduction": "<h1>Udemy</h1><h3>Poprzez realizację licznych projektów na Udemy – zarówno natywnych (Kotlin, Swift), jak i we Flutterze – zyskałem cenne doświadczenie i głębsze zrozumienie architektury oraz najlepszych praktyk w budowaniu aplikacji Flutter.</h3>",
-      "introductionUrl": "assets/images/project_list/udemy_1.png",
+      "introduction": "<h1>Edukacja i Rozwój</h1><h3>Poprzez realizację licznych projektów – zarówno natywnych (Kotlin, Swift), jak i we Flutterze – zyskałem cenne doświadczenie i głębsze zrozumienie architektury oraz najlepszych praktyk w budowaniu aplikacji Flutter.</h3>",
+      "introductionUrl": "assets/images/project_list/prototypes.png",
       "development": "",
       "developmentUrl": "",
       "conclusion": "",
       "conclusionUrl": "",
-      "dateStart": "2025-10-10T01:00:00.000",
+      "dateStart": "2020-06-10T01:00:00.000",
       "dateEnd": null
     }
   ]

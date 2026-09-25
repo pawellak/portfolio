@@ -12,27 +12,25 @@ class CvSectionExperience extends pw.StatelessWidget {
   CvSectionExperience();
 
   @override
-  pw.Widget build(pw.Context context) {
-    return CvTitleContainer(
-      icon: FluentIcons.book_compass_24_regular,
-      title: 'label.about_me.experience.title',
-      child: PfRow(
-        children: [
-          pw.Expanded(child: _AboutMeExperienceWidget(labelKey: 'sygnisoft')),
-          pw.SizedBox(width: Dimens.dimen12),
-          pw.Expanded(child: _AboutMeExperienceWidget(labelKey: 'svantek')),
-          pw.SizedBox(width: Dimens.dimen12),
-          pw.Expanded(child: _AboutMeExperienceWidget(labelKey: 'falcon_acoustics')),
-          pw.SizedBox(width: Dimens.dimen12),
-          pw.Expanded(child: _AboutMeExperienceWidget(labelKey: 'ecoplan')),
-        ],
-      ),
-    );
-  }
+  pw.Widget build(pw.Context context) => CvTitleContainer(
+    icon: FluentIcons.book_compass_24_regular,
+    title: 'label.about_me.experience.title',
+    child: PfRow(
+      children: [
+        pw.Expanded(child: _CvSectionExperienceWidget(labelKey: 'sygnisoft')),
+        pw.SizedBox(width: Dimens.dimen12),
+        pw.Expanded(child: _CvSectionExperienceWidget(labelKey: 'svantek')),
+        pw.SizedBox(width: Dimens.dimen12),
+        pw.Expanded(child: _CvSectionExperienceWidget(labelKey: 'falcon_acoustics')),
+        pw.SizedBox(width: Dimens.dimen12),
+        pw.Expanded(child: _CvSectionExperienceWidget(labelKey: 'ecoplan')),
+      ],
+    ),
+  );
 }
 
-class _AboutMeExperienceWidget extends pw.StatelessWidget {
-  _AboutMeExperienceWidget({required this.labelKey});
+class _CvSectionExperienceWidget extends pw.StatelessWidget {
+  _CvSectionExperienceWidget({required this.labelKey});
 
   final String labelKey;
 

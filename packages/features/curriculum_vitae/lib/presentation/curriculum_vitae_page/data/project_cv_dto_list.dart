@@ -12,14 +12,5 @@ class ProjectCvDtoList {
 
   final List<ProjectCvDto> result;
 
-  Future<List<ProjectCvModel>> toModel() async {
-    final List<ProjectCvModel> modelList = [];
-
-    for (final element in result) {
-      final avc = await ProjectCvDto.toModel(element);
-      modelList.add(avc);
-    }
-
-    return modelList;
-  }
+  Future<List<ProjectCvModel>> toModel() async => Future.wait(result.map(ProjectCvDto.toModel).toList());
 }

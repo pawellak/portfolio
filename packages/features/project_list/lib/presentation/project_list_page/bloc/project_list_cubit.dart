@@ -14,6 +14,7 @@ class ProjectListCubit extends BaseCubit<ProjectListState> {
 
   @override
   Future<void> initialMethod() async {
+    await super.initialMethod();
     await refreshPage();
   }
 

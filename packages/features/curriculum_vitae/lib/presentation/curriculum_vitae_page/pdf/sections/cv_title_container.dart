@@ -22,7 +22,7 @@ class CvTitleContainer extends pw.StatelessWidget {
   @override
   pw.Widget build(pw.Context context) => PfContainer(
     margin: pw.EdgeInsets.only(top: margin),
-    padding: const pw.EdgeInsets.all(Dimens.dimen10),
+    padding: const pw.EdgeInsets.all(Dimens.dimen7),
     child: PfColumn(
       crossAxisAlignment: pw.CrossAxisAlignment.start,
       children: [

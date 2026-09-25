@@ -15,7 +15,7 @@ class ClElevatedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Row(
     children: [
-      FaIcon(icon, color: context.colorTokens.iconPrimaryColor),
+      FaIcon(FaIconData(icon), color: context.colorTokens.iconPrimaryColor),
       const SizedBox(width: Dimens.dimen16),
       Expanded(
         child: SizedBox(

@@ -21,16 +21,16 @@ class CvSectionEducation extends pw.StatelessWidget {
     title: 'label.about_me.education.title',
     child: PfRow(
       children: [
-        pw.Expanded(child: _AboutMeEducationWidget(labelKey: 'label.about_me.education.eng', pwr: pwr)),
-        PfSizeBox(width: Dimens.dimen12),
-        pw.Expanded(child: _AboutMeEducationWidget(labelKey: 'label.about_me.education.msc_eng', pwr: pwr)),
+        pw.Expanded(child: _CvSectionEducationWidget(labelKey: 'label.about_me.education.eng', pwr: pwr)),
+        PfSizeBox(width: Dimens.dimen8),
+        pw.Expanded(child: _CvSectionEducationWidget(labelKey: 'label.about_me.education.msc_eng', pwr: pwr)),
       ],
     ),
   );
 }
 
-class _AboutMeEducationWidget extends pw.StatelessWidget {
-  _AboutMeEducationWidget({required this.labelKey, required this.pwr});
+class _CvSectionEducationWidget extends pw.StatelessWidget {
+  _CvSectionEducationWidget({required this.labelKey, required this.pwr});
 
   final String labelKey;
   final pw.MemoryImage pwr;
@@ -48,7 +48,7 @@ class _AboutMeEducationWidget extends pw.StatelessWidget {
           padding: const pw.EdgeInsets.all(Dimens.dimen6),
           horizontalRadius: Dimens.dimen4,
         ),
-        PfSizeBox(width: Dimens.dimen6),
+        PfSizeBox(width: Dimens.dimen16),
         pw.Expanded(
           child: PfColumn(
             crossAxisAlignment: pw.CrossAxisAlignment.start,
@@ -71,8 +71,3 @@ class _AboutMeEducationWidget extends pw.StatelessWidget {
     ),
   );
 }
-
-// Label('$labelKey.institution', style: context.textTheme.bodyLarge, fontWeight: FontWeight.bold),
-// Label('$labelKey.degree', style: context.textTheme.bodyLarge),
-// Label('$labelKey.major', style: context.textTheme.bodyMedium),
-// Label('$labelKey.period', style: context.textTheme.bodySmall, color: context.colorTokens.textSecondary),

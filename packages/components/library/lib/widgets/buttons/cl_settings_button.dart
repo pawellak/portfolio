@@ -50,6 +50,6 @@ class ClSettingsButton extends StatelessWidget {
   Widget _buildSuffixWidget(BuildContext context) =>
       suffixWidget ??
       (suffixArrowVisible
-          ? ClIcon(isSemantic: false, path: FontAwesomeIcons.angleRight, color: context.colorTokens.moreMenuColor)
+          ? ClIcon(isSemantic: false, path: FontAwesomeIcons.angleRight.data, color: context.colorTokens.moreMenuColor)
           : const SizedBox());
 }

@@ -30,28 +30,42 @@ class _DrawerItemState extends State<_DrawerItemWidget> {
     },
     cursor: SystemMouseCursors.click,
     child: ClContainer(
-      backgroundColor:
-          isFocused
-              ? context.colorTokens.topNavigationPrimaryBackgroundColor
-              : context.colorTokens.topNavigationSecondaryBackgroundColor,
+      backgroundColor: _getBackgroundColor(context),
       onTap: () {
         _onItemTap(context);
       },
-      width: Dimens.dimen120,
+      width: Dimens.dimen150,
       padding: const EdgeInsets.all(Dimens.dimen8),
       margin: const EdgeInsets.all(Dimens.dimen4),
       border: Border.all(color: context.colorTokens.topNavigationPrimaryBackgroundColor.withAlpha(_kButtonAlpha)),
-      child: Label(
-        widget.item.label.tr().toUpperCase(),
-        translate: false,
-        textAlign: TextAlign.center,
-        color:
-            isFocused
-                ? context.colorTokens.topNavigationSecondaryBackgroundColor
-                : context.colorTokens.topNavigationPrimaryBackgroundColor,
+      child: Row(
+        children: [
+          ClIcon(
+            path: isFocused ? widget.item.selectedIcon : widget.item.unselectedIcon,
+            color: _getIconColor(context),
+          ),
+          Expanded(
+            child: Label(
+              widget.item.label.tr().toUpperCase(),
+              translate: false,
+              textAlign: TextAlign.center,
+              color: _getIconColor(context),
+            ),
+          ),
+        ],
       ),
     ),
   );
+
+  Color _getBackgroundColor(BuildContext context) =>
+      isFocused
+          ? context.colorTokens.topNavigationPrimaryBackgroundColor
+          : context.colorTokens.topNavigationSecondaryBackgroundColor;
+
+  Color _getIconColor(BuildContext context) =>
+      isFocused
+          ? context.colorTokens.topNavigationSecondaryBackgroundColor
+          : context.colorTokens.topNavigationPrimaryBackgroundColor;
 
   void _onItemTap(BuildContext context) {
     NavigableController.onTap(context: context, navigationShell: widget.navigationShell, index: widget.index);
