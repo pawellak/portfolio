@@ -26,7 +26,7 @@ class ClIcon extends StatelessWidget {
     onTap: onTap,
     child: Padding(
       padding: padding,
-      child: FaIcon(path, size: size, color: color ?? context.colorTokens.iconPrimaryColor),
+      child: FaIcon(FaIconData(path), size: size, color: color ?? context.colorTokens.iconPrimaryColor),
     ),
   );
 }

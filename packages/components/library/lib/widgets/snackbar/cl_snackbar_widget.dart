@@ -36,5 +36,5 @@ class ClSnackBarWidget extends Flushbar<void> {
 
   @override
   Widget? get mainButton =>
-      IconButton(onPressed: dismiss, icon: ClIcon(path: FontAwesomeIcons.closedCaptioning, color: iconColor));
+      IconButton(onPressed: dismiss, icon: ClIcon(path: FontAwesomeIcons.closedCaptioning.data, color: iconColor));
 }

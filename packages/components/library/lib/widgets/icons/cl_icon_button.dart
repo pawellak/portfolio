@@ -54,6 +54,6 @@ class ClIconButton extends StatelessWidget {
             ]
             : null,
     padding: padding ?? const EdgeInsets.all(Dimens.dimen8),
-    child: FaIcon(path, size: size, color: color ?? context.colorTokens.iconButtonIconColor),
+    child: FaIcon(FaIconData(path), size: size, color: color ?? context.colorTokens.iconButtonIconColor),
   );
 }
